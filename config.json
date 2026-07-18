@@ -1,0 +1,76 @@
+{
+  "ntfy_topic": "",
+  "filters": {
+    "max_price": 7000,
+    "min_price": 2500,
+    "exclude_keywords": [
+      "studio",
+      "1br",
+      "1 bedroom",
+      "one bedroom",
+      "2br",
+      "2 bedroom",
+      "roommate wanted",
+      "room for rent",
+      "room available"
+    ],
+    "require_any_keywords": []
+  },
+  "_comment_sources": "Craigslist works reliably. Sources marked enabled:false actively block bots (403) - use their native saved-search alerts instead. See README.",
+  "sources": [
+    {
+      "name": "CL Williamsburg/Greenpoint 3BR+",
+      "type": "craigslist",
+      "url": "https://newyork.craigslist.org/search/brooklyn-ny/apa?lat=40.722&lon=-73.949&search_distance=1.6&min_bedrooms=3&max_price=7000&sort=date"
+    },
+    {
+      "name": "CL Brownstone Bklyn (Ft Greene/Prospect Hts/Bklyn Hts/Cobble/Boerum/Park Slope) 3BR+",
+      "type": "craigslist",
+      "url": "https://newyork.craigslist.org/search/brooklyn-ny/apa?lat=40.686&lon=-73.978&search_distance=2.0&min_bedrooms=3&max_price=7000&sort=date"
+    },
+    {
+      "name": "CL Wburg/Greenpoint SUBLETS + lease takeovers 3BR+",
+      "type": "craigslist",
+      "url": "https://newyork.craigslist.org/search/brooklyn-ny/sub?lat=40.722&lon=-73.949&search_distance=1.6&min_bedrooms=3&max_price=7000&sort=date"
+    },
+    {
+      "name": "CL Brownstone Bklyn SUBLETS + lease takeovers 3BR+",
+      "type": "craigslist",
+      "url": "https://newyork.craigslist.org/search/brooklyn-ny/sub?lat=40.686&lon=-73.978&search_distance=2.0&min_bedrooms=3&max_price=7000&sort=date"
+    },
+    {
+      "name": "CL Brooklyn 4BR+ (whole borough, wider net)",
+      "type": "craigslist",
+      "url": "https://newyork.craigslist.org/search/brk/apa?min_bedrooms=4&max_price=7000&sort=date"
+    },
+    {
+      "name": "RentHop Williamsburg 3BR",
+      "type": "generic",
+      "enabled": false,
+      "url": "https://www.renthop.com/apartments-for-rent/williamsburg-new-york-ny/3-bedroom",
+      "link_pattern": "renthop\\.com/listings/"
+    },
+    {
+      "name": "RentHop Greenpoint 3BR",
+      "type": "generic",
+      "enabled": false,
+      "url": "https://www.renthop.com/apartments-for-rent/greenpoint-new-york-ny/3-bedroom",
+      "link_pattern": "renthop\\.com/listings/"
+    },
+    {
+      "name": "RentHop Park Slope 3BR",
+      "type": "generic",
+      "enabled": false,
+      "url": "https://www.renthop.com/apartments-for-rent/park-slope-new-york-ny/3-bedroom",
+      "link_pattern": "renthop\\.com/listings/"
+    },
+    {
+      "name": "Leasebreak Williamsburg",
+      "type": "generic",
+      "enabled": false,
+      "url": "https://www.leasebreak.com/short-term-rentals/williamsburg-brooklyn",
+      "link_pattern": "leasebreak\\.com/(listing|lease)"
+    }
+  ],
+  "_comment_topic": "Topic intentionally blank in this public repo; set via NTFY_TOPIC repo secret."
+}
