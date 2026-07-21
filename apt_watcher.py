@@ -120,6 +120,16 @@ def passes_filters(listing, filters):
         if kw.lower() in title:
             return False
 
+    # Neighborhood backstop: circles can't cleanly exclude Crown Heights /
+    # Bed-Stuy without also dropping Clinton Hill / Prospect Heights, so we
+    # also drop by the listing's location tag. Only fires on an affirmative
+    # tag match; untagged listings still pass (the circle already vetted them).
+    location = (listing.get("location") or "").lower()
+    if location:
+        for bad in filters.get("exclude_locations", []):
+            if bad.lower() in location:
+                return False
+
     required = filters.get("require_any_keywords", [])
     if required and not any(kw.lower() in title for kw in required):
         return False

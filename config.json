@@ -14,29 +14,47 @@
       "room for rent",
       "room available"
     ],
-    "require_any_keywords": []
+    "require_any_keywords": [],
+    "_comment_exclude_locations": "Backstop for circle bleed: drops any listing whose Craigslist neighborhood tag contains one of these. Clinton Hill borders Bed-Stuy and Prospect Hts borders Crown Hts, so the search circles can't exclude these geographically without losing your targets. Border listings tagged e.g. 'clinton hill / bed-stuy' WILL be dropped here.",
+    "exclude_locations": [
+      "crown heights",
+      "bushwick",
+      "bed-stuy",
+      "bedstuy",
+      "bed stuy",
+      "bedford stuyvesant",
+      "bedford-stuyvesant",
+      "east williamsburg",
+      "east-williamsburg",
+      "long island city",
+      "east village",
+      "ridgewood",
+      "prospect lefferts",
+      "flatbush",
+      "sunset park"
+    ]
   },
   "_comment_sources": "Craigslist works reliably. Sources marked enabled:false actively block bots (403) - use their native saved-search alerts instead. See README.",
   "sources": [
     {
-      "name": "CL Williamsburg/Greenpoint 3BR+",
+      "name": "CL West Williamsburg / South Greenpoint 3BR+",
       "type": "craigslist",
-      "url": "https://newyork.craigslist.org/search/brooklyn-ny/apa?lat=40.722&lon=-73.949&search_distance=1.6&min_bedrooms=3&max_price=7000&sort=date"
+      "url": "https://newyork.craigslist.org/search/brooklyn-ny/apa?lat=40.720&lon=-73.956&search_distance=1.0&min_bedrooms=3&max_price=7000&sort=date"
     },
     {
-      "name": "CL Brownstone Bklyn (Ft Greene/Prospect Hts/Bklyn Hts/Cobble/Boerum/Park Slope) 3BR+",
+      "name": "CL Brownstone Bklyn (Ft Greene/Clinton Hill/Prospect Hts/Bklyn Hts/Cobble/Boerum/Park Slope) 3BR+",
       "type": "craigslist",
-      "url": "https://newyork.craigslist.org/search/brooklyn-ny/apa?lat=40.686&lon=-73.978&search_distance=2.0&min_bedrooms=3&max_price=7000&sort=date"
+      "url": "https://newyork.craigslist.org/search/brooklyn-ny/apa?lat=40.684&lon=-73.981&search_distance=1.5&min_bedrooms=3&max_price=7000&sort=date"
     },
     {
-      "name": "CL Wburg/Greenpoint SUBLETS + lease takeovers 3BR+",
+      "name": "CL W.Wburg/S.Greenpoint SUBLETS + lease takeovers 3BR+",
       "type": "craigslist",
-      "url": "https://newyork.craigslist.org/search/brooklyn-ny/sub?lat=40.722&lon=-73.949&search_distance=1.6&min_bedrooms=3&max_price=7000&sort=date"
+      "url": "https://newyork.craigslist.org/search/brooklyn-ny/sub?lat=40.720&lon=-73.956&search_distance=1.0&min_bedrooms=3&max_price=7000&sort=date"
     },
     {
       "name": "CL Brownstone Bklyn SUBLETS + lease takeovers 3BR+",
       "type": "craigslist",
-      "url": "https://newyork.craigslist.org/search/brooklyn-ny/sub?lat=40.686&lon=-73.978&search_distance=2.0&min_bedrooms=3&max_price=7000&sort=date"
+      "url": "https://newyork.craigslist.org/search/brooklyn-ny/sub?lat=40.684&lon=-73.981&search_distance=1.5&min_bedrooms=3&max_price=7000&sort=date"
     },
     {
       "name": "CL Brooklyn 4BR+ (whole borough, wider net)",
