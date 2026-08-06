@@ -325,7 +325,7 @@ def load_config():
         return json.load(f)
 
 
-def run_cycle(config, conn, quiet_first_run=True):
+def run_cycle(config, conn, quiet_first_run=True, seed_only=False):
     filters = config.get("filters", {})
     total_new = 0
     first_run = conn.execute("SELECT COUNT(*) FROM listings").fetchone()[0] == 0
@@ -333,6 +333,8 @@ def run_cycle(config, conn, quiet_first_run=True):
     for source in config.get("sources", []):
         if source.get("enabled") is False:
             continue
+        if "type" not in source:
+            continue  # comment/marker entry (e.g. {"_scenario": ...})
         adapter = ADAPTERS.get(source.get("type"))
         if not adapter:
             print(f"[WARN] unknown source type: {source.get('type')}", file=sys.stderr)
@@ -354,18 +356,24 @@ def run_cycle(config, conn, quiet_first_run=True):
         for listing in fresh:
             record(conn, listing)
             total_new += 1
-            # On the very first run, seed the DB silently so you don't get
-            # blasted with 100 notifications for existing listings.
+            # Stay silent when (a) seeding on purpose (--seed, e.g. after adding
+            # new sources) or (b) the very first run on an empty DB — otherwise
+            # you'd get blasted with notifications for pre-existing listings.
+            if seed_only:
+                continue
             if not (first_run and quiet_first_run):
                 notify(config, listing)
                 time.sleep(1)  # be gentle with ntfy
 
         print(
             f"[{datetime.now():%H:%M:%S}] {source['name']}: "
-            f"{len(listings)} found, {len(fresh)} new"
+            f"{len(listings)} found, {len(fresh)} {'seeded' if seed_only else 'new'}"
         )
 
-    if first_run and quiet_first_run and total_new:
+    if seed_only and total_new:
+        print(f"[INFO] Seeded {total_new} current listings silently. "
+              f"Only listings newer than now will notify.")
+    elif first_run and quiet_first_run and total_new:
         print(f"[INFO] First run: seeded {total_new} existing listings silently. "
               f"You'll be notified about anything new from now on.")
 
@@ -374,6 +382,9 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--test", action="store_true", help="send test notification")
     parser.add_argument("--list", action="store_true", help="print seen listings")
+    parser.add_argument("--seed", action="store_true",
+                        help="record current listings as seen WITHOUT notifying "
+                             "(run once after adding/changing sources)")
     args = parser.parse_args()
 
     config = load_config()
@@ -394,6 +405,10 @@ def main():
             "ORDER BY first_seen DESC"
         ):
             print(" | ".join(str(c) for c in row))
+        return
+
+    if args.seed:
+        run_cycle(config, conn, seed_only=True)
         return
 
     run_cycle(config, conn)

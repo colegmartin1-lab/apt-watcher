@@ -1,18 +1,13 @@
 {
   "ntfy_topic": "",
   "filters": {
-    "max_price": 7000,
-    "min_price": 2500,
+    "max_price": 6000,
+    "min_price": 1000,
     "exclude_keywords": [
-      "studio",
-      "1br",
-      "1 bedroom",
-      "one bedroom",
-      "2br",
-      "2 bedroom",
       "roommate wanted",
       "room for rent",
-      "room available"
+      "room available",
+      "sublease your"
     ],
     "require_any_keywords": [],
     "_comment_exclude_locations": "Backstop for circle bleed: drops any listing whose Craigslist neighborhood tag contains one of these. Clinton Hill borders Bed-Stuy and Prospect Hts borders Crown Hts, so the search circles can't exclude these geographically without losing your targets. Border listings tagged e.g. 'clinton hill / bed-stuy' WILL be dropped here.",
@@ -32,34 +27,56 @@
       "prospect lefferts",
       "flatbush",
       "sunset park"
-    ]
+    ],
+    "_comment_bedrooms": "Bedroom counts are enforced per-source via Craigslist min_bedrooms/max_bedrooms URL params (reliable structured field), NOT keyword excludes, so we can mix 3BR/2BR/studio scenarios."
   },
   "_comment_sources": "Craigslist works reliably. Sources marked enabled:false actively block bots (403) - use their native saved-search alerts instead. See README.",
   "sources": [
     {
-      "name": "CL West Williamsburg / South Greenpoint 3BR+",
-      "type": "craigslist",
-      "url": "https://newyork.craigslist.org/search/brooklyn-ny/apa?lat=40.720&lon=-73.956&search_distance=1.0&min_bedrooms=3&max_price=7000&sort=date"
+      "_scenario": "A = the group (you + Emmet + gf): 2-3BR up to ~$6k. 3BR is the goal; 2BR only if big/with office, so capped a bit lower."
     },
     {
-      "name": "CL Brownstone Bklyn (Ft Greene/Clinton Hill/Prospect Hts/Bklyn Hts/Cobble/Boerum/Park Slope) 3BR+",
+      "name": "Group 3BR ≤$6k · W.Wburg/S.Greenpoint",
       "type": "craigslist",
-      "url": "https://newyork.craigslist.org/search/brooklyn-ny/apa?lat=40.684&lon=-73.981&search_distance=1.5&min_bedrooms=3&max_price=7000&sort=date"
+      "url": "https://newyork.craigslist.org/search/brooklyn-ny/apa?lat=40.720&lon=-73.956&search_distance=1.0&min_bedrooms=3&min_price=2500&max_price=6000&sort=date"
     },
     {
-      "name": "CL W.Wburg/S.Greenpoint SUBLETS + lease takeovers 3BR+",
+      "name": "Group 2BR ≤$5.5k · W.Wburg/S.Greenpoint",
       "type": "craigslist",
-      "url": "https://newyork.craigslist.org/search/brooklyn-ny/sub?lat=40.720&lon=-73.956&search_distance=1.0&min_bedrooms=3&max_price=7000&sort=date"
+      "url": "https://newyork.craigslist.org/search/brooklyn-ny/apa?lat=40.720&lon=-73.956&search_distance=1.0&min_bedrooms=2&max_bedrooms=2&min_price=2500&max_price=5500&sort=date"
     },
     {
-      "name": "CL Brownstone Bklyn SUBLETS + lease takeovers 3BR+",
+      "name": "Group 3BR ≤$6k · Brownstone Bklyn",
       "type": "craigslist",
-      "url": "https://newyork.craigslist.org/search/brooklyn-ny/sub?lat=40.684&lon=-73.981&search_distance=1.5&min_bedrooms=3&max_price=7000&sort=date"
+      "url": "https://newyork.craigslist.org/search/brooklyn-ny/apa?lat=40.684&lon=-73.981&search_distance=1.5&min_bedrooms=3&min_price=2500&max_price=6000&sort=date"
     },
     {
-      "name": "CL Brooklyn 4BR+ (whole borough, wider net)",
+      "name": "Group 2BR ≤$5.5k · Brownstone Bklyn",
       "type": "craigslist",
-      "url": "https://newyork.craigslist.org/search/brk/apa?min_bedrooms=4&max_price=7000&sort=date"
+      "url": "https://newyork.craigslist.org/search/brooklyn-ny/apa?lat=40.684&lon=-73.981&search_distance=1.5&min_bedrooms=2&max_bedrooms=2&min_price=2500&max_price=5500&sort=date"
+    },
+    {
+      "name": "Group 2-3BR sublet ≤$6k · W.Wburg/S.Greenpoint",
+      "type": "craigslist",
+      "url": "https://newyork.craigslist.org/search/brooklyn-ny/sub?lat=40.720&lon=-73.956&search_distance=1.0&min_bedrooms=2&min_price=2000&max_price=6000&sort=date"
+    },
+    {
+      "name": "Group 2-3BR sublet ≤$6k · Brownstone Bklyn",
+      "type": "craigslist",
+      "url": "https://newyork.craigslist.org/search/brooklyn-ny/sub?lat=40.684&lon=-73.981&search_distance=1.5&min_bedrooms=2&min_price=2000&max_price=6000&sort=date"
+    },
+    {
+      "_scenario": "B = solo fallback (just you): studio or 1BR under $2.5k in the same neighborhoods. Reluctant option."
+    },
+    {
+      "name": "SOLO studio/1BR ≤$2.5k · W.Wburg/S.Greenpoint",
+      "type": "craigslist",
+      "url": "https://newyork.craigslist.org/search/brooklyn-ny/apa?lat=40.720&lon=-73.956&search_distance=1.0&max_bedrooms=1&min_price=1000&max_price=2500&sort=date"
+    },
+    {
+      "name": "SOLO studio/1BR ≤$2.5k · Brownstone Bklyn",
+      "type": "craigslist",
+      "url": "https://newyork.craigslist.org/search/brooklyn-ny/apa?lat=40.684&lon=-73.981&search_distance=1.5&max_bedrooms=1&min_price=1000&max_price=2500&sort=date"
     },
     {
       "name": "RentHop Williamsburg 3BR",
