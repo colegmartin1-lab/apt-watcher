@@ -1,5 +1,7 @@
 {
   "ntfy_topic": "",
+  "_comment_max_age": "Suppress notifications for listings whose Craigslist posting date is older than this many days ('blatantly stale'). Only fires when the date is known; unknown-age listings still notify. Set null/0 to disable.",
+  "notify_max_age_days": 14,
   "filters": {
     "max_price": 6000,
     "min_price": 1000,

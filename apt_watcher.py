@@ -17,7 +17,7 @@ import re
 import sqlite3
 import sys
 import time
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urljoin
 
@@ -105,6 +105,32 @@ def parse_price(text):
         return int(m.group(1).replace(",", ""))
     except ValueError:
         return None
+
+
+def fetch_listing_date(url, timeout=15):
+    """Posting datetime from a Craigslist detail page, or None if unavailable.
+    The search-results page carries no dates, so we read the listing page
+    (only ever done once per listing, when it's first seen)."""
+    try:
+        html = SESSION.get(url, timeout=timeout).text
+        t = BeautifulSoup(html, "html.parser").select_one("time[datetime]")
+        if not t or not t.get("datetime"):
+            return None
+        dt = datetime.fromisoformat(t["datetime"])
+        return dt if dt.tzinfo else dt.replace(tzinfo=timezone.utc)
+    except Exception:
+        return None
+
+
+def is_stale(url, max_age_days):
+    """True only when we can prove the posting is older than max_age_days.
+    Unknown age -> False (never suppress on uncertainty)."""
+    if not max_age_days or "craigslist.org" not in url:
+        return False
+    dt = fetch_listing_date(url)
+    if dt is None:
+        return False
+    return (datetime.now(timezone.utc) - dt).days > max_age_days
 
 
 def passes_filters(listing, filters):
@@ -353,6 +379,8 @@ def run_cycle(config, conn, quiet_first_run=True, seed_only=False):
             if is_new(conn, l["url"]) and passes_filters(l, filters)
         ]
 
+        max_age = config.get("notify_max_age_days")
+        stale_ct = 0
         for listing in fresh:
             record(conn, listing)
             total_new += 1
@@ -361,13 +389,20 @@ def run_cycle(config, conn, quiet_first_run=True, seed_only=False):
             # you'd get blasted with notifications for pre-existing listings.
             if seed_only:
                 continue
-            if not (first_run and quiet_first_run):
-                notify(config, listing)
-                time.sleep(1)  # be gentle with ntfy
+            if first_run and quiet_first_run:
+                continue
+            # Suppress blatantly stale posts, but keep them recorded so we don't
+            # re-check their date every cycle. Unknown age still notifies.
+            if is_stale(listing["url"], max_age):
+                stale_ct += 1
+                continue
+            notify(config, listing)
+            time.sleep(1)  # be gentle with ntfy
 
+        stale_note = f", {stale_ct} stale-skipped" if stale_ct else ""
         print(
             f"[{datetime.now():%H:%M:%S}] {source['name']}: "
-            f"{len(listings)} found, {len(fresh)} {'seeded' if seed_only else 'new'}"
+            f"{len(listings)} found, {len(fresh)} {'seeded' if seed_only else 'new'}{stale_note}"
         )
 
     if seed_only and total_new:
