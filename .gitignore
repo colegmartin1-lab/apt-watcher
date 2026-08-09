@@ -4,4 +4,5 @@ __pycache__/
 # props_vs_adp.py generates these via --init; regenerate rather than commit
 props.csv
 adp.csv
+team_totals.csv
 board.csv

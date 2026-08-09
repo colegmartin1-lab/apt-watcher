@@ -23,6 +23,7 @@ Usage
 """
 
 import argparse
+import os
 import sys
 from statistics import NormalDist
 
@@ -63,6 +64,24 @@ CV = {
 YPR = {"RB": 7.5, "WR": 12.5, "TE": 10.0, "QB": 0.0}
 
 FLEX_POS = ("RB", "WR", "TE")
+
+# --- team-total reconciliation knobs ---------------------------------------
+# The sharper team market (win totals, season point totals) disciplines the
+# softer individual-prop market. These constants back a team's implied volume
+# out of its point total so the summed player props can be checked against it.
+LEAGUE_AVG_PF = 380.0      # league-average season points scored (~22.4/gm)
+PTS_PER_WIN = 26.0         # season points per win above/below the 8.5 baseline
+POINTS_PER_OFF_TD = 6.95   # offensive TD + expected PAT
+# Share of team points from offensive TDs (remainder: FGs, safeties, D/ST).
+# NOTE: unlike the two identity checks, the point-total anchor is only as good
+# as this constant. Calibrate it to your scoring environment before trusting
+# TD_HOT; the ry_ratio and td_id_ratio checks are assumption-free and don't
+# depend on it.
+OFF_TD_SHARE = 0.72
+
+# Reconciliation flag thresholds (ratios of prop-sum to identity/anchor).
+RECO_TOL = 0.06            # |ratio - 1| within this => reconciles
+RECO_HOT = 0.12            # ratio above 1+this => individual lines run hot
 
 # ---------------------------------------------------------------------------
 
@@ -204,6 +223,123 @@ def build_board(props_path, adp_path, teams, roster, flex):
     return board, starters, flex_alloc
 
 
+# --- team-total reconciliation ---------------------------------------------
+
+
+def team_prop_aggregates(players):
+    """Sum each team's propped means into the quantities the identities touch."""
+    fields = ("pass_yds", "rec_yds", "pass_td", "rec_td", "rush_td")
+    agg = {}
+    for name, p in players.items():
+        t = agg.setdefault(p["team"], {f: 0.0 for f in fields})
+        for m, mu in p["means"].items():
+            if m in fields:
+                t[m] += mu
+    return agg
+
+
+def load_team_totals(path):
+    """Read team win totals and season point totals.
+
+    points_for is optional; when absent it is backed out of the win total via
+    the documented linear map so a team line always has a scoring anchor.
+    """
+    df = pd.read_csv(path)
+    if "team" not in df.columns:
+        sys.exit(f"team totals file {path} needs a 'team' column")
+    if "win_total" not in df.columns:
+        df["win_total"] = float("nan")
+    if "points_for" not in df.columns:
+        df["points_for"] = float("nan")
+    out = {}
+    for _, r in df.iterrows():
+        wt = r["win_total"]
+        pf = r["points_for"]
+        if pd.isna(pf) and not pd.isna(wt):
+            pf = LEAGUE_AVG_PF + (float(wt) - 8.5) * PTS_PER_WIN  # implied from wins
+        out[str(r["team"]).strip()] = {"win_total": wt, "points_for": pf}
+    return out
+
+
+def _ratio(num, den):
+    return num / den if den else float("nan")
+
+
+def reconcile(players, totals):
+    """Check each team's summed props against the market identities and the
+    point-total anchor. Returns (report_df, {team: flag})."""
+    agg = team_prop_aggregates(players)
+    rows = []
+    for team, a in sorted(agg.items()):
+        tot = totals.get(team, {})
+        pf = tot.get("points_for", float("nan"))
+
+        # Identity 1: team passing yards == team receiving yards.
+        ry_ratio = _ratio(a["rec_yds"], a["pass_yds"])
+        # Identity 2: team passing TDs == team receiving TDs.
+        td_id_ratio = _ratio(a["rec_td"], a["pass_td"])
+        # Anchor: offensive TDs implied by the point total vs summed prop TDs.
+        # Passing TDs == receiving TDs, so fall back to rec_td when the QB
+        # itself isn't propped, keeping the anchor usable on partial rosters.
+        pass_td_est = a["pass_td"] if a["pass_td"] > 0 else a["rec_td"]
+        prop_off_td = a["rush_td"] + pass_td_est  # rushing + passing scores
+        impl_off_td = (float(pf) * OFF_TD_SHARE / POINTS_PER_OFF_TD
+                       if not pd.isna(pf) else float("nan"))
+        td_anchor = _ratio(prop_off_td, impl_off_td)
+
+        # Every flag is an OVER-allocation flag. Under-allocation (receivers
+        # summing to less than the QB, prop TDs below the point-total anchor) is
+        # just depth you didn't prop, not a wrong line — so it never flags.
+        flags = []
+        if not pd.isna(ry_ratio) and ry_ratio > 1 + RECO_TOL:
+            flags.append("REC>PASS")
+        if not pd.isna(td_id_ratio) and td_id_ratio > 1 + RECO_HOT:
+            flags.append("RECTD>PASSTD")
+        if not pd.isna(td_anchor) and td_anchor > 1 + RECO_HOT:
+            flags.append("TD_HOT")
+
+        rows.append({
+            "team": team,
+            "win_tot": tot.get("win_total", float("nan")),
+            "pf": pf,
+            "pass_yds": a["pass_yds"], "rec_yds": a["rec_yds"], "ry_ratio": ry_ratio,
+            "pass_td": a["pass_td"], "rec_td": a["rec_td"], "td_id_ratio": td_id_ratio,
+            "prop_offtd": prop_off_td, "impl_offtd": impl_off_td, "td_anchor": td_anchor,
+            "flags": ",".join(flags) if flags else "ok",
+        })
+    report = pd.DataFrame(rows)
+    team_flag = dict(zip(report["team"], report["flags"]))
+    return report, team_flag
+
+
+def print_reconcile_report(report):
+    show = report.copy()
+    for c in ("pf", "pass_yds", "rec_yds", "pass_td", "rec_td",
+              "prop_offtd", "impl_offtd"):
+        show[c] = show[c].round(1)
+    for c in ("ry_ratio", "td_id_ratio", "td_anchor"):
+        show[c] = show[c].round(2)
+    show["win_tot"] = show["win_tot"].round(1)
+    cols = ["team", "win_tot", "pf", "pass_yds", "rec_yds", "ry_ratio",
+            "pass_td", "rec_td", "td_id_ratio", "prop_offtd", "impl_offtd",
+            "td_anchor", "flags"]
+    print("\n=== Team-total reconciliation "
+          "(sharper team market vs summed player props) ===")
+    with pd.option_context("display.max_rows", None, "display.width", 200):
+        print(show[cols].to_string(index=False))
+    flagged = report[report["flags"] != "ok"]
+    if len(flagged):
+        print(f"\n{len(flagged)} team(s) do not reconcile — the individual lines "
+              "on these teams are the suspect ones:")
+        print("  " + ", ".join(f"{r.team} [{r.flags}]" for r in flagged.itertuples()))
+    else:
+        print("\nAll teams reconcile within tolerance.")
+    print("  flags are over-allocation only; under-allocation is unpropped depth, not a bad line")
+    print("  ry_ratio    = sum(rec_yds)/QB pass_yds   (>1.06 => receivers over-propped)")
+    print("  td_id_ratio = sum(rec_td)/QB pass_td     (>1.12 => receiver TD lines run hot)")
+    print("  td_anchor   = prop off TDs / TDs implied by point total (>1.12 => team runs hot)")
+
+
 # --- templates -------------------------------------------------------------
 
 PROPS_TEMPLATE = """player,pos,team,market,line,over,under
@@ -252,12 +388,25 @@ Patrick Mahomes,25,1.0
 """
 
 
+TEAM_TOTALS_TEMPLATE = """team,win_total,points_for
+SF,11.5,480
+ATL,9.5,410
+MIA,10.5,455
+DAL,10.5,470
+DET,11.5,500
+KC,11.5,460
+BUF,11.5,485
+"""
+
+
 def write_templates():
     with open("props.csv", "w") as f:
         f.write(PROPS_TEMPLATE)
     with open("adp.csv", "w") as f:
         f.write(ADP_TEMPLATE)
-    print("wrote props.csv and adp.csv")
+    with open("team_totals.csv", "w") as f:
+        f.write(TEAM_TOTALS_TEMPLATE)
+    print("wrote props.csv, adp.csv, and team_totals.csv")
     print("  edit them, then run:  python props_vs_adp.py --teams 12 --rb 2 --wr 2 --flex 1")
 
 
@@ -275,6 +424,10 @@ def main(argv=None):
     ap.add_argument("--wr", type=int, default=2)
     ap.add_argument("--te", type=int, default=1)
     ap.add_argument("--flex", type=int, default=1)
+    ap.add_argument("--team-totals", default="team_totals.csv",
+                    help="team win/point totals for reconciliation (if present)")
+    ap.add_argument("--no-reconcile", action="store_true",
+                    help="skip the team-total reconciliation pass")
     ap.add_argument("--out", default=None, help="optional CSV path for the full board")
     args = ap.parse_args(argv)
 
@@ -287,6 +440,16 @@ def main(argv=None):
         args.props, args.adp, args.teams, roster, args.flex
     )
 
+    # Team-total reconciliation: flag board rows whose team's props don't
+    # reconcile with the sharper team market, so you know which VOR values
+    # rest on the soft individual lines.
+    team_flag = {}
+    report = None
+    if not args.no_reconcile and os.path.exists(args.team_totals):
+        totals = load_team_totals(args.team_totals)
+        report, team_flag = reconcile(load_props(args.props), totals)
+    board["team_reco"] = board["team"].map(team_flag).fillna("-")
+
     print(f"\nLeague: {args.teams} teams | starters/team "
           f"QB{args.qb} RB{args.rb} WR{args.wr} TE{args.te} FLEX{args.flex}")
     print(f"Flex allocated greedily across RB/WR/TE: {flex_alloc}\n")
@@ -297,12 +460,17 @@ def main(argv=None):
     show["gp_adj"] = show["gp_adj"].round(2)
     show["adp_rank"] = show["adp_rank"].astype("Int64")
     cols = ["vor_rank", "adp_rank", "edge", "player", "pos", "team",
-            "proj", "gp_adj", "proj_adj", "repl", "vor", "rec_imputed"]
-    with pd.option_context("display.max_rows", None, "display.width", 160):
+            "proj", "gp_adj", "proj_adj", "repl", "vor", "rec_imputed", "team_reco"]
+    with pd.option_context("display.max_rows", None, "display.width", 180):
         print(show[cols].to_string(index=False))
 
     print("\nedge = adp_rank - vor_rank  (positive => the model ranks him ahead "
           "of where ADP does; a value target)")
+    print("team_reco = team-total reconciliation flag; anything but 'ok' means "
+          "this row rests on lines the team market disputes")
+
+    if report is not None:
+        print_reconcile_report(report)
     if args.out:
         board.to_csv(args.out, index=False)
         print(f"\nfull board written to {args.out}")
