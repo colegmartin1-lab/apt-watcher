@@ -146,6 +146,15 @@ def passes_filters(listing, filters):
         if kw.lower() in title:
             return False
 
+    # Some sources (Reddit, Listings Project) carry the neighborhood in the
+    # title/slug rather than a structured field, so they require an explicit
+    # neighborhood match instead of relying on a geo search radius.
+    required_loc = filters.get("require_any_locations", [])
+    if required_loc:
+        hay = f"{title} {(listing.get('location') or '').lower()}"
+        if not any(kw.lower() in hay for kw in required_loc):
+            return False
+
     # Neighborhood backstop: circles can't cleanly exclude Crown Heights /
     # Bed-Stuy without also dropping Clinton Hill / Prospect Heights, so we
     # also drop by the listing's location tag. Only fires on an affirmative
@@ -278,9 +287,107 @@ def scrape_generic(source):
     return listings
 
 
+UUID_SUFFIX = re.compile(
+    r"-[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+)
+
+
+def scrape_listingsproject(source):
+    """
+    Listings Project (weekly NYC newsletter, listingsproject.com).
+
+    Worth having because it's the one working source that covers Manhattan —
+    Craigslist's Manhattan geo-search is broken, so West Village / SoHo can
+    only come from here. Cards are image-only links, but the URL slug carries
+    the neighborhood and bedroom count, e.g.
+        /listings/west-village-1-bedroom-apartment-<uuid>
+    Price only exists on the detail page, so we fetch it once per listing.
+    """
+    html = fetch(source["url"])
+    soup = BeautifulSoup(html, "html.parser")
+    listings, seen = [], set()
+
+    for a in soup.find_all("a", href=True):
+        if "/listings/" not in a["href"]:
+            continue
+        full = urljoin(source["url"], a["href"]).split("?")[0]
+        if full in seen:
+            continue
+        seen.add(full)
+
+        slug = UUID_SUFFIX.sub("", full.split("/listings/")[-1])
+        title = slug.replace("-", " ").strip()
+
+        price = ""
+        try:
+            detail = SESSION.get(full, timeout=15)
+            if detail.status_code == 200:
+                text = BeautifulSoup(detail.text, "html.parser").get_text(" ", strip=True)
+                m = PRICE_RE.search(text)
+                if m:
+                    price = m.group(0).replace(" ", "")
+            time.sleep(0.3)  # be a polite guest
+        except requests.RequestException:
+            pass  # price stays unknown; filters treat that as "don't reject"
+
+        listings.append(
+            {
+                "url": full,
+                "title": title[:140],
+                "price": price,
+                "location": slug.replace("-", " "),  # slug names the neighborhood
+                "source": source["name"],
+            }
+        )
+
+    return listings
+
+
+REDDIT_ENTRY_RE = re.compile(r"<entry>(.*?)</entry>", re.S)
+REDDIT_FIELD_RE = {
+    "title": re.compile(r"<title>(.*?)</title>", re.S),
+    "link": re.compile(r'<link[^>]*href="([^"]+)"'),
+}
+
+
+def scrape_reddit(source):
+    """
+    Reddit via public RSS (no auth, no API key). High-noise: most posts are
+    'ISO' requests, rants, and news rather than listings, so config supplies
+    require_any_keywords to keep only posts that look like a real offer in a
+    neighborhood we care about.
+
+    Reddit rate-limits hard (429) — one feed per cycle, and Blocked/errors
+    are swallowed upstream so a throttle never breaks the run.
+    """
+    xml = fetch(source["url"])
+    listings = []
+
+    for chunk in REDDIT_ENTRY_RE.findall(xml):
+        t = REDDIT_FIELD_RE["title"].search(chunk)
+        l = REDDIT_FIELD_RE["link"].search(chunk)
+        if not t or not l:
+            continue
+        title = re.sub(r"&amp;", "&", t.group(1)).strip()
+        m = PRICE_RE.search(title)
+        listings.append(
+            {
+                "url": l.group(1).split("?")[0],
+                "title": title[:140],
+                "price": m.group(0).replace(" ", "") if m else "",
+                "location": title,  # neighborhood, when named, is in the title
+                "source": source["name"],
+            }
+        )
+
+    return listings
+
+
 ADAPTERS = {
     "craigslist": scrape_craigslist,
     "generic": scrape_generic,
+    "listingsproject": scrape_listingsproject,
+    "reddit": scrape_reddit,
 }
 
 
@@ -374,9 +481,11 @@ def run_cycle(config, conn, quiet_first_run=True, seed_only=False):
             print(f"[WARN] {source['name']}: {exc}", file=sys.stderr)
             continue
 
+        # A source may tighten (or loosen) the global filters for itself.
+        src_filters = {**filters, **source.get("filters", {})}
         fresh = [
             l for l in listings
-            if is_new(conn, l["url"]) and passes_filters(l, filters)
+            if is_new(conn, l["url"]) and passes_filters(l, src_filters)
         ]
 
         max_age = config.get("notify_max_age_days")

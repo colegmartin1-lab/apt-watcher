@@ -53,6 +53,87 @@
       "name": "Studio/1BR ≤$3k · Brownstone Bklyn (Ft Greene/Bklyn Hts/Cobble/Boerum/Prospect Hts/Park Slope)",
       "type": "craigslist",
       "url": "https://newyork.craigslist.org/search/brooklyn-ny/apa?lat=40.685&lon=-73.982&search_distance=1.4&max_bedrooms=1&min_price=1000&max_price=3000&sort=date"
+    },
+    {
+      "_scenario": "Non-Craigslist sources. Listings Project is the ONLY working source that reaches Manhattan (West Village/SoHo) — Craigslist's Manhattan geo-search is broken. Reddit is high-noise so it requires an explicit neighborhood + studio/1BR keyword match."
+    },
+    {
+      "name": "Listings Project · NYC (incl. West Village / SoHo)",
+      "type": "listingsproject",
+      "url": "https://www.listingsproject.com/real-estate/new-york-city",
+      "filters": {
+        "require_any_locations": [
+          "greenpoint",
+          "williamsburg",
+          "park slope",
+          "fort greene",
+          "boerum hill",
+          "prospect heights",
+          "brooklyn heights",
+          "cobble hill",
+          "west village",
+          "soho",
+          "nolita",
+          "carroll gardens"
+        ],
+        "exclude_keywords": [
+          "roommate wanted",
+          "room for rent",
+          "room available",
+          "2 bdrm",
+          "2-bdrm",
+          "2 br",
+          "2-br",
+          "two bedroom",
+          "3br",
+          "3 bdrm",
+          "3 bedroom",
+          "two-bedroom",
+          "loft share",
+          "art studio",
+          "office"
+        ]
+      }
+    },
+    {
+      "name": "Reddit · r/NYCapartments",
+      "type": "reddit",
+      "url": "https://www.reddit.com/r/NYCapartments/new/.rss",
+      "filters": {
+        "require_any_locations": [
+          "greenpoint",
+          "williamsburg",
+          "park slope",
+          "fort greene",
+          "boerum hill",
+          "prospect heights",
+          "brooklyn heights",
+          "cobble hill",
+          "west village",
+          "soho",
+          "nolita",
+          "carroll gardens"
+        ],
+        "exclude_keywords": [
+          "iso ",
+          "looking for",
+          "in search of",
+          "[iso]",
+          "wanted",
+          "roommate",
+          "room for rent",
+          "advice",
+          "help",
+          "question",
+          "do not move",
+          "scam",
+          "review",
+          "2 bed",
+          "3 bed",
+          "2br",
+          "3br"
+        ]
+      }
     }
   ],
   "_comment_topic": "Topic blank here; set via NTFY_TOPIC repo secret."
