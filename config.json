@@ -3,7 +3,7 @@
   "_comment_max_age": "Suppress notifications for listings whose Craigslist posting date is older than this many days ('blatantly stale'). Only fires when the date is known; unknown-age listings still notify. Set null/0 to disable.",
   "notify_max_age_days": 14,
   "filters": {
-    "max_price": 6000,
+    "max_price": 3000,
     "min_price": 1000,
     "exclude_keywords": [
       "roommate wanted",
@@ -12,7 +12,7 @@
       "sublease your"
     ],
     "require_any_keywords": [],
-    "_comment_exclude_locations": "Backstop for circle bleed: drops any listing whose Craigslist neighborhood tag contains one of these. Clinton Hill borders Bed-Stuy and Prospect Hts borders Crown Hts, so the search circles can't exclude these geographically without losing your targets. Border listings tagged e.g. 'clinton hill / bed-stuy' WILL be dropped here.",
+    "_comment_exclude_locations": "Backstop for circle bleed. Studios/1BR only, Brooklyn-scoped. Clinton Hill/Downtown/DUMBO/Gowanus added since they're NOT on Cole's list. Border listings tagged with a wanted+unwanted hood get dropped.",
     "exclude_locations": [
       "crown heights",
       "bushwick",
@@ -23,71 +23,37 @@
       "bedford-stuyvesant",
       "east williamsburg",
       "east-williamsburg",
+      "clinton hill",
+      "downtown brooklyn",
+      "dumbo",
+      "vinegar hill",
+      "navy yard",
       "long island city",
       "east village",
       "ridgewood",
       "prospect lefferts",
+      "plg",
       "flatbush",
-      "sunset park"
+      "sunset park",
+      "gowanus"
     ],
     "_comment_bedrooms": "Bedroom counts are enforced per-source via Craigslist min_bedrooms/max_bedrooms URL params (reliable structured field), NOT keyword excludes, so we can mix 3BR/2BR/studio scenarios."
   },
   "_comment_sources": "Craigslist works reliably. Sources marked enabled:false actively block bots (403) - use their native saved-search alerts instead. See README.",
   "sources": [
     {
-      "_scenario": "A = the group (you + Emmet + Lou): 2-3BR up to ~$6k, GREENPOINT/WILLIAMSBURG ONLY (north circle). 3BR is the goal; 2BR only if big/with office, so capped a bit lower. No sublets."
+      "_scenario": "SOLO — studio/1BR under $3k for Cole. Brooklyn via Craigslist. West Village + SoHo (Manhattan) are NOT here: Craigslist's Manhattan geo-search is broken, so those go through StreetEasy/Zillow email alerts -> Gmail forward -> this ntfy topic. See README."
     },
     {
-      "name": "Group 3BR ≤$6k · Greenpoint/Williamsburg",
+      "name": "Studio/1BR ≤$3k · Greenpoint / N-W Williamsburg",
       "type": "craigslist",
-      "url": "https://newyork.craigslist.org/search/brooklyn-ny/apa?lat=40.720&lon=-73.956&search_distance=1.0&min_bedrooms=3&min_price=2500&max_price=6000&sort=date"
+      "url": "https://newyork.craigslist.org/search/brooklyn-ny/apa?lat=40.723&lon=-73.957&search_distance=1.0&max_bedrooms=1&min_price=1000&max_price=3000&sort=date"
     },
     {
-      "name": "Group 2BR ≤$5.5k · Greenpoint/Williamsburg",
+      "name": "Studio/1BR ≤$3k · Brownstone Bklyn (Ft Greene/Bklyn Hts/Cobble/Boerum/Prospect Hts/Park Slope)",
       "type": "craigslist",
-      "url": "https://newyork.craigslist.org/search/brooklyn-ny/apa?lat=40.720&lon=-73.956&search_distance=1.0&min_bedrooms=2&max_bedrooms=2&min_price=2500&max_price=5500&sort=date"
-    },
-    {
-      "_scenario": "B = solo fallback (just you): ANY bedroom count under $2.5k (studio/1BR expected, but catch a 2BR miracle too). Wider geography: both circles = Wburg/Greenpoint + Fort Greene/Prospect Hts/Park Slope/Cobble Hill/Bklyn Hts."
-    },
-    {
-      "name": "SOLO any-bed ≤$2.5k · Greenpoint/Williamsburg",
-      "type": "craigslist",
-      "url": "https://newyork.craigslist.org/search/brooklyn-ny/apa?lat=40.720&lon=-73.956&search_distance=1.0&min_price=1000&max_price=2500&sort=date"
-    },
-    {
-      "name": "SOLO any-bed ≤$2.5k · Brownstone Bklyn",
-      "type": "craigslist",
-      "url": "https://newyork.craigslist.org/search/brooklyn-ny/apa?lat=40.684&lon=-73.981&search_distance=1.5&min_price=1000&max_price=2500&sort=date"
-    },
-    {
-      "name": "RentHop Williamsburg 3BR",
-      "type": "generic",
-      "enabled": false,
-      "url": "https://www.renthop.com/apartments-for-rent/williamsburg-new-york-ny/3-bedroom",
-      "link_pattern": "renthop\\.com/listings/"
-    },
-    {
-      "name": "RentHop Greenpoint 3BR",
-      "type": "generic",
-      "enabled": false,
-      "url": "https://www.renthop.com/apartments-for-rent/greenpoint-new-york-ny/3-bedroom",
-      "link_pattern": "renthop\\.com/listings/"
-    },
-    {
-      "name": "RentHop Park Slope 3BR",
-      "type": "generic",
-      "enabled": false,
-      "url": "https://www.renthop.com/apartments-for-rent/park-slope-new-york-ny/3-bedroom",
-      "link_pattern": "renthop\\.com/listings/"
-    },
-    {
-      "name": "Leasebreak Williamsburg",
-      "type": "generic",
-      "enabled": false,
-      "url": "https://www.leasebreak.com/short-term-rentals/williamsburg-brooklyn",
-      "link_pattern": "leasebreak\\.com/(listing|lease)"
+      "url": "https://newyork.craigslist.org/search/brooklyn-ny/apa?lat=40.685&lon=-73.982&search_distance=1.4&max_bedrooms=1&min_price=1000&max_price=3000&sort=date"
     }
   ],
-  "_comment_topic": "Topic intentionally blank in this public repo; set via NTFY_TOPIC repo secret."
+  "_comment_topic": "Topic blank here; set via NTFY_TOPIC repo secret."
 }
