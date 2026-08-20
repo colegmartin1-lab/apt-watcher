@@ -317,6 +317,14 @@ UUID_SUFFIX = re.compile(
     r"-[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
 )
 
+# Listings Project pages quote several rates at once (per night / per week /
+# per month), so grabbing the first dollar figure reads a nightly rate as if
+# it were rent. Always pull the monthly figure specifically.
+MONTHLY_RE = re.compile(r"\$\s*([\d,]{3,7})\s*(?:/|per\s+)\s*month", re.I)
+SHORT_TERM_RE = re.compile(
+    r"(\$\s*[\d,]+\s*(?:/|per\s+)\s*(?:night|week))|nightly|minimum stay", re.I
+)
+
 
 def scrape_listingsproject(source):
     """
@@ -344,14 +352,18 @@ def scrape_listingsproject(source):
         slug = UUID_SUFFIX.sub("", full.split("/listings/")[-1])
         title = slug.replace("-", " ").strip()
 
-        price = ""
+        price, terms = "", ""
         try:
             detail = SESSION.get(full, timeout=15)
             if detail.status_code == 200:
                 text = BeautifulSoup(detail.text, "html.parser").get_text(" ", strip=True)
-                m = PRICE_RE.search(text)
+                m = MONTHLY_RE.search(text)
                 if m:
-                    price = m.group(0).replace(" ", "")
+                    price = "$" + m.group(1)
+                # Nightly/weekly rates mean this is a furnished short-stay, not
+                # a lease. Tag it so config can filter it out by location.
+                if SHORT_TERM_RE.search(text):
+                    terms = " short-term-rental"
             time.sleep(0.3)  # be a polite guest
         except requests.RequestException:
             pass  # price stays unknown; filters treat that as "don't reject"
@@ -361,7 +373,8 @@ def scrape_listingsproject(source):
                 "url": full,
                 "title": title[:140],
                 "price": price,
-                "location": slug.replace("-", " "),  # slug names the neighborhood
+                # slug names the neighborhood; terms flag short-stay rentals
+                "location": slug.replace("-", " ") + terms,
                 "source": source["name"],
             }
         )
