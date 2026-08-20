@@ -1,2 +1,5 @@
 requests>=2.31
 beautifulsoup4>=4.12
+# Listings Project (and others) serve Content-Encoding: br; without this,
+# requests silently returns undecodable bytes and adapters find 0 listings.
+brotli>=1.1
