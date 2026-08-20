@@ -15,7 +15,10 @@ concurrency:
 jobs:
   poll:
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    # Both trackers run in one job so their DB commits can't race each other.
+    # Bumped from 8m: the sublets tracker fetches detail pages from Sublet.com
+    # (slow, ~750KB pages) and Listings Project.
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
 
@@ -26,14 +29,23 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: poll sources
+      - name: poll long-term rentals
         run: python apt_watcher.py
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
 
-      - name: persist seen-listings DB
+      # Separate config, DB and topic, so sublet alerts land in their own feed.
+      # always() keeps a failure in either tracker from silencing the other.
+      - name: poll sublets
+        if: always()
+        run: python apt_watcher.py --config config.sublets.json --db seen_sublets.db
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC_SUBLETS }}
+
+      - name: persist seen-listings DBs
+        if: always()
         run: |
           git config user.name "apt-watcher-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add seen_listings.db
+          git add seen_listings.db seen_sublets.db
           git diff --cached --quiet || { git commit -m "update seen listings"; git push; }

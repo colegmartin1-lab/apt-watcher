@@ -8,6 +8,10 @@ Usage:
     python3 apt_watcher.py            # run one poll cycle
     python3 apt_watcher.py --test     # send a test notification
     python3 apt_watcher.py --list     # show everything seen so far
+
+One script drives several independent trackers. Each gets its own config +
+DB (and usually its own ntfy topic) so their notifications never mix:
+    python3 apt_watcher.py --config config.sublets.json --db seen_sublets.db
 """
 
 import argparse
@@ -25,6 +29,9 @@ import requests
 from bs4 import BeautifulSoup
 
 BASE_DIR = Path(__file__).resolve().parent
+# Defaults for the original (long-term rentals) tracker. Both are overridable
+# with --config/--db so additional trackers can run from this same script
+# without their DBs or notifications bleeding into each other.
 CONFIG_PATH = BASE_DIR / "config.json"
 DB_PATH = BASE_DIR / "seen_listings.db"
 
@@ -146,6 +153,13 @@ def passes_filters(listing, filters):
         if kw.lower() in title:
             return False
 
+    # Some rejects are shapes rather than phrases -- "9 Days:", "Oct 1-15",
+    # "2 wks" all mean "shorter than a month" and there are too many spellings
+    # to list as substrings.
+    for pat in filters.get("exclude_regex", []):
+        if re.search(pat, title, re.I):
+            return False
+
     # Some sources (Reddit, Listings Project) carry the neighborhood in the
     # title/slug rather than a structured field, so they require an explicit
     # neighborhood match instead of relying on a geo search radius.
@@ -170,6 +184,18 @@ def passes_filters(listing, filters):
         return False
 
     return True
+
+
+def is_preferred(listing, filters):
+    """True when the listing explicitly advertises something we're after
+    (e.g. 'month to month'). Not a filter -- requiring the phrase would drop
+    most real listings, since plenty of good ones just never say it. It only
+    decides whether the push gets a highlight marker."""
+    prefer = filters.get("prefer_keywords", [])
+    if not prefer:
+        return False
+    hay = f"{(listing.get('title') or '')} {(listing.get('detail') or '')}".lower()
+    return any(kw.lower() in hay for kw in prefer)
 
 
 # --------------------------------------------------------------- adapters ---
@@ -343,6 +369,75 @@ def scrape_listingsproject(source):
     return listings
 
 
+SUBLETCOM_PROP_RE = re.compile(r"sublet\.com/property/\d+")
+SUBLETCOM_HOOD_RE = re.compile(r"[Rr]ental listing in ([^.]+?)\.")
+
+
+def scrape_sublet_com(source):
+    """
+    Sublet.com -- one of the few short-term sites that doesn't 403 us.
+
+    Its cards are the best-structured data of any source here: each one spells
+    out the unit type ("Apartment" vs "Room Rental") and the term ("Month to
+    Month" vs "Min 6 Months"), which are exactly the two things that decide
+    whether a sublet is worth seeing. Both land in the title so the ordinary
+    keyword filters can act on them.
+
+    The catch is that the listing page is borough-wide with no neighborhood on
+    the card, so we fetch each detail page once for its "Rental listing in
+    <neighborhood>, Brooklyn." line and filter on that. The page is heavy and
+    slow, hence the longer timeout.
+    """
+    html = fetch(source["url"], timeout=source.get("timeout", 45))
+    soup = BeautifulSoup(html, "html.parser")
+    listings, seen = [], set()
+
+    for a in soup.find_all("a", href=True):
+        if not SUBLETCOM_PROP_RE.search(a["href"]):
+            continue
+        full = a["href"].split("?")[0].replace("http://", "https://")
+        if full in seen:
+            continue
+        seen.add(full)
+
+        # The link itself is an image; the useful text lives on the card, so
+        # walk up until an ancestor shows a price.
+        card, node = "", a
+        for _ in range(5):
+            node = node.parent
+            if node is None:
+                break
+            card = node.get_text(" ", strip=True)[:220]
+            if PRICE_RE.search(card):
+                break
+        card = re.sub(r"\s*(View Listing|Group Message|Contact|Phone|Send Message)\s*", " ", card).strip()
+
+        m = PRICE_RE.search(card)
+        location = ""
+        try:
+            detail = SESSION.get(full, timeout=20)
+            if detail.status_code == 200:
+                text = BeautifulSoup(detail.text, "html.parser").get_text(" ", strip=True)
+                hood = SUBLETCOM_HOOD_RE.search(text)
+                if hood:
+                    location = hood.group(1).strip()
+            time.sleep(0.3)  # be a polite guest
+        except requests.RequestException:
+            pass  # unknown location; require_any_locations will drop it
+
+        listings.append(
+            {
+                "url": full,
+                "title": card[:140],
+                "price": m.group(0).replace(" ", "") if m else "",
+                "location": location,
+                "source": source["name"],
+            }
+        )
+
+    return listings
+
+
 REDDIT_ENTRY_RE = re.compile(r"<entry>(.*?)</entry>", re.S)
 REDDIT_FIELD_RE = {
     "title": re.compile(r"<title>(.*?)</title>", re.S),
@@ -388,6 +483,7 @@ ADAPTERS = {
     "generic": scrape_generic,
     "listingsproject": scrape_listingsproject,
     "reddit": scrape_reddit,
+    "sublet_com": scrape_sublet_com,
 }
 
 
@@ -412,14 +508,18 @@ def notify_desktop(listing):
         pass
 
 
-def notify(config, listing):
+def notify(config, listing, preferred=False):
     """Push to phone via ntfy.sh (free, no signup: subscribe to your topic
     in the ntfy app), plus a native desktop banner when running on a Mac.
     Falls back to stdout if no topic configured."""
     notify_desktop(listing)
     # NTFY_TOPIC env var wins so cloud runners can keep the topic in a secret
     topic = os.environ.get("NTFY_TOPIC") or config.get("ntfy_topic")
-    title = f"New: {listing.get('title', 'listing')}"
+    prefix = config.get("notify_prefix", "New")
+    # A listing that actually says "month to month" is worth spotting in a
+    # crowded feed, so it gets a marker rather than a separate channel.
+    mark = "\u2b50 " if preferred else ""
+    title = f"{mark}{prefix}: {listing.get('title', 'listing')}"
     price = listing.get("price", "")
     loc = listing.get("location", "")
     body_parts = [p for p in (price, loc, listing.get("source", "")) if p]
@@ -437,7 +537,7 @@ def notify(config, listing):
             data=listing["url"].encode("utf-8"),
             headers={
                 "Title": title.encode("utf-8"),
-                "Tags": "house",
+                "Tags": "star,house" if preferred else "house",
                 "Click": listing["url"],
                 "Priority": "high",
                 "Message": body.encode("utf-8") if body else b"New listing",
@@ -505,7 +605,7 @@ def run_cycle(config, conn, quiet_first_run=True, seed_only=False):
             if is_stale(listing["url"], max_age):
                 stale_ct += 1
                 continue
-            notify(config, listing)
+            notify(config, listing, preferred=is_preferred(listing, src_filters))
             time.sleep(1)  # be gentle with ntfy
 
         stale_note = f", {stale_ct} stale-skipped" if stale_ct else ""
@@ -529,7 +629,25 @@ def main():
     parser.add_argument("--seed", action="store_true",
                         help="record current listings as seen WITHOUT notifying "
                              "(run once after adding/changing sources)")
+    parser.add_argument("--config", metavar="PATH",
+                        help="config file to run (default: config.json)")
+    parser.add_argument("--db", metavar="PATH",
+                        help="seen-listings DB for this tracker "
+                             "(default: seen_listings.db). Give each tracker "
+                             "its own, or they'll dedupe against each other.")
     args = parser.parse_args()
+
+    # Each tracker is just a (config, db) pair, so pointing these elsewhere is
+    # all it takes to run a second, fully independent watcher.
+    global CONFIG_PATH, DB_PATH
+    if args.config:
+        CONFIG_PATH = Path(args.config).expanduser()
+        if not CONFIG_PATH.is_absolute():
+            CONFIG_PATH = BASE_DIR / CONFIG_PATH
+    if args.db:
+        DB_PATH = Path(args.db).expanduser()
+        if not DB_PATH.is_absolute():
+            DB_PATH = BASE_DIR / DB_PATH
 
     config = load_config()
     conn = init_db()
