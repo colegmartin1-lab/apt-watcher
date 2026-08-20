@@ -1,0 +1,24 @@
+name: diag
+on: { workflow_dispatch: }
+jobs:
+  diag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install requests beautifulsoup4
+      - run: |
+          python - <<'EOF'
+          import requests
+          from bs4 import BeautifulSoup
+          H={"User-Agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+          u="https://www.listingsproject.com/real-estate/new-york-city"
+          r=requests.get(u,headers=H,timeout=25)
+          print("STATUS",r.status_code,"LEN",len(r.text),"FINAL",r.url)
+          print("SERVER",r.headers.get("server"),"CF-RAY",r.headers.get("cf-ray"))
+          s=BeautifulSoup(r.text,"html.parser")
+          n=len([a for a in s.find_all("a",href=True) if "/listings/" in a["href"]])
+          print("LISTING_LINKS",n)
+          print("SNIPPET",r.text[:400].replace("\n"," "))
+          EOF
