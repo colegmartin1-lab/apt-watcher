@@ -101,8 +101,22 @@ config, own DB, own ntfy topic — so their alerts never mix:
 |---|---|---|
 | config | `config.json` | `config.sublets.json` |
 | DB | `seen_listings.db` | `seen_sublets.db` |
-| topic | `cole-solo-nyc-2026-q7x9m` | `cole-sublets-bk-2026-v4k2p` |
+| ntfy topic | `NTFY_TOPIC` secret | `NTFY_TOPIC_SUBLETS` secret |
 | push reads | `New: ...` | `Sublet: ...` |
+
+Both run every 5 minutes from the one `watch` job in GitHub Actions (one job,
+so their DB commits can't race), and locally on demand.
+
+> **Topics are not written down in this repo — it's public.** An ntfy topic is
+> just a public URL: anyone who can read it can read your listings feed and
+> push notifications to your phone. `config.sublets.json` therefore has
+> `ntfy_topic: null` here and takes the real value from the `NTFY_TOPIC_SUBLETS`
+> secret at runtime. Your local copy on the Desktop keeps the literal topic so
+> local runs work without exporting anything — that one line is the only
+> intentional difference between the two copies.
+>
+> The long-term tracker already works this way (`config.json` ships an empty
+> topic in the repo), so the sublets tracker just matches it.
 
 Run it:
 ```
