@@ -190,7 +190,8 @@
     {
       "name": "Smith Hanten",
       "url": "https://smithhanten.com/rentals/",
-      "every_minutes": 30
+      "every_minutes": 60,
+      "_note": "Rate-limits repeat visits (HTTP 429); check hourly."
     },
     {
       "name": "Garfield Realty",
@@ -230,7 +231,9 @@
     {
       "name": "Real Street",
       "url": "https://realstreetny.com/index.cfm?page=browser&status=2,21",
-      "every_minutes": 15
+      "every_minutes": 15,
+      "enabled": false,
+      "_note": "Blocks GitHub's servers (HTTP error on every run since 2026-10-15)."
     },
     {
       "name": "Rennit",
