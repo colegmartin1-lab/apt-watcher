@@ -29,7 +29,19 @@ other big sites block bots, but they all email saved-search alerts. So every run
    offers a whole apartment (not "looking for…"), and pulls out price, size,
    neighborhood and lease type. Costs about $1/month. This step is skipped if
    `ANTHROPIC_API_KEY` isn't set.
-7. Pushes each match to ntfy once. It pushes again only if the price drops.
+7. **Broker & landlord websites** (`pages` in the config, about 50 of them):
+   boutique brownstone-Brooklyn brokers, landlords that rent directly, and
+   AppFolio/Buildium/RentCafe pages of small managers with no website. Each
+   page is checked every 15–30 minutes. In link mode, only links new since the
+   last check go to Haiku. In text mode (single-building pages that list units
+   as text), the priced text is watched and read again when it changes. A
+   page's first check records what's there silently. `skip_cards_matching`
+   ignores sidebars that reshuffle on every load.
+8. **Structured feeds** (`feeds`): Nooklyn's JSON search API and Brooklyn
+   Group's embedded page data. Their listings already come with price, beds
+   and address, so they go through the same rules as the email alerts, with no
+   AI needed.
+9. Pushes each match to ntfy once. It pushes again only if the price drops.
    If Gmail stops working, your phone gets a ⚠️ alert (at most every 12h).
 
 State (handled email IDs, sent listings, read posts) is in `inbox_state.json`.
@@ -46,6 +58,10 @@ python inbox_watcher.py --seed            # mark everything current as seen, sil
 python inbox_watcher.py --days 7 --dump DIR   # save raw alert emails (for adding a site)
 python inbox_watcher.py --file DIR/*.eml --dry-run -v --no-posts   # test parsers on saved emails
 ```
+
+**Adding a broker/landlord site:** add `{"name", "url", "every_minutes"}` to
+`pages` (use `"mode": "text"` if units aren't links). The first run records it
+silently.
 
 **Adding a site's alerts:** dump a sample email. Then add an `email_sources`
 rule with the sender, the line that starts each listing card, and the line

@@ -131,7 +131,8 @@
     ],
     "listingsproject_url": "https://www.listingsproject.com/real-estate/new-york-city",
     "ai_model": "claude-haiku-5-5",
-    "ai_max_posts_per_run": 60
+    "ai_max_posts_per_run": 60,
+    "ai_max_page_calls_per_run": 15
   },
   "email_sources": [
     {
@@ -168,5 +169,280 @@
       "no_beds_means_studio": true
     }
   ],
-  "_email_sources_note": "Only these saved-search alert emails are read. Recommendation emails (StreetEasy 'Homes for You', Zillow recommendations@, Trulia properties@/discover@, RentHop) are ignored. To add a site: send a sample alert, add a rule with its sender, the line that starts each listing, and where the saved-search part ends."
+  "_email_sources_note": "Only these saved-search alert emails are read. Recommendation emails (StreetEasy 'Homes for You', Zillow recommendations@, Trulia properties@/discover@, RentHop) are ignored. To add a site: send a sample alert, add a rule with its sender, the line that starts each listing, and where the saved-search part ends.",
+  "pages": [
+    {
+      "name": "Brooklyn Heights Real Estate",
+      "url": "https://brooklynheightsrealestate.com/?page=properties&status=2,21&isMLS=1&isCompany=1",
+      "every_minutes": 15
+    },
+    {
+      "name": "Brownstone Real Estate",
+      "url": "https://www.brownstonelistings.com/Apartment-Rentals",
+      "every_minutes": 15
+    },
+    {
+      "name": "Brooklyn Landmark",
+      "url": "https://www.brooklynlandmark.com/properties/for-rent",
+      "every_minutes": 15,
+      "skip_cards_matching": "^(Random|Latest) properties"
+    },
+    {
+      "name": "Smith Hanten",
+      "url": "https://smithhanten.com/rentals/",
+      "every_minutes": 30
+    },
+    {
+      "name": "Garfield Realty",
+      "url": "https://www.garfieldbrooklyn.com/for-rent/",
+      "every_minutes": 15
+    },
+    {
+      "name": "Brooklyn Properties",
+      "url": "https://brooklynproperties.com/our-customers/renter/",
+      "every_minutes": 15
+    },
+    {
+      "name": "Slope Realty",
+      "url": "http://www.sloperealty.com/rentals.aspx",
+      "every_minutes": 30
+    },
+    {
+      "name": "Berman Realty",
+      "url": "https://www.bermanrealty.com/rentals",
+      "every_minutes": 30
+    },
+    {
+      "name": "Carroll Gardens Realty",
+      "url": "http://www.carrollgardensrealty.com/default.asp.f-rental_listings",
+      "every_minutes": 30
+    },
+    {
+      "name": "DavidWest Properties",
+      "url": "https://www.davidwestproperties.com/default.asp.f-rental_listings",
+      "every_minutes": 30
+    },
+    {
+      "name": "BLS Realty",
+      "url": "https://brownstonelifestyles.com/listings/rent/",
+      "every_minutes": 15
+    },
+    {
+      "name": "Real Street",
+      "url": "https://realstreetny.com/index.cfm?page=browser&status=2,21",
+      "every_minutes": 15
+    },
+    {
+      "name": "Rennit",
+      "url": "https://rennit.nyc/apartments",
+      "every_minutes": 15
+    },
+    {
+      "name": "Brooklyn Rents",
+      "url": "https://www.brooklynrents.com/apartments",
+      "every_minutes": 15
+    },
+    {
+      "name": "Groome Realty",
+      "url": "https://www.groomerealtyny.com/index.cfm?page=browser&status=2,21&isMLS=0&isCompany=1&isGrid=1",
+      "every_minutes": 30
+    },
+    {
+      "name": "Brick & Galo",
+      "url": "https://www.brickandgalo.com/nyc-apartment-rentals/",
+      "every_minutes": 30
+    },
+    {
+      "name": "LiveInGreenpoint (FlatFinders)",
+      "url": "https://liveingreenpoint.com/",
+      "every_minutes": 15
+    },
+    {
+      "name": "PropertyClub no-fee Brooklyn",
+      "url": "https://propertyclub.nyc/for-rent/brooklyn/no-fee",
+      "every_minutes": 30
+    },
+    {
+      "name": "iBEC Living",
+      "url": "http://www.ibecliving.com/apartments",
+      "every_minutes": 15
+    },
+    {
+      "name": "Brodsky",
+      "url": "https://brodsky.com/rentals",
+      "every_minutes": 15
+    },
+    {
+      "name": "Rockrose",
+      "url": "https://rockrose.com/availabilities/",
+      "every_minutes": 15
+    },
+    {
+      "name": "Two Trees",
+      "url": "https://www.twotreesny.com/availabilities/apartments",
+      "every_minutes": 15
+    },
+    {
+      "name": "The Rocklyn",
+      "url": "https://therocklyn.com/availability",
+      "every_minutes": 30
+    },
+    {
+      "name": "Blue Heaven PM",
+      "url": "https://blueheavenpm.com/rental-search/",
+      "every_minutes": 30
+    },
+    {
+      "name": "JSAF Management (AppFolio)",
+      "url": "https://jsafmgmt.appfolio.com/listings",
+      "every_minutes": 15
+    },
+    {
+      "name": "True Management (AppFolio)",
+      "url": "https://truemanagement.appfolio.com/listings",
+      "every_minutes": 15
+    },
+    {
+      "name": "Consort Management (AppFolio)",
+      "url": "https://consortmgmt.appfolio.com/listings",
+      "every_minutes": 15
+    },
+    {
+      "name": "MyPropertyMan (AppFolio)",
+      "url": "https://mypropertyman.appfolio.com/listings",
+      "every_minutes": 15
+    },
+    {
+      "name": "Guard PM (AppFolio)",
+      "url": "https://guardpm.appfolio.com/listings",
+      "every_minutes": 15
+    },
+    {
+      "name": "Atlas NYC (AppFolio)",
+      "url": "https://atlasnyc.appfolio.com/listings",
+      "every_minutes": 15
+    },
+    {
+      "name": "Park Slope Management (Buildium)",
+      "url": "https://parkslopemanagement.managebuilding.com/Resident/public/rentals",
+      "every_minutes": 30
+    },
+    {
+      "name": "Erlich Management (Buildium)",
+      "url": "https://erlichmanagement.managebuilding.com/Resident/public/rentals",
+      "every_minutes": 30
+    },
+    {
+      "name": "RentCafe · NW Brooklyn",
+      "url": "https://www.rentcafe.com/apartments-for-rent/us/ny/brooklyn/northwestern-brooklyn",
+      "every_minutes": 15
+    },
+    {
+      "name": "RentCafe · Greenpoint",
+      "url": "https://www.rentcafe.com/apartments-for-rent/us/ny/brooklyn/greenpoint",
+      "every_minutes": 15
+    },
+    {
+      "name": "RentCafe · Williamsburg",
+      "url": "https://www.rentcafe.com/apartments-for-rent/us/ny/brooklyn/williamsburg",
+      "every_minutes": 15
+    },
+    {
+      "name": "L Rose · 602 Manhattan Ave",
+      "url": "https://www.rentcafe.com/apartments/ny/brooklyn/602-manhattan-avenue-brooklyn-ny/default.aspx",
+      "every_minutes": 30,
+      "mode": "text"
+    },
+    {
+      "name": "L Rose · 597 Manhattan Ave",
+      "url": "https://www.rentcafe.com/apartments/ny/brooklyn/597-manhattan-avenue-brooklyn-ny/default.aspx",
+      "every_minutes": 30,
+      "mode": "text"
+    },
+    {
+      "name": "L Rose · 574 Manhattan Ave",
+      "url": "https://www.rentcafe.com/apartments/ny/brooklyn/574-manhattan-avenue-brooklyn-ny/default.aspx",
+      "every_minutes": 30,
+      "mode": "text"
+    },
+    {
+      "name": "L Rose · 1007 Atlantic Ave",
+      "url": "https://www.rentcafe.com/apartments/ny/brooklyn/1007-atlantic-avenue-brooklyn-ny/default.aspx",
+      "every_minutes": 30,
+      "mode": "text"
+    },
+    {
+      "name": "L Rose · 320 Cumberland St",
+      "url": "https://www.rentcafe.com/apartments/ny/brooklyn/320-cumberland-street-brooklyn-ny/default.aspx",
+      "every_minutes": 30,
+      "mode": "text"
+    },
+    {
+      "name": "Chateau Gabriel · 459 6th Ave",
+      "url": "https://www.rentcafe.com/apartments/ny/brooklyn/459-6th-ave/default.aspx",
+      "every_minutes": 30,
+      "mode": "text"
+    },
+    {
+      "name": "Chateau Gabriel · 104 6th Ave",
+      "url": "https://www.rentcafe.com/apartments/ny/brooklyn/104-6th-ave/default.aspx",
+      "every_minutes": 30,
+      "mode": "text"
+    },
+    {
+      "name": "Chateau Gabriel · 719 Union St",
+      "url": "https://www.rentcafe.com/apartments/ny/brooklyn/719-union-street/default.aspx",
+      "every_minutes": 30,
+      "mode": "text"
+    },
+    {
+      "name": "Chateau Gabriel · 293 Grand Ave",
+      "url": "https://www.rentcafe.com/apartments/ny/brooklyn/293-grand-ave/default.aspx",
+      "every_minutes": 30,
+      "mode": "text"
+    },
+    {
+      "name": "Anpora · 35 Orange St",
+      "url": "https://www.rentcafe.com/apartments/ny/brooklyn/35-orange-street/default.aspx",
+      "every_minutes": 30,
+      "mode": "text"
+    },
+    {
+      "name": "Madison · 25 Pierrepont St",
+      "url": "https://www.rentcafe.com/apartments/ny/brooklyn/25-pierrepont-street/default.aspx",
+      "every_minutes": 30,
+      "mode": "text"
+    },
+    {
+      "name": "Forest Family · 351 Bedford Ave",
+      "url": "https://www.rentcafe.com/apartments/ny/brooklyn/351-bedford-avenue/default.aspx",
+      "every_minutes": 30,
+      "mode": "text"
+    },
+    {
+      "name": "Freestone · 300 Lafayette Ave",
+      "url": "https://www.rentcafe.com/apartments/ny/brooklyn/300-lafayette-ave-llc/default.aspx",
+      "every_minutes": 30,
+      "mode": "text"
+    },
+    {
+      "name": "FOUND Study · 97 Columbia Heights",
+      "url": "https://www.rentcafe.com/apartments/ny/brooklyn/97-columbia-heights/default.aspx",
+      "every_minutes": 30,
+      "mode": "text"
+    }
+  ],
+  "_pages_note": "Firm/landlord listing pages. Each is checked every N minutes; only links that are new since the last check are read by Claude Haiku. A page's first check records what's there silently. Add any page by name + url.",
+  "feeds": [
+    {
+      "name": "Nooklyn",
+      "type": "nooklyn",
+      "every_minutes": 15
+    },
+    {
+      "name": "Brooklyn Group",
+      "type": "brooklyn_group",
+      "every_minutes": 15
+    }
+  ]
 }

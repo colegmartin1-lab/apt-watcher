@@ -245,6 +245,7 @@ def parse_cards(rule, tokens):
             "is_sale": bool(SALE_RE.search(joined)),
             "is_gone": bool(GONE_RE.search(joined)),
             "hood_hint": hood_hint.group(1) if hood_hint else None,
+            "borough": borough_of(joined, None),
             "url": (good or links or [None])[0],
             "source": rule["name"],
         })
@@ -265,20 +266,71 @@ def parse_email(cfg, sender, subject, html_body, text_body):
 _geo_cache = {}
 
 
-def geocode(address, borough_hint="Brooklyn"):
-    key = address.lower()
+MANHATTAN_HINT = re.compile(r"\bnew york,? ny\b|\bmanhattan\b|\b100\d\d\b|west village|\bsoho\b|"
+                            r"greenwich village|east village|lower east side|chelsea|tribeca", re.I)
+BROOKLYN_HINT = re.compile(r"\bbrooklyn\b|\b112\d\d\b", re.I)
+
+
+def borough_of(text, default="Brooklyn"):
+    """Which borough an address/listing text points at, for the lookup."""
+    if BROOKLYN_HINT.search(text or ""):
+        return "Brooklyn"
+    if MANHATTAN_HINT.search(text or ""):
+        return "Manhattan"
+    return default
+
+
+STREET_TYPES = {"street": "st", "avenue": "ave", "place": "pl", "road": "rd", "boulevard": "blvd",
+                "terrace": "ter", "court": "ct", "drive": "dr", "lane": "ln", "parkway": "pkwy",
+                "north": "n", "south": "s", "east": "e", "west": "w"}
+
+
+def _street_key(s):
+    """'448 Bergen Street' / '448 BERGEN ST' → ('448', 'bergen st')."""
+    s = re.sub(r"[^a-z0-9 ]", " ", s.lower())
+    words = [STREET_TYPES.get(w, w) for w in s.split()]
+    num = words[0] if words and words[0][0].isdigit() else ""
+    rest = words[1:] if num else words
+    rest = [re.sub(r"(\d+)(st|nd|rd|th)$", r"\1", w) for w in rest]  # 8th → 8
+    return num, " ".join(rest)
+
+
+def geocode(address, borough_hint="Brooklyn", explicit=False):
+    """Address → real neighborhood + coordinates via NYC GeoSearch.
+
+    GeoSearch ignores the borough in the query text, and Brooklyn and
+    Manhattan share street names (Clinton St, Henry St, Bank St...). So take
+    the top few matches and score them: when the listing itself names the
+    borough, that wins; otherwise an exact number+street match wins."""
+    # Only the city/ZIP part names a borough ("602 Manhattan Ave" is Greenpoint).
+    detected = borough_of(address.partition(",")[2], None)
+    if detected:
+        borough_hint, explicit = detected, True
+    key = f"{address.lower()}|{borough_hint}|{explicit}"
     if key in _geo_cache:
         return _geo_cache[key]
-    text = address if re.search(r"brooklyn|new york|ny\b", address, re.I) \
-        else f"{address}, {borough_hint}, NY"
+    street = address.split(",")[0]
+    num, name = _street_key(street)
     result = None
     try:
         r = requests.get("https://geosearch.planninglabs.nyc/v2/search",
-                         params={"text": text, "size": 1}, headers=UA, timeout=15)
+                         params={"text": f"{street}, {borough_hint}, NY", "size": 5},
+                         headers=UA, timeout=15)
         feats = r.json().get("features") or []
+
+        def score(f):
+            p = f["properties"]
+            fnum, fname = _street_key(p.get("name") or p.get("label") or "")
+            same_street = bool(name) and fname == name
+            exact = same_street and num == fnum
+            same_borough = p.get("borough") == borough_hint
+            if explicit:
+                return same_borough * 10 + exact * 3 + same_street
+            return exact * 3 + same_borough * 2 + same_street
         if feats:
-            p = feats[0]["properties"]
-            lon, lat = feats[0]["geometry"]["coordinates"]
+            best = max(feats, key=score)  # max() keeps GeoSearch's order on ties
+            p = best["properties"]
+            lon, lat = best["geometry"]["coordinates"]
             result = {"hood": p.get("neighbourhood") or "", "borough": p.get("borough") or "",
                       "label": p.get("name") or p.get("label") or address,
                       "lat": lat, "lon": lon, "confidence": p.get("confidence", 0)}
@@ -415,7 +467,9 @@ def judge_post(cfg, post, reading):
         return None, why
     flags, geo = [], None
     if reading.address:
-        geo = geocode(reading.address, cfg.get("default_borough", "Brooklyn"))
+        hint = borough_of(f"{reading.neighborhood or ''} {post['title']}", None)
+        geo = geocode(reading.address, hint or cfg.get("default_borough", "Brooklyn"),
+                      explicit=bool(hint))
     if geo and geo.get("confidence", 0) >= 0.8:
         why = judge_place(cfg, geo)
         if why:
@@ -477,6 +531,17 @@ def collect_posts(cfg, state, fb_posts, verbose):
             hits.append(hit)
         elif verbose:
             log(f"   ✗ [{p['source']}] {p['title'][:70]} — {why}")
+
+    # Broker / property-manager websites: only new links get read.
+    from pages import check_pages
+    if cfg.get("pages") and not reader.broken:
+        reader.budget = ft.get("ai_max_page_calls_per_run", 15)
+        for p, reading in check_pages(cfg, state, reader, log, verbose):
+            hit, why = judge_post(cfg, p, reading)
+            if hit:
+                hits.append(hit)
+            elif verbose:
+                log(f"   ✗ [{p['source']}] {reading.summary[:70]} — {why}")
     return hits, reader.broken
 
 
@@ -534,6 +599,22 @@ def run(args):
         else:
             batch[hit["key"]] = hit
 
+    def consider_card(c):
+        """A structured listing (alert email or JSON feed) → batch if it passes."""
+        geo = geocode(c["address"], c.get("borough") or cfg.get("default_borough", "Brooklyn"),
+                      explicit=bool(c.get("borough")))
+        why = judge(cfg, c, geo)
+        if why:
+            if args.verbose:
+                log(f"   ✗ [{c['source']}] {c['address']} {c['unit'] or ''} ${c['price']} "
+                    f"{beds_label(c['beds'])} [{geo['hood'] if geo else '?'}] — {why}")
+            return
+        unit = f" #{c['unit']}" if c["unit"] else ""
+        add({"key": listing_key(geo, c["address"], c["unit"]), "price": c["price"],
+             "beds": c["beds"], "hood": geo["hood"], "line": c["address"] + unit,
+             "url": c.get("url"), "sources": {c["source"]}, "flags": [],
+             "is_post": False})
+
     for gid, m in fresh:
         sender, subject, html_body, text_body = message_parts(m)
         if sender.endswith("facebookmail.com"):
@@ -553,20 +634,15 @@ def run(args):
             continue
         log(f"{sender} · {subject[:70]!r}: {len(cards)} listings")
         for c in cards:
-            geo = geocode(c["address"], cfg.get("default_borough", "Brooklyn"))
-            why = judge(cfg, c, geo)
-            if why:
-                if args.verbose:
-                    log(f"   ✗ {c['address']} {c['unit'] or ''} ${c['price']} "
-                        f"{beds_label(c['beds'])} [{geo['hood'] if geo else '?'}] — {why}")
-                continue
-            unit = f" #{c['unit']}" if c["unit"] else ""
-            add({"key": listing_key(geo, c["address"], c["unit"]), "price": c["price"],
-                 "beds": c["beds"], "hood": geo["hood"], "line": c["address"] + unit,
-                 "url": c.get("url"), "sources": {c["source"]}, "flags": [],
-                 "is_post": False})
+            consider_card(c)
         if not args.file:
             state["processed"][gid] = time.time()
+
+    # Structured feeds (e.g. Nooklyn's JSON): same rules, no AI needed.
+    if not args.file and not args.no_posts:
+        from feeds import check_feeds
+        for c in check_feeds(cfg, state, log):
+            consider_card(c)
 
     if not args.no_posts:
         hits, broken = collect_posts(cfg, state, fb_posts, args.verbose)

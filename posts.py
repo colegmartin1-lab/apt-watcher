@@ -151,14 +151,19 @@ class Reader:
             return None
         self.budget -= 1
         content = f"Source: {post['source']}\nTitle: {post['title']}\n\n{post['text']}"
+        return self.call(READER_PROMPT, content, PostReading, label=post["url"])
+
+    def call(self, system, content, schema, max_tokens=2048, label=""):
+        """One structured-output request; None on any failure. A bad key or an
+        empty balance also sets self.broken so the run can warn the phone."""
         try:
             resp = self.client.messages.parse(
                 model=self.model,
-                max_tokens=2048,
+                max_tokens=max_tokens,
                 output_config={"effort": "low"},
-                system=READER_PROMPT,
+                system=system,
                 messages=[{"role": "user", "content": content}],
-                output_format=PostReading,
+                output_format=schema,
             )
         except (self.anthropic.AuthenticationError, self.anthropic.PermissionDeniedError) as e:
             self.broken, self.budget = f"key rejected ({e.status_code}): expired, revoked or wrong", 0
@@ -167,14 +172,14 @@ class Reader:
             if "credit balance" in str(e).lower():
                 self.broken, self.budget = "out of credit: top up at console.anthropic.com", 0
             else:
-                self.log(f"  AI read failed (400) for {post['url']}: {e.message[:120]}")
+                self.log(f"  AI read failed (400) for {label}: {e.message[:120]}")
             return None
         except self.anthropic.APIStatusError as e:
-            self.log(f"  AI read failed ({e.status_code}) for {post['url']}")
+            self.log(f"  AI read failed ({e.status_code}) for {label}")
             return None
         except self.anthropic.APIConnectionError:
-            self.log(f"  AI read failed (network) for {post['url']}")
+            self.log(f"  AI read failed (network) for {label}")
             return None
-        if resp.stop_reason == "refusal" or resp.parsed_output is None:
+        if resp.stop_reason in ("refusal", "max_tokens") or resp.parsed_output is None:
             return None
         return resp.parsed_output
