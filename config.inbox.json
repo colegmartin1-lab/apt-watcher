@@ -1,0 +1,173 @@
+{
+  "gmail_user": "colegmartin1@gmail.com",
+  "ntfy_topic": "",
+  "default_borough": "Brooklyn",
+  "alert_senders": [
+    "streeteasy.com",
+    "zillow.com",
+    "trulia.com",
+    "facebookmail.com",
+    "hotpads.com",
+    "apartments.com",
+    "zumper.com",
+    "renthop.com",
+    "leasebreak.com"
+  ],
+  "rules": {
+    "min_price": 1000,
+    "max_price": 3000,
+    "max_beds": 1,
+    "neighborhoods": [
+      "Greenpoint",
+      "Williamsburg",
+      "Fort Greene",
+      "Clinton Hill",
+      "Boerum Hill",
+      "Cobble Hill",
+      "Brooklyn Heights",
+      "Prospect Heights",
+      "Park Slope",
+      "West Village",
+      "SoHo"
+    ],
+    "williamsburg": {
+      "_note": "Only north of Domino Park (Grand St) and west of the BQE. bqe_line = [lat, lon] waypoints along Rodney St / Meeker Ave.",
+      "min_lat": 40.715,
+      "bqe_line": [
+        [
+          40.709,
+          -73.957
+        ],
+        [
+          40.714,
+          -73.9515
+        ],
+        [
+          40.718,
+          -73.947
+        ],
+        [
+          40.724,
+          -73.939
+        ]
+      ]
+    },
+    "neighborhood_aliases": {
+      "Greenpoint": [
+        "gpoint"
+      ],
+      "Williamsburg": [
+        "wburg",
+        "w burg",
+        "billyburg",
+        "north williamsburg",
+        "n williamsburg"
+      ],
+      "Fort Greene": [
+        "ft greene",
+        "ft. greene",
+        "fort green",
+        "ft green"
+      ],
+      "Clinton Hill": [
+        "clinton hills"
+      ],
+      "Boerum Hill": [
+        "boerum"
+      ],
+      "Cobble Hill": [
+        "cobble"
+      ],
+      "Brooklyn Heights": [
+        "bk heights",
+        "brooklyn hts",
+        "bklyn heights"
+      ],
+      "Prospect Heights": [
+        "prospect hts",
+        "p heights"
+      ],
+      "Park Slope": [
+        "the slope",
+        "north slope"
+      ],
+      "West Village": [
+        "w village",
+        "west vill"
+      ],
+      "SoHo": [
+        "soho"
+      ]
+    },
+    "never_neighborhoods": [
+      "east williamsburg",
+      "south williamsburg",
+      "south slope",
+      "prospect lefferts",
+      "prospect lefferts gardens",
+      "prospect park south",
+      "bed stuy",
+      "bedstuy",
+      "bedford stuyvesant",
+      "crown heights",
+      "bushwick",
+      "downtown brooklyn",
+      "dumbo",
+      "gowanus",
+      "carroll gardens",
+      "greenwich village",
+      "east village",
+      "nolita",
+      "tribeca",
+      "west soho",
+      "noho"
+    ]
+  },
+  "free_text": {
+    "enabled": true,
+    "subreddits": [
+      "NYCapartments",
+      "NYCsublets",
+      "BrooklynApartments"
+    ],
+    "listingsproject_url": "https://www.listingsproject.com/real-estate/new-york-city",
+    "ai_model": "claude-haiku-5-5",
+    "ai_max_posts_per_run": 60
+  },
+  "email_sources": [
+    {
+      "name": "StreetEasy",
+      "from": "@email\\.streeteasy\\.com$",
+      "subject": "Results? for |has an update",
+      "card_start": "^(Rental Unit|Rental|Condo|Co-op|Townhouse|Multi-family|House|Apartment)\\b.* in ",
+      "stop_at": [
+        "See all homes in your saved search",
+        "CONTINUE YOUR SEARCH",
+        "Get the StreetEasy App"
+      ],
+      "link": "links\\.streeteasy\\.com/a/click|streeteasy\\.com/(rental|building)/"
+    },
+    {
+      "name": "Zillow",
+      "from": "^rental-instant-updates@mail\\.zillow\\.com$",
+      "card_start": "^For rent\\b",
+      "stop_at": [
+        "Other rentals you might like",
+        "See latest search results"
+      ],
+      "link": "zillow\\.com/(routing/email/property-notifications|homedetails)"
+    },
+    {
+      "name": "Trulia",
+      "from": "^new-listings@alerts\\.trulia\\.com$",
+      "card_start": "^\\$[\\d,]+/mo$",
+      "stop_at": [
+        "More homes you might love",
+        "Continue your search"
+      ],
+      "link": "trulia\\.com/",
+      "no_beds_means_studio": true
+    }
+  ],
+  "_email_sources_note": "Only these saved-search alert emails are read. Recommendation emails (StreetEasy 'Homes for You', Zillow recommendations@, Trulia properties@/discover@, RentHop) are ignored. To add a site: send a sample alert, add a rule with its sender, the line that starts each listing, and where the saved-search part ends."
+}

@@ -1,8 +1,10 @@
 name: watch
 
 on:
+  # GitHub's own schedule runs hours late, so cron-job.org calls
+  # workflow_dispatch every 5 minutes; this cron is just a backup.
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "*/15 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -29,10 +31,15 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: poll long-term rentals
-        run: python apt_watcher.py
+      # Long-term rentals: reads the listing-alert emails in Gmail (StreetEasy,
+      # Zillow, Trulia, ...) plus Reddit / Listings Project / Facebook-group
+      # posts, filters hard, and pushes only real matches.
+      - name: poll long-term rentals (inbox watcher)
+        run: python inbox_watcher.py
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
       # Separate config, DB and topic, so sublet alerts land in their own feed.
       # always() keeps a failure in either tracker from silencing the other.
@@ -47,5 +54,5 @@ jobs:
         run: |
           git config user.name "apt-watcher-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add seen_listings.db seen_sublets.db
+          git add inbox_state.json seen_sublets.db
           git diff --cached --quiet || { git commit -m "update seen listings"; git push; }
