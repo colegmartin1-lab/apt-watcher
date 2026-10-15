@@ -37,6 +37,8 @@
  "posts_seen": {
   "lp:https://www.listingsproject.com/listings/1bd-apartment-in-fort-greene-409472": 1792026540.2830338,
   "lp:https://www.listingsproject.com/listings/awesome-upscaled-designer-studio-in-brooklyn-054bd26c-be0d-4889-8a39-bd8d71e44b6a": 1792026544.5810964,
+  "lp:https://www.listingsproject.com/listings/bohemian-brooklyn-loft-with-private-terrace-cb233d65-95dd-4dad-a3a3-17ae467eca4d": 1792027554.6188006,
+  "lp:https://www.listingsproject.com/listings/brand-new-one-bed-one-bath-in-boerum-hill": 1792027551.4143906,
   "lp:https://www.listingsproject.com/listings/design-lover-s-brooklyn-heights-pied-a-terre-private-garden-art-incredible-location": 1792026625.0429776,
   "lp:https://www.listingsproject.com/listings/fort-greene-1br-office-furnishing-flexible": 1792026550.3606377,
   "lp:https://www.listingsproject.com/listings/fully-furnished-1-br-gramercy-park-12-3-12-27-w-elevator-doorman-4aad5fe4-db65-43d5-9bdb-a3d774ac0ba4": 1792026537.6541054,
@@ -98,7 +100,9 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1x65rp6/2_bed_1_bath_3590mo_east_village/": 1792026465.37127,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1x661s4/1100_room_in_prospect_lefferts_gardens_flatbush/": 1792026462.8495922,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1x6785g/upper_east_side_studio_avail_111/": 1792026461.5209067,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1x67pm3/just_moved_to_nyc_signed_a_lease_in_a_rush_now/": 1792026460.1690218
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1x67pm3/just_moved_to_nyc_signed_a_lease_in_a_rush_now/": 1792026460.1690218,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1x68icw/lease_in_licastoria_25_male_2bed1bath_3500_total/": 1792027550.1591809,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1x68mon/chauncey_street_studio_1875/": 1792027548.386857
  },
  "processed": {
   "1878912659436325385": 1792025847.640471,
@@ -124,6 +128,7 @@
   "1879043845782191941": 1792025850.257808,
   "1879058785498969075": 1792025850.479617,
   "1879072465170725982": 1792025850.4806132,
-  "1879074281434431319": 1792025850.4812758
+  "1879074281434431319": 1792025850.4812758,
+  "1879076451977852118": 1792027541.460652
  }
 }
