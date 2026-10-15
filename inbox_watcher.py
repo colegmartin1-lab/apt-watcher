@@ -664,10 +664,12 @@ def run(args):
             continue
         if sender.endswith("facebookmail.com"):
             from posts import facebook_post_from_email
-            post = facebook_post_from_email(gid, subject, html_body, text_body)
-            if post:
+            post = facebook_post_from_email(gid, sender, subject, html_body, text_body)
+            if post and post["id"] not in state.get("posts_seen", {}):
+                # Left unprocessed until the AI has read it, so a burst bigger
+                # than one run's AI allowance carries over instead of being lost.
                 fb_posts.append(post)
-            if not args.file:
+            elif not args.file:
                 state["processed"][gid] = time.time()
             continue
         cards = parse_email(cfg, sender, subject, html_body, text_body)

@@ -11,6 +11,7 @@ The answer is then judged by the same rules as the alert-email listings.
 import html
 import re
 import time
+from urllib.parse import unquote
 
 import requests
 from bs4 import BeautifulSoup
@@ -100,21 +101,43 @@ def fetch_listingsproject(cfg, seen_ids, max_pages=12, max_details=40):
     return posts
 
 
-FB_GROUP_LINK = re.compile(r"https://(?:www\.|m\.)?facebook\.com/groups/[^\s\"'<>]+")
+FB_LINK = re.compile(r"https?://(?:www\.|m\.|web\.)?facebook\.com/[^\s\"'<>]+")
+FB_SKIP_LINK = re.compile(r"settings|unsubscribe|/notifications|/help|privacy|login|recover|/policies|"
+                          r"/legal|email_notif|/mobile|/download|/messages|/friends", re.I)
+FB_POST_LINK = re.compile(r"/posts/|permalink|story_fbid|story\.php|/groups/|/photo|/share/|pfbid", re.I)
+# Only ever read post notifications; never security/login/account mail.
+FB_SENDERS = re.compile(r"^(notification|groupupdates|update|updates|notify)\b", re.I)
+FB_SENSITIVE = re.compile(r"\bcode\b|log ?in|password|security|confirm|verif|account|recover|"
+                          r"two-factor|2fa|authenticat|payment|receipt|birthday|friend request|"
+                          r"memories|messenger|tagged you|reacted", re.I)
+FB_GROUP_NAME = re.compile(r"(?:posted|shared [^.]*?|new posts?) in (.+?)\s*$", re.I)
+FB_PAGE_NAME = re.compile(r"^(.+?) (?:posted|shared|added|updated)\b", re.I)
 
 
-def facebook_post_from_email(gid, subject, html_body, text_body):
-    """A Facebook group-notification email → one post, or None if the email
-    isn't about a group post (friend activity, login alerts, ...)."""
-    raw = html_body or text_body
-    links = FB_GROUP_LINK.findall(raw)
-    if not links:
+def facebook_post_from_email(gid, sender, subject, html_body, text_body):
+    """A Facebook notification email about a new post in a group, or from a
+    page/profile you follow → one post for the AI. None for anything else,
+    and never for security/login/account emails (those must not leave Gmail)."""
+    if not FB_SENDERS.search(sender.split("@")[0]) or FB_SENSITIVE.search(subject):
         return None
-    # Prefer the link to the specific post over the group's front page.
-    post_links = [l for l in links if re.search(r"/(posts|permalink)/", l)]
-    url = html.unescape((post_links or links)[0]).split("&")[0]
+    raw = html.unescape(html_body or text_body)
+    links = []
+    for l in FB_LINK.findall(raw):
+        # Facebook wraps links as facebook.com/n/?<path>&aref=...; unwrap them.
+        m = re.match(r"(https?://[^/]+)/n/\?(.+)", l)
+        if m:
+            l = f"{m.group(1)}/{unquote(m.group(2)).split('&')[0]}"
+        if not FB_SKIP_LINK.search(l):
+            links.append(l)
+    post_links = [l for l in links if FB_POST_LINK.search(l)]
+    if not post_links:
+        return None
+    url = post_links[0].split("&aref")[0].split("&__")[0]
+    place = FB_GROUP_NAME.search(subject) or FB_PAGE_NAME.search(subject)
+    where = place.group(1) if place else None
     text = _text(html_body) if html_body else re.sub(r"\s+", " ", text_body)
-    return {"id": "fb:" + gid, "url": url, "source": "Facebook group",
+    return {"id": "fb:" + gid, "url": url,
+            "source": f"FB · {where.strip()[:40]}" if where else "Facebook",
             "title": subject[:140], "text": text[:MAX_POST_CHARS]}
 
 
