@@ -142,6 +142,7 @@ class Reader:
         self.model = cfg.get("ai_model", "claude-haiku-5-5")
         self.budget = cfg.get("ai_max_posts_per_run", 60)
         self.log = log
+        self.broken = None  # set when the key itself is bad: stop and tell the phone
 
     def read(self, post):
         if self.budget <= 0:
@@ -157,6 +158,15 @@ class Reader:
                 messages=[{"role": "user", "content": content}],
                 output_format=PostReading,
             )
+        except (self.anthropic.AuthenticationError, self.anthropic.PermissionDeniedError) as e:
+            self.broken, self.budget = f"key rejected ({e.status_code}): expired, revoked or wrong", 0
+            return None
+        except self.anthropic.BadRequestError as e:
+            if "credit balance" in str(e).lower():
+                self.broken, self.budget = "out of credit: top up at console.anthropic.com", 0
+            else:
+                self.log(f"  AI read failed (400) for {post['url']}: {e.message[:120]}")
+            return None
         except self.anthropic.APIStatusError as e:
             self.log(f"  AI read failed ({e.status_code}) for {post['url']}")
             return None

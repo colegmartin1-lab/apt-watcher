@@ -68,7 +68,7 @@ def log(msg):
 def load_state(path):
     if path.exists():
         return json.loads(path.read_text())
-    return {"processed": {}, "notified": {}, "last_error_alert": 0}
+    return {"processed": {}, "notified": {}}
 
 
 def save_state(path, state):
@@ -446,10 +446,10 @@ def collect_posts(cfg, state, fb_posts, verbose):
     from posts import Reader, fetch_listingsproject, fetch_reddit
     ft = cfg.get("free_text", {})
     if not ft.get("enabled"):
-        return []
+        return [], None
     if not os.environ.get("ANTHROPIC_API_KEY"):
         log("free-text sources skipped: ANTHROPIC_API_KEY not set")
-        return []
+        return [], None
     seen = state.setdefault("posts_seen", {})
     posts = list(fb_posts)
     for name, fetcher in (("Reddit", lambda: fetch_reddit(ft)),
@@ -476,7 +476,16 @@ def collect_posts(cfg, state, fb_posts, verbose):
             hits.append(hit)
         elif verbose:
             log(f"   ✗ [{p['source']}] {p['title'][:70]} — {why}")
-    return hits
+    return hits, reader.broken
+
+
+def alert_problem(state, topic, kind, title, body, dry_run):
+    """Ping the phone about a broken piece, at most once per 12h per kind,
+    so a dead watcher is never silent but never spammy either."""
+    last = state.setdefault("problem_alerts", {})
+    if topic and not dry_run and time.time() - last.get(kind, 0) > 43200:
+        ntfy(topic, title, body, tags="warning", priority="high")
+        last[kind] = time.time()
 
 
 # --------------------------------------------------------------------------
@@ -497,11 +506,9 @@ def run(args):
             msgs = list(fetch_emails(cfg, args.days))
         except (imaplib.IMAP4.error, OSError, RuntimeError) as e:
             log(f"Gmail failed: {e}")
-            # Tell the phone once every 12h so a dead watcher isn't silent.
-            if topic and not args.dry_run and time.time() - state.get("last_error_alert", 0) > 43200:
-                ntfy(topic, "⚠️ Apartment watcher can't read Gmail",
-                     f"{e}\nAlerts are paused until this is fixed.", tags="warning")
-                state["last_error_alert"] = time.time()
+            alert_problem(state, topic, "gmail", "⚠️ Apartment watcher can't read Gmail",
+                          f"{e}\nEmail alerts are paused until this is fixed.", args.dry_run)
+            if not args.dry_run:
                 save_state(state_path, state)
             return 1
 
@@ -561,8 +568,14 @@ def run(args):
             state["processed"][gid] = time.time()
 
     if not args.no_posts:
-        for hit in collect_posts(cfg, state, fb_posts, args.verbose):
+        hits, broken = collect_posts(cfg, state, fb_posts, args.verbose)
+        for hit in hits:
             add(hit)
+        if broken:
+            log(f"AI reader broken: {broken}")
+            alert_problem(state, topic, "anthropic", "⚠️ Apartment watcher: AI post reader stopped",
+                          f"Anthropic API {broken}.\nReddit / Listings Project / Facebook posts "
+                          "aren't being read until this is fixed.", args.dry_run)
 
     sent = 0
     for key, hit in batch.items():
