@@ -222,10 +222,14 @@ def parse_cards(rule, tokens):
         texts = [t for t, _ in card["tokens"]]
         joined = " ".join(texts)
         addr = unit = None
-        for t in texts:
+        addr_ctx = ""
+        for i, t in enumerate(texts):
             m = ADDRESS_RE.match(t)
             if m and len(t) < 90:
                 addr, unit = clean_text(m.group(1)), m.group(2)
+                # The city usually sits on the address line or the next one
+                # ("373 Manhattan Ave #3," / "Brooklyn, NY").
+                addr_ctx = " ".join(texts[i:i + 2])
                 break
         if not addr:
             continue
@@ -245,7 +249,10 @@ def parse_cards(rule, tokens):
             "is_sale": bool(SALE_RE.search(joined)),
             "is_gone": bool(GONE_RE.search(joined)),
             "hood_hint": hood_hint.group(1) if hood_hint else None,
-            "borough": borough_of(joined, None),
+            # Only the address line and the site's own neighborhood label say
+            # where the apartment is; the card also names the broker's office
+            # ("…, New York, NY 10018"), which must not count.
+            "borough": borough_of(f"{addr_ctx} {hood_hint.group(1) if hood_hint else ''}", None),
             "url": (good or links or [None])[0],
             "source": rule["name"],
         })
