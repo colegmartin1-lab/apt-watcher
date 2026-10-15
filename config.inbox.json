@@ -451,7 +451,7 @@
   "ai_email_sources": [
     {
       "name": "Leasebreak",
-      "from": "@leasebreak\\.com$",
+      "from": "[@.]leasebreak\\.com$",
       "skip_subject": "password|verify|confirm|welcome|receipt",
       "base_url": "https://www.leasebreak.com/"
     }
