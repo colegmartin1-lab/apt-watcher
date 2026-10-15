@@ -153,6 +153,28 @@ def read_cards(reader, firm, cards):
     return out
 
 
+def read_email_cards(reader, name, cards, min_price, max_price):
+    """Listing cards from an alert email/newsletter → (post, reading) pairs.
+    Cards whose every price is outside the budget are skipped before the AI
+    sees them (a weekly digest can hold hundreds of listings)."""
+    def in_budget(text):
+        prices = [int(p.replace(",", "").replace("$", "").strip()) for p in PRICES.findall(text)
+                  if p.replace(",", "").replace("$", "").strip().isdigit()]
+        return not prices or any(min_price <= x <= max_price for x in prices)
+    seen_text, keep = set(), {}
+    for url, text in cards.items():
+        if text not in seen_text and in_budget(text):  # same listing linked twice
+            seen_text.add(text)
+            keep[url] = text
+    out, items = [], list(keep.items())
+    for i in range(0, len(items), MAX_CARDS_PER_CALL):
+        got = read_cards(reader, name, dict(items[i:i + MAX_CARDS_PER_CALL]))
+        if got is None:
+            return out if out else None
+        out += got
+    return out
+
+
 def check_pages(cfg, state, reader, log, verbose=False):
     """Yield (post, reading) for new listings on configured firm pages."""
     pages_state = state.setdefault("pages", {})

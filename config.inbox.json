@@ -129,7 +129,7 @@
       "NYCapartments",
       "BrooklynApartments"
     ],
-    "listingsproject_url": "https://www.listingsproject.com/real-estate/new-york-city",
+    "listingsproject_url": "https://www.listingsproject.com/real-estate/new-york-city/rentals",
     "ai_model": "claude-haiku-5-5",
     "ai_max_posts_per_run": 60,
     "ai_max_page_calls_per_run": 15
@@ -443,6 +443,25 @@
       "name": "Brooklyn Group",
       "type": "brooklyn_group",
       "every_minutes": 15
+    }
+  ],
+  "ai_email_sources": [
+    {
+      "name": "Leasebreak",
+      "from": "@leasebreak\\.com$",
+      "skip_subject": "password|verify|confirm|welcome|receipt",
+      "base_url": "https://www.leasebreak.com/"
+    }
+  ],
+  "_ai_email_sources_note": "Emails from these senders are split into listing cards and read by Haiku (after a price pre-filter), for sites whose alert layout varies (Leasebreak's weekly list and search alerts).",
+  "reminders": [
+    {
+      "name": "Listings Project First Access",
+      "weekday": "Tuesday",
+      "hour_et": 18,
+      "title": "Listings Project: First Access preview",
+      "body": "Members can preview next week's listings now. Save the good ones and contact listers first thing Wednesday morning.",
+      "url": "https://www.listingsproject.com/real-estate/first-access"
     }
   ]
 }

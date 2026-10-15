@@ -64,21 +64,29 @@ def fetch_reddit(cfg):
     return posts
 
 
-def fetch_listingsproject(cfg, seen_ids):
-    """Index page lists the newest listings; detail text is only fetched for
-    ones we haven't read yet (the slug alone hides 'Seeking' vs 'Offering')."""
+def fetch_listingsproject(cfg, seen_ids, max_pages=12, max_details=40):
+    """NYC rentals category, page by page. The weekly batch drops on Wednesday
+    morning (~80 NYC rentals over ~7 pages), so keep paging until a page has
+    nothing new; on other days that's a single request. Detail pages are only
+    fetched for listings not read yet (the slug alone hides 'Seeking' vs
+    'Offering' and the rent)."""
     base = "https://www.listingsproject.com"
-    r = requests.get(cfg["listingsproject_url"], headers=BROWSER_UA, timeout=20)
-    r.raise_for_status()
-    soup = BeautifulSoup(r.text, "html.parser")
-    urls = list(dict.fromkeys(
-        (a["href"] if a["href"].startswith("http") else base + a["href"]).split("?")[0]
-        for a in soup.find_all("a", href=True) if "/listings/" in a["href"]))
+    urls = []
+    for page in range(1, max_pages + 1):
+        r = requests.get(cfg["listingsproject_url"], params={"page": page} if page > 1 else None,
+                         headers=BROWSER_UA, timeout=20)
+        r.raise_for_status()
+        soup = BeautifulSoup(r.text, "html.parser")
+        found = list(dict.fromkeys(
+            (a["href"] if a["href"].startswith("http") else base + a["href"]).split("?")[0]
+            for a in soup.find_all("a", href=True) if "/listings/" in a["href"]))
+        fresh = [u for u in found if "lp:" + u not in seen_ids and u not in urls]
+        urls += fresh
+        if not found or not fresh:
+            break
+        time.sleep(0.5)
     posts = []
-    for url in urls:
-        pid = "lp:" + url
-        if pid in seen_ids:
-            continue
+    for url in urls[:max_details]:  # the rest wait for the next run
         try:
             d = requests.get(url, headers=BROWSER_UA, timeout=20)
             d.raise_for_status()
@@ -86,7 +94,7 @@ def fetch_listingsproject(cfg, seen_ids):
             continue
         text = _text(d.text)
         title = text.split(" | Listings Project")[0][:140]
-        posts.append({"id": pid, "url": url, "source": "Listings Project",
+        posts.append({"id": "lp:" + url, "url": url, "source": "Listings Project",
                       "title": title, "text": text[:MAX_POST_CHARS]})
         time.sleep(0.5)
     return posts

@@ -496,7 +496,7 @@ def judge_post(cfg, post, reading):
             "flags": flags, "is_post": True}, None
 
 
-def collect_posts(cfg, state, fb_posts, verbose):
+def collect_posts(cfg, state, fb_posts, verbose, ai_emails=(), from_files=False):
     """Fetch new posts from every free-text source and run them past the AI."""
     from posts import Reader, fetch_listingsproject, fetch_reddit
     ft = cfg.get("free_text", {})
@@ -532,6 +532,24 @@ def collect_posts(cfg, state, fb_posts, verbose):
         elif verbose:
             log(f"   ✗ [{p['source']}] {p['title'][:70]} — {why}")
 
+    # Emails read by the AI (Leasebreak's weekly list / search alerts).
+    from pages import read_email_cards
+    r = cfg["rules"]
+    for gid, name, cards in ai_emails:
+        reader.budget = max(reader.budget, ft.get("ai_max_email_calls", 12))
+        got = read_email_cards(reader, name, cards, r["min_price"], r["max_price"])
+        if got is None:
+            continue  # AI unavailable: email stays unprocessed and is retried next run
+        if not from_files:
+            state["processed"][gid] = time.time()
+        log(f"{name} email: {len(cards)} links, {len(got)} listings read")
+        for p, reading in got:
+            hit, why = judge_post(cfg, p, reading)
+            if hit:
+                hits.append(hit)
+            elif verbose:
+                log(f"   ✗ [{name}] {reading.summary[:70]} — {why}")
+
     # Broker / property-manager websites: only new links get read.
     from pages import check_pages
     if cfg.get("pages") and not reader.broken:
@@ -543,6 +561,23 @@ def collect_posts(cfg, state, fb_posts, verbose):
             elif verbose:
                 log(f"   ✗ [{p['source']}] {reading.summary[:70]} — {why}")
     return hits, reader.broken
+
+
+def send_reminders(cfg, state, topic, dry_run):
+    """Weekly nudges (e.g. Listings Project First Access needs you signed in,
+    so the watcher can't read it; it can remind you to look)."""
+    from datetime import timedelta
+    now_et = datetime.now(timezone.utc) - timedelta(hours=4)  # EDT; an hour off in winter is fine
+    sent = state.setdefault("reminders_sent", {})
+    for rem in cfg.get("reminders", []):
+        week = now_et.strftime("%G-%V")
+        if (now_et.strftime("%A") == rem["weekday"] and now_et.hour >= rem["hour_et"]
+                and sent.get(rem["name"]) != week):
+            log(f"reminder: {rem['name']}")
+            if topic and not dry_run:
+                ntfy(topic, rem["title"], rem["body"], click=rem.get("url"), tags="bell")
+            if not dry_run:
+                sent[rem["name"]] = week
 
 
 def alert_problem(state, topic, kind, title, body, dry_run):
@@ -591,7 +626,7 @@ def run(args):
 
     # Collect candidates across all sources first, so the same apartment
     # seen on three sites in one run becomes one alert listing all three.
-    batch, fb_posts = {}, []
+    batch, fb_posts, ai_emails = {}, [], []
 
     def add(hit):
         if hit["key"] in batch:
@@ -617,6 +652,16 @@ def run(args):
 
     for gid, m in fresh:
         sender, subject, html_body, text_body = message_parts(m)
+        ai_rule = next((r for r in cfg.get("ai_email_sources", [])
+                        if re.search(r["from"], sender)), None)
+        if ai_rule:
+            if not re.search(ai_rule.get("skip_subject", "$^"), subject, re.I) and html_body:
+                from pages import link_cards
+                ai_emails.append((gid, ai_rule["name"],
+                                  link_cards(html_body, ai_rule.get("base_url", "https://example.com/"))))
+            elif not args.file:
+                state["processed"][gid] = time.time()
+            continue
         if sender.endswith("facebookmail.com"):
             from posts import facebook_post_from_email
             post = facebook_post_from_email(gid, subject, html_body, text_body)
@@ -645,7 +690,7 @@ def run(args):
             consider_card(c)
 
     if not args.no_posts:
-        hits, broken = collect_posts(cfg, state, fb_posts, args.verbose)
+        hits, broken = collect_posts(cfg, state, fb_posts, args.verbose, ai_emails, args.file)
         for hit in hits:
             add(hit)
         if broken:
@@ -653,6 +698,8 @@ def run(args):
             alert_problem(state, topic, "anthropic", "⚠️ Apartment watcher: AI post reader stopped",
                           f"Anthropic API {broken}.\nReddit / Listings Project / Facebook posts "
                           "aren't being read until this is fixed.", args.dry_run)
+
+    send_reminders(cfg, state, topic, args.dry_run or args.file)
 
     sent = 0
     for key, hit in batch.items():
