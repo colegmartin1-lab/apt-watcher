@@ -123,7 +123,9 @@ class PostReading(BaseModel):
     neighborhood: Optional[str] = Field(description="NYC neighborhood as stated or clearly implied, e.g. 'Park Slope'")
     address: Optional[str] = Field(description="Street address or cross streets if given, e.g. '448 Bergen St' or 'Bedford Ave & N 7th St'")
     lease: Literal["lease", "lease_takeover", "long_sublet", "short_term", "unknown"] = Field(
-        description="short_term = under ~3 months, nightly/weekly rates, or furnished stays")
+        description="lease = new lease with the landlord; lease_takeover = taking over the "
+                    "remaining lease in your own name; long_sublet = subletting from the tenant for "
+                    "3+ months; short_term = under ~3 months, nightly/weekly rates, or furnished stays")
     available: Optional[str] = Field(description="Move-in date as written, if stated")
     summary: str = Field(description="One line, max 80 chars, the key facts a renter would want")
 

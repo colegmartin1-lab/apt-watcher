@@ -1,8 +1,8 @@
 # apt-watcher
 
-Two trackers run here on GitHub Actions, each pushing to its own ntfy topic.
-
-## 1. Long-term rentals: `inbox_watcher.py` (rebuilt Oct 2026)
+Long-term rental tracker (`inbox_watcher.py`, rebuilt Oct 2026). Runs on GitHub
+Actions and pushes to ntfy. Leases and lease takeovers only: sublets and short
+stays are always dropped. The old sublet tracker was retired on 2026-10-14.
 
 The search: solo studio/1BR, $1,000–3,000, in Greenpoint, Williamsburg (north of
 Domino Park, west of the BQE), Fort Greene, Clinton Hill, Boerum Hill, Cobble
@@ -23,8 +23,8 @@ other big sites block bots, but they all email saved-search alerts. So every run
    listings and listings in the wrong neighborhood.
 5. Merges duplicates, so one apartment listed on Trulia, Zillow and
    StreetEasy becomes one alert.
-6. **Free-text posts:** reads Reddit (r/NYCapartments, r/NYCsublets and
-   r/BrooklynApartments, title *and* body), Listings Project, and
+6. **Free-text posts:** reads Reddit (r/NYCapartments and r/BrooklynApartments,
+   title *and* body), Listings Project, and
    Facebook-group notification emails. Claude Haiku decides whether each post
    offers a whole apartment (not "looking for…"), and pulls out price, size,
    neighborhood and lease type. Costs about $1/month. This step is skipped if
@@ -53,8 +53,3 @@ where the saved-search part ends.
 
 **Schedule:** GitHub's own cron runs hours late, so cron-job.org calls the
 workflow's `workflow_dispatch` every 5 minutes. The `*/15` cron is only a backup.
-
-## 2. Sublets: `apt_watcher.py --config config.sublets.json`
-
-This is the older scraper (Craigslist, Listings Project, Sublet.com, Reddit). It
-pushes to `NTFY_TOPIC_SUBLETS` and is unchanged.

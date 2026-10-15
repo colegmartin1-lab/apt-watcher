@@ -406,8 +406,9 @@ def judge_post(cfg, post, reading):
         return None, "not an offer"
     if reading.kind != "whole_apartment":
         return None, reading.kind
-    if reading.lease == "short_term":
-        return None, "short-term"
+    # Long-term only: leases and lease takeovers. Any sublet is out.
+    if reading.lease in ("short_term", "long_sublet"):
+        return None, reading.lease.replace("_", " ")
     # People often leave the price out ("DM for details"); still worth a ping.
     why = judge_size_price(cfg, reading.price_monthly, reading.bedrooms, price_required=False)
     if why:
@@ -431,8 +432,8 @@ def judge_post(cfg, post, reading):
             flags.append("no address, neighborhood as stated")
     if reading.price_monthly is None:
         flags.append("no price in post")
-    if reading.lease in ("long_sublet", "lease_takeover"):
-        flags.append(reading.lease.replace("_", " "))
+    if reading.lease == "lease_takeover":
+        flags.append("lease takeover")
     key = listing_key(geo, reading.address, None) if geo else \
         hashlib.sha1(post["url"].encode()).hexdigest()[:16]
     line = reading.summary + (f" · avail {reading.available}" if reading.available else "")

@@ -1,8 +1,5 @@
 requests>=2.31
 beautifulsoup4>=4.12
-# Listings Project (and others) serve Content-Encoding: br; without this,
-# requests silently returns undecodable bytes and adapters find 0 listings.
-brotli>=1.1
 # inbox_watcher.py: AI reader for Reddit / Listings Project / Facebook posts
 anthropic>=1.14
 pydantic>=2

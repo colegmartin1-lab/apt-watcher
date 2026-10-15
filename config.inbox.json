@@ -127,7 +127,6 @@
     "enabled": true,
     "subreddits": [
       "NYCapartments",
-      "NYCsublets",
       "BrooklynApartments"
     ],
     "listingsproject_url": "https://www.listingsproject.com/real-estate/new-york-city",
