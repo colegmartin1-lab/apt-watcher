@@ -1,7 +1,7 @@
 {
  "feeds": {
   "Brooklyn Group": {
-   "checked": 1792171521.5395346,
+   "checked": 1792172452.903178,
    "seen": {
     "bg:1000": 1792116927.1342967,
     "bg:1001": 1792116927.1342967,
@@ -2065,7 +2065,7 @@
    }
   },
   "Nooklyn": {
-   "checked": 1792171521.5395346,
+   "checked": 1792172452.903178,
    "seen": {
     "nooklyn:100394": 1792116927.1342967,
     "nooklyn:100504": 1792116927.1342967,
@@ -2678,7 +2678,7 @@
     "nooklyn:98433": 1792116927.1342967,
     "nooklyn:98515": 1792116927.1342967,
     "nooklyn:98538": 1792116927.1342967,
-    "nooklyn:98864": 1792085433.361256,
+    "nooklyn:98864": 1792172452.903178,
     "nooklyn:98885": 1792116927.1342967,
     "nooklyn:99249": 1792116927.1342967
    }
@@ -4192,7 +4192,8 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1x7kimn/studio_lease_takeover_available_starting_1023/": 1792167629.7636635,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1x7l0e4/looking_to_swap_2165_2bed_1bath_rent_stabilized/": 1792168526.918858,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1x7mg5j/any_leads_help_1br_in_lesev_or_bk_radius/": 1792171835.131738,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1x7mies/ae_ta_time_on_lease/": 1792172125.5797355
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1x7mies/ae_ta_time_on_lease/": 1792172125.5797355,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1x7mqzt/we_need_a_place_to_land_like_yesterday/": 1792172475.1992323
  },
  "processed": {
   "1878912659436325385": 1792025847.640471,
