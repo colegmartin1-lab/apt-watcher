@@ -3495,7 +3495,7 @@
    }
   },
   "8b5802c82e6b372c": {
-   "checked": 1792155638.7215736,
+   "checked": 1792156530.8340738,
    "seen": {
     "0d74c0f9b41a142f": 1792116944.7537136,
     "20cf86ed2ebeaa2b": 1792116944.7537136,
@@ -4156,7 +4156,8 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1x7eu7s/iso_2br_ues_or_uws/": 1792153567.8299327,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1x7f466/renovated_1bed_in_mid_70s_and_3rd_ave_ues_3650/": 1792154449.910691,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1x7f4s8/marketing_apartments/": 1792154448.6905992,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1x7fg05/being_harassed_by_a_neighbor_exroommate_or/": 1792155349.7337618
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1x7fg05/being_harassed_by_a_neighbor_exroommate_or/": 1792155349.7337618,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1x7fv4q/1_bed_1_bath_plus_office_in_hells_kitchen/": 1792156530.8286707
  },
  "processed": {
   "1878912659436325385": 1792025847.640471,
@@ -4192,7 +4193,8 @@
   "1879136489278223459": 1792084224.5595186,
   "1879147854492454928": 1792095359.4582412,
   "1879148901212746139": 1792096235.6687565,
-  "1879162958717127267": 1792109722.0670867
+  "1879162958717127267": 1792109722.0670867,
+  "1879212107776162277": 1792156525.9473789
  },
  "reminders_sent": {}
 }
