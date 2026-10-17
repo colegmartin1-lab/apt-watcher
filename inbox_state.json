@@ -2763,10 +2763,10 @@
  },
  "pages": {
   "00c5b83d74bbe593": {
-   "checked": 1792202430.9018161,
+   "checked": 1792204240.579436,
    "seen": {
-    "48d63f934a87036b": 1792117233.4368079,
-    "bd7b14ab632cc156": 1792117233.4368079
+    "48d63f934a87036b": 1792204240.579436,
+    "bd7b14ab632cc156": 1792204240.579436
    }
   },
   "02ce40a68c1bc982": {
@@ -4232,7 +4232,8 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1x7xfh1/studio_sublet_on_the_upper_east_side/": 1792199730.407397,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1x7y0ic/vent/": 1792201538.8507826,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1x7yjhr/524_putnam_ave_bedstuy/": 1792203331.9432008,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1x7yowl/moving_to_nyc_in_january/": 1792203628.757348
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1x7yowl/moving_to_nyc_in_january/": 1792203628.757348,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1x7yvh3/iso_1_or_2br_in_bk_for_nov_1_move_in/": 1792204240.5740118
  },
  "processed": {
   "1878912659436325385": 1792025847.640471,
@@ -4286,7 +4287,8 @@
   "1879244239286564892": 1792187063.5694995,
   "1879245399438799342": 1792188338.8086174,
   "1879245405794750521": 1792188338.8090603,
-  "1879254727732003952": 1792197027.8434865
+  "1879254727732003952": 1792197027.8434865,
+  "1879262312428362266": 1792204235.6254241
  },
  "reminders_sent": {}
 }
