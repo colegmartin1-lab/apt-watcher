@@ -1,7 +1,7 @@
 {
  "feeds": {
   "Brooklyn Group": {
-   "checked": 1792439125.987951,
+   "checked": 1792440029.38919,
    "seen": {
     "bg:1000": 1792377381.6820872,
     "bg:1001": 1792377381.6820872,
@@ -2067,7 +2067,7 @@
    }
   },
   "Nooklyn": {
-   "checked": 1792439125.987951,
+   "checked": 1792440029.38919,
    "seen": {
     "nooklyn:100394": 1792377381.6820872,
     "nooklyn:100504": 1792377381.6820872,
@@ -3128,17 +3128,28 @@
    }
   },
   "4c40b5f4dfa20c81": {
-   "checked": 1792439150.6174476,
+   "checked": 1792440060.4827096,
    "seen": {
     "01656f12fceb5fa3": 1792422054.4511318,
+    "0282e6bb62fe04a9": 1792440060.4827096,
+    "045c008e44c5aa67": 1792440060.4827096,
+    "06ffbf0a0c8231f2": 1792440060.4827096,
+    "14e37d6022a2649d": 1792440060.4827096,
+    "17c4885f1dfc5cdc": 1792440060.4827096,
+    "1de5dba010156919": 1792440060.4827096,
     "24ec52e9220e0244": 1792422054.4511318,
     "40900438247bc4c2": 1792422054.4511318,
     "4f72a583c29be576": 1792422054.4511318,
+    "5c6858002f644915": 1792440060.4827096,
     "980590ebce26813c": 1792422054.4511318,
+    "a2a278a878e78f73": 1792440060.4827096,
     "ae1b15973bd2cc45": 1792417560.6665077,
     "b8b2dffb90cb591f": 1792430151.3007655,
     "ccf56fc94ea283c2": 1792430151.3007655,
+    "cf71ef188d869ff3": 1792440060.4827096,
     "e44de6c5564c18b5": 1792430151.3007655,
+    "e988cd7f89662951": 1792440060.4827096,
+    "f4f983cd67baf250": 1792440060.4827096,
     "f8f7b3ee9940af60": 1792430151.3007655
    }
   },
@@ -4074,7 +4085,7 @@
    }
   },
   "ebce190b005f0ff1": {
-   "checked": 1792439150.6174476,
+   "checked": 1792440060.4827096,
    "seen": {}
   },
   "fc9df85cad7a305a": {
@@ -4267,6 +4278,7 @@
   "cl:5UxS9RHp1K3q4bQCFy1kEy": 1792437055.9094265,
   "cl:5Wbst3s6XCmyX2VaGrptSL": 1792414005.4409103,
   "cl:5YUha4kYx1kfKUEetf7uFv": 1792414020.6096334,
+  "cl:5ZpJjmjysdUNQpqwX2fcGB": 1792440049.8898327,
   "cl:5cBzRgcyfnNPTJRXpHc7cM": 1792436756.6148057,
   "cl:5eU3Y5kta5hiMwjM8Fpsbd": 1792436756.6148121,
   "cl:5m6T1y1PbGSDsH4YNUYQjv": 1792435869.197349,
@@ -4459,6 +4471,7 @@
   "cl:gYyHY9mU3dGv4qg7gKbkSe": 1792414565.9681733,
   "cl:gdFnrTYyo8LAHMrbbEBiQa": 1792437370.9419107,
   "cl:gyeytBuzuzAri6hg5nwjz9": 1792437642.0250275,
+  "cl:gztzTpZUExfTfuQiP6wiZB": 1792440060.4781957,
   "cl:h1Cjh9VhRYSd5ZbUty7cqE": 1792437370.9419067,
   "cl:h62TdD5KqQqvYLhAr2sh7M": 1792437370.9419074,
   "cl:hAYvGQpMTsvKhMz8Q7zdsA": 1792436164.05548,
@@ -5111,7 +5124,9 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xa4pxg/longterm_sublet_east_village_studio_3300_inunit/": 1792434343.8186069,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xa5emu/no_fee_1br_loft_in_turtle_bay/": 1792435875.6287963,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xa5tt9/nyc_landlord_denying_my_esa_after_i_signed_the/": 1792436759.7581267,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xa5vrd/30m_looking_for_washington_heights_roomroommate/": 1792437052.0799809
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xa5vrd/30m_looking_for_washington_heights_roomroommate/": 1792437052.0799809,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xa7agb/sublet_bright_spacious_1br_in_williamsburg_1_min/": 1792440056.7524357,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xa7bum/sublease_lease_takeover_in_lincoln_center/": 1792440054.1605554
  },
  "processed": {
   "1878912659436325385": 1792025847.640471,
