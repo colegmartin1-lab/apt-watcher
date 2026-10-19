@@ -1,7 +1,7 @@
 {
  "feeds": {
   "Brooklyn Group": {
-   "checked": 1792422923.0080183,
+   "checked": 1792423833.0536313,
    "seen": {
     "bg:1000": 1792377381.6820872,
     "bg:1001": 1792377381.6820872,
@@ -2066,7 +2066,7 @@
    }
   },
   "Nooklyn": {
-   "checked": 1792422923.0080183,
+   "checked": 1792423833.0536313,
    "seen": {
     "nooklyn:100394": 1792377381.6820872,
     "nooklyn:100504": 1792377381.6820872,
@@ -2101,7 +2101,7 @@
     "nooklyn:101645": 1792362924.2699637,
     "nooklyn:101647": 1792377381.6820872,
     "nooklyn:101649": 1792377381.6820872,
-    "nooklyn:101651": 1792336824.2056444,
+    "nooklyn:101651": 1792423833.0536313,
     "nooklyn:101652": 1792377381.6820872,
     "nooklyn:101653": 1792377381.6820872,
     "nooklyn:101655": 1792377381.6820872,
@@ -2176,7 +2176,7 @@
     "nooklyn:101785": 1792377381.6820872,
     "nooklyn:101786": 1792377381.6820872,
     "nooklyn:101789": 1792382128.0727725,
-    "nooklyn:101795": 1792336824.2056444,
+    "nooklyn:101795": 1792423833.0536313,
     "nooklyn:101796": 1792377381.6820872,
     "nooklyn:101797": 1792377381.6820872,
     "nooklyn:101799": 1792377381.6820872,
@@ -2664,10 +2664,10 @@
     "nooklyn:95692": 1792377381.6820872,
     "nooklyn:95763": 1792377381.6820872,
     "nooklyn:95819": 1792377381.6820872,
-    "nooklyn:95912": 1792336824.2056444,
+    "nooklyn:95912": 1792423833.0536313,
     "nooklyn:95947": 1792116927.1342967,
     "nooklyn:95963": 1792377381.6820872,
-    "nooklyn:96019": 1792336824.2056444,
+    "nooklyn:96019": 1792423833.0536313,
     "nooklyn:96111": 1792377381.6820872,
     "nooklyn:96246": 1792342222.7427948,
     "nooklyn:96285": 1792342222.7427948,
@@ -3083,7 +3083,7 @@
    }
   },
   "4c40b5f4dfa20c81": {
-   "checked": 1792422942.1417117,
+   "checked": 1792423856.7294984,
    "seen": {
     "01656f12fceb5fa3": 1792422054.4511318,
     "24ec52e9220e0244": 1792422054.4511318,
@@ -4025,7 +4025,7 @@
    }
   },
   "ebce190b005f0ff1": {
-   "checked": 1792422942.1417117,
+   "checked": 1792423856.7294984,
    "seen": {}
   },
   "fc9df85cad7a305a": {
@@ -4732,7 +4732,8 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1x9yrmr/carroll_gardens_1bd_december_sublet_42k/": 1792421150.684823,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1x9zc1z/lease_takeover_queens_1_bed_1_bath/": 1792422327.2321875,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1x9zcv3/amazing_deal_on_a_private_room_in_a_ridgewood_3br/": 1792422629.2490327,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1x9zezs/iso_studio1br_in_brooklyn_32k_mid_novdec_move_in/": 1792422627.3790011
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1x9zezs/iso_studio1br_in_brooklyn_32k_mid_novdec_move_in/": 1792422627.3790011,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1x9zvq6/looking_for_a_1br_in_inwood_washington_heights/": 1792423856.7251325
  },
  "processed": {
   "1878912659436325385": 1792025847.640471,
