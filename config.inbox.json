@@ -127,12 +127,16 @@
     "enabled": true,
     "subreddits": [
       "NYCapartments",
-      "BrooklynApartments"
+      "BrooklynApartments",
+      "NYCsublets"
     ],
-    "listingsproject_url": "https://www.listingsproject.com/real-estate/new-york-city/rentals",
     "ai_model": "claude-haiku-5-5",
     "ai_max_posts_per_run": 60,
-    "ai_max_page_calls_per_run": 15
+    "ai_max_page_calls_per_run": 15,
+    "listingsproject_urls": [
+      "https://www.listingsproject.com/real-estate/new-york-city/rentals",
+      "https://www.listingsproject.com/real-estate/new-york-city/sublets"
+    ]
   },
   "email_sources": [
     {
@@ -466,5 +470,23 @@
       "body": "Members can preview next week's listings now. Save the good ones and contact listers first thing Wednesday morning.",
       "url": "https://www.listingsproject.com/real-estate/first-access"
     }
-  ]
+  ],
+  "craigslist_sublets": {
+    "areas": [
+      "brk",
+      "mnh"
+    ],
+    "_note": "Craigslist 'sublets & temporary'. Price, rent period and map pin are checked before any AI read."
+  },
+  "takeover": {
+    "enabled": true,
+    "_note": "Sublets/temporary posts become '🔁 Takeover lead' alerts (with a Gmail draft asking about a lease takeover) when they're a whole apartment in the area and budget, the tenant isn't coming back, takeover odds >= min_odds, and scam risk <= max_scam. High scam risk is dropped everywhere.",
+    "min_odds": "medium",
+    "max_scam": "medium",
+    "outreach": {
+      "name": "Cole",
+      "subject": "Your {kind} {where}: open to a lease takeover?",
+      "body": "Hi there,\n\nI came across your post for the {kind} {where} ({source}). I'm looking for a long-term place rather than a sublet, so I wanted to ask: would you, and your landlord, be open to a lease takeover or assignment, with me taking over the lease when you move out?\n\nIf so, I can move quickly and share proof of income and references, and I'm flexible on the move-in date. If not, no worries, and good luck with the move!\n\nThanks,\n{name}\n\n(Re: {title} - {url})\n"
+    }
+  }
 }

@@ -16,7 +16,7 @@ from urllib.parse import unquote
 import requests
 from bs4 import BeautifulSoup
 from pydantic import BaseModel, Field
-from typing import Literal, Optional
+from typing import List, Literal, Optional
 
 BROWSER_UA = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
@@ -96,9 +96,72 @@ def fetch_listingsproject(cfg, seen_ids, max_pages=12, max_details=40):
         text = _text(d.text)
         title = text.split(" | Listings Project")[0][:140]
         posts.append({"id": "lp:" + url, "url": url, "source": "Listings Project",
-                      "title": title, "text": text[:MAX_POST_CHARS]})
+                      "title": title, "text": text[:MAX_POST_CHARS],
+                      "sublet_context": cfg["listingsproject_url"].endswith("/sublets")})
         time.sleep(0.5)
     return posts
+
+
+CL_PRICE = re.compile(r"\$\s*([\d,]+)")
+
+
+def fetch_craigslist(clcfg, seen_ids, place_check, min_price, max_price, log, max_details=40):
+    """Craigslist "sublets & temporary" search pages (no-JS fallback markup).
+
+    Cheap filters run before any AI: price in budget, monthly (not daily/
+    weekly) rent, and the post's own map pin inside an allowed neighborhood
+    (place_check(lat, lon) → (geo, reason)). Posts failing them are returned
+    in `skipped` so they're marked seen and never fetched again."""
+    posts, skipped, details = [], [], 0
+    for area in clcfg["areas"]:
+        url = f"https://newyork.craigslist.org/search/{area}/sub"
+        r = requests.get(url, params={"min_price": int(min_price * 0.8), "max_price": max_price,
+                                      "sort": "date"}, headers=BROWSER_UA, timeout=20)
+        r.raise_for_status()
+        for li in BeautifulSoup(r.text, "html.parser").select("li.cl-static-search-result"):
+            a = li.find("a", href=True)
+            if not a:
+                continue
+            link = a["href"].split("#")[0]
+            pid = "cl:" + link.rstrip("/").split("/")[-1].split(".")[0]
+            if pid in seen_ids or any(p["id"] == pid for p in posts) or pid in skipped:
+                continue
+            price_el = li.select_one(".price")
+            price = CL_PRICE.search(price_el.get_text()) if price_el else None
+            if price and not (min_price * 0.8 <= int(price.group(1).replace(",", "")) <= max_price):
+                skipped.append(pid)  # e.g. a $130/night stay
+                continue
+            if details >= max_details:
+                continue  # the rest wait for the next run
+            details += 1
+            try:
+                d = requests.get(link, headers=BROWSER_UA, timeout=20)
+                d.raise_for_status()
+            except requests.RequestException:
+                continue
+            ds = BeautifulSoup(d.text, "html.parser")
+            attrs = " · ".join(x.get_text(" ", strip=True) for x in ds.select(".attrgroup span"))
+            if re.search(r"rent period:\s*(daily|weekly)", attrs, re.I):
+                skipped.append(pid)
+                continue
+            m = ds.select_one("#map")
+            geo = None
+            if m and m.get("data-latitude") and m.get("data-longitude"):
+                geo, why = place_check(float(m["data-latitude"]), float(m["data-longitude"]))
+                if why:
+                    skipped.append(pid)
+                    continue
+            body = ds.select_one("#postingbody")
+            title = ds.select_one("#titletextonly")
+            text = re.sub(r"\s+", " ", body.get_text(" ")).replace("QR Code Link to This Post", "") if body else ""
+            listed = f"Listed price: {price_el.get_text(strip=True)}\n" if price_el else ""
+            posts.append({"id": pid, "url": link, "source": "Craigslist sublets",
+                          "title": (title.get_text(strip=True) if title else a.get_text(strip=True))[:140],
+                          "text": f"Posted in Craigslist 'sublets & temporary'.\n{listed}{attrs}\n{text}"[:MAX_POST_CHARS],
+                          "geo": geo, "sublet_context": True})
+            time.sleep(0.5)
+    log(f"Craigslist sublets: {len(posts)} to read, {len(skipped)} filtered out cheaply")
+    return posts, skipped
 
 
 FB_LINK = re.compile(r"https?://(?:www\.|m\.|web\.)?facebook\.com/[^\s\"'<>]+")
@@ -145,7 +208,31 @@ def facebook_post_from_email(gid, sender, subject, html_body, text_body):
 # AI reader
 # --------------------------------------------------------------------------
 
-class PostReading(BaseModel):
+class TakeoverSignals(BaseModel):
+    """Read on every post: used to drop scams everywhere, and to decide
+    whether a sublet is worth asking about a lease takeover."""
+    lister_type: Literal["tenant", "landlord", "broker", "host_or_operator", "unknown"] = Field(
+        description="Who is posting: the current tenant; the landlord/management; a broker/agent; "
+                    "or a furnished-rental host/operator (Airbnb-style, corporate housing, co-living)")
+    tenant_returning: Optional[bool] = Field(
+        description="True if the tenant says they are coming back (e.g. 'while I'm away until March'); "
+                    "False if they are leaving for good (relocating, moving out, breaking lease); null if unclear")
+    scam_risk: Literal["low", "medium", "high"] = Field(
+        description="Likelihood this is a rental scam. Red flags: rent far below the area for that size, "
+                    "lister abroad / 'keys by mail', deposit or payment before viewing, Zelle/wire/gift "
+                    "cards/crypto, contact only via WhatsApp/text/off-platform email, no real address or "
+                    "viewing, pressure/urgency, generic copy-paste text, too-good-to-be-true luxury")
+    scam_flags: List[str] = Field(description="Up to 3 short red flags actually present (empty if none)")
+    takeover_odds: Literal["low", "medium", "high"] = Field(
+        description="Chance the place could become a lease takeover/assignment for a new long-term "
+                    "tenant. High: tenant leaving for good, mentions breaking/transferring the lease, "
+                    "landlord open to a new tenant, many months left. Low: tenant returning, short "
+                    "fixed dates, furnished with tenant's belongings staying, host/operator listing, room.")
+    takeover_reasons: List[str] = Field(description="Up to 2 short reasons for takeover_odds")
+    contact_email: Optional[str] = Field(description="An email address written in the post itself, else null")
+
+
+class PostReading(TakeoverSignals):
     is_offer: bool = Field(description="True only if someone is OFFERING a place to rent. "
                            "False for 'looking for'/ISO posts, questions, rants, news, ads for services.")
     kind: Literal["whole_apartment", "room_in_shared", "other"]
@@ -164,7 +251,9 @@ class PostReading(BaseModel):
 READER_PROMPT = """You read NYC housing posts for one renter and extract facts. \
 Be literal: only report what the post says or clearly implies. A post titled \
 "Looking for…", "ISO", "Seeking…" is not an offer even if it names a price. \
-A "room" in a shared apartment is kind=room_in_shared even if the room is large."""
+A "room" in a shared apartment is kind=room_in_shared even if the room is large. \
+Judge scam risk and lease-takeover odds from the post's own words; don't invent \
+red flags or reasons that aren't there."""
 
 
 class Reader:

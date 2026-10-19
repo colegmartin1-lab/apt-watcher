@@ -19,7 +19,7 @@ import requests
 from bs4 import BeautifulSoup
 from pydantic import BaseModel, Field
 
-from posts import BROWSER_UA
+from posts import BROWSER_UA, TakeoverSignals
 
 LISTINGISH = re.compile(r"\$\s?\d|\bstudio\b|\bbed|\bbr\b|bedroom|/mo\b|per month|apartment|\bapt\b|"
                         r"\brent(al|als)?\b|\bfor rent\b", re.I)
@@ -104,7 +104,7 @@ def price_text(html):
     return f"Page: {title} | {body}" if body else ""
 
 
-class PageListing(BaseModel):
+class PageListing(TakeoverSignals):
     card: int = Field(description="Number of the card this listing came from")
     is_offer: bool = Field(description="True only for an apartment currently offered for rent. "
                            "False for sold/sales listings, agent bios, blog posts, neighborhood guides, "

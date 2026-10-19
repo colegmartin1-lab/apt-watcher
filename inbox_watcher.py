@@ -377,12 +377,12 @@ def judge_place(cfg, geo):
 
 def judge_size_price(cfg, price, beds, price_required=True):
     r = cfg["rules"]
+    if beds is not None and beds > r["max_beds"]:
+        return f"{beds} beds"
     if price is None:
         return "no price" if price_required else None
     if not (r["min_price"] <= price <= r["max_price"]):
         return f"price ${price:,}"
-    if beds is not None and beds > r["max_beds"]:
-        return f"{beds} beds"
     return None
 
 
@@ -426,10 +426,12 @@ def listing_key(geo, address, unit):
 # notify
 # --------------------------------------------------------------------------
 
-def ntfy(topic, title, body, click=None, tags="house", priority="default"):
+def ntfy(topic, title, body, click=None, tags="house", priority="default", actions=None):
     headers = {"Title": title.encode("utf-8"), "Tags": tags, "Priority": priority}
     if click:
         headers["Click"] = click
+    if actions:
+        headers["Actions"] = actions
     requests.post(f"https://ntfy.sh/{topic}", data=body.encode("utf-8"),
                   headers=headers, timeout=15)
 
@@ -438,24 +440,53 @@ def beds_label(b):
     return "Beds ?" if b is None else ("Studio" if b == 0 else f"{b}BR")
 
 
-def notify_hit(topic, hit, dry_run):
+def notify_hit(topic, hit, dry_run, drafted=False):
     price = f"${hit['price']:,}" if hit["price"] else "Price ?"
     title = f"{price} · {beds_label(hit['beds'])} · {hit['hood']}"
     lines = [hit["line"], f"via {', '.join(sorted(hit['sources']))}"]
+    actions = None
+    if hit.get("takeover"):
+        title = "🔁 Takeover lead · " + title
+        if hit.get("why"):
+            lines.insert(1, f"Why: {hit['why']}")
+        if drafted:
+            lines.append("✉️ Message drafted in Gmail: review & send")
+            actions = (f"view, Open listing, {hit['url']}; "
+                       "view, Gmail drafts, https://mail.google.com/mail/u/0/#drafts")
     lines += [f"⚠️ {f}" for f in hit["flags"]]
     body = "\n".join(lines)
     # People's posts get snapped up fastest, so they always ring.
     prio = "high" if hit["is_post"] or (hit["price"] or 0) <= 2500 else "default"
     log(f"  ✅ NOTIFY {title} | {' | '.join(lines)} | {hit['url']}")
     if not dry_run and topic:
-        ntfy(topic, title, body, click=hit["url"], priority=prio,
-             tags="speech_balloon" if hit["is_post"] else "house")
+        ntfy(topic, title, body, click=hit["url"], priority=prio, actions=actions,
+             tags="repeat" if hit.get("takeover") else "speech_balloon" if hit["is_post"] else "house")
         time.sleep(1)
 
 
 # --------------------------------------------------------------------------
 # free-text posts (Reddit, Listings Project, Facebook group emails)
 # --------------------------------------------------------------------------
+
+ODDS = {"low": 0, "medium": 1, "high": 2}
+
+
+def reverse_geocode(lat, lon):
+    """Map pin → neighborhood, via NYC GeoSearch's reverse lookup."""
+    try:
+        r = requests.get("https://geosearch.planninglabs.nyc/v2/reverse",
+                         params={"point.lat": lat, "point.lon": lon, "size": 1},
+                         headers=UA, timeout=15)
+        f = (r.json().get("features") or [None])[0]
+        if f:
+            p = f["properties"]
+            return {"hood": p.get("neighbourhood") or "", "borough": p.get("borough") or "",
+                    "label": p.get("name") or p.get("label") or "", "lat": lat, "lon": lon,
+                    "confidence": 1.0}
+    except (requests.RequestException, ValueError, KeyError) as e:
+        log(f"  reverse geocode failed for {lat},{lon}: {e}")
+    return None
+
 
 def judge_post(cfg, post, reading):
     """AI reading of a post → (hit dict, None) or (None, reason)."""
@@ -465,15 +496,32 @@ def judge_post(cfg, post, reading):
         return None, "not an offer"
     if reading.kind != "whole_apartment":
         return None, reading.kind
-    # Long-term only: leases and lease takeovers. Any sublet is out.
-    if reading.lease in ("short_term", "long_sublet"):
-        return None, reading.lease.replace("_", " ")
+    if reading.scam_risk == "high":
+        return None, "likely scam: " + "; ".join(reading.scam_flags[:2])
+    # Leases and lease takeovers are the main search. A sublet only counts as
+    # a takeover lead: the tenant may be leaving for good, worth asking.
+    takeover = reading.lease in ("short_term", "long_sublet") or \
+        (post.get("sublet_context") and reading.lease == "unknown")
+    if takeover:
+        t = cfg.get("takeover", {})
+        if not t.get("enabled"):
+            return None, reading.lease.replace("_", " ")
+        if reading.tenant_returning:
+            return None, "sublet: tenant returning"
+        if ODDS[reading.takeover_odds] < ODDS[t.get("min_odds", "medium")]:
+            return None, f"sublet, takeover odds {reading.takeover_odds}"
+        if reading.lister_type == "host_or_operator":
+            return None, "furnished-rental operator"
+        if ODDS[reading.scam_risk] > ODDS[t.get("max_scam", "medium")]:
+            return None, f"scam risk {reading.scam_risk}"
     # People often leave the price out ("DM for details"); still worth a ping.
     why = judge_size_price(cfg, reading.price_monthly, reading.bedrooms, price_required=False)
     if why:
         return None, why
-    flags, geo = [], None
-    if reading.address:
+    flags, geo = [], post.get("geo")  # Craigslist posts carry their own map pin
+    if geo:
+        pass
+    elif reading.address:
         hint = borough_of(f"{reading.neighborhood or ''} {post['title']}", None)
         geo = geocode(reading.address, hint or cfg.get("default_borough", "Brooklyn"),
                       explicit=bool(hint))
@@ -495,12 +543,17 @@ def judge_post(cfg, post, reading):
         flags.append("no price in post")
     if reading.lease == "lease_takeover":
         flags.append("lease takeover")
-    key = listing_key(geo, reading.address, None) if geo else \
+    if reading.scam_risk == "medium":
+        flags.append("possible scam: " + "; ".join(reading.scam_flags[:2]))
+    key = listing_key(geo, reading.address, None) if geo and reading.address else \
         hashlib.sha1(post["url"].encode()).hexdigest()[:16]
     line = reading.summary + (f" · avail {reading.available}" if reading.available else "")
     return {"key": key, "price": reading.price_monthly, "beds": reading.bedrooms,
             "hood": hood, "line": line, "url": post["url"], "sources": {post["source"]},
-            "flags": flags, "is_post": True}, None
+            "flags": flags, "is_post": True, "takeover": takeover,
+            "why": "; ".join(reading.takeover_reasons[:2]), "title": post["title"],
+            "address": reading.address, "available": reading.available,
+            "contact_email": reading.contact_email}, None
 
 
 def collect_posts(cfg, state, fb_posts, verbose, ai_emails=(), from_files=False):
@@ -514,8 +567,26 @@ def collect_posts(cfg, state, fb_posts, verbose, ai_emails=(), from_files=False)
         return [], None
     seen = state.setdefault("posts_seen", {})
     posts = list(fb_posts)
-    for name, fetcher in (("Reddit", lambda: fetch_reddit(ft)),
-                          ("Listings Project", lambda: fetch_listingsproject(ft, seen))):
+    lp_urls = ft.get("listingsproject_urls") or [ft["listingsproject_url"]]
+    fetchers = [("Reddit", lambda: fetch_reddit(ft))]
+    fetchers += [(f"Listings Project {u.rsplit('/', 1)[-1]}",
+                  lambda u=u: fetch_listingsproject({**ft, "listingsproject_url": u}, seen))
+                 for u in lp_urls]
+    if cfg.get("takeover", {}).get("enabled") and cfg.get("craigslist_sublets"):
+        from posts import fetch_craigslist
+
+        def place_check(lat, lon):
+            geo = reverse_geocode(lat, lon)
+            return geo, judge_place(cfg, geo)
+
+        def craigslist():
+            got, skipped = fetch_craigslist(cfg["craigslist_sublets"], seen, place_check,
+                                            cfg["rules"]["min_price"], cfg["rules"]["max_price"], log)
+            for pid in skipped:
+                seen[pid] = time.time()
+            return got
+        fetchers.append(("Craigslist sublets", craigslist))
+    for name, fetcher in fetchers:
         try:
             got = fetcher()
             log(f"{name}: {len(got)} posts")
@@ -585,6 +656,46 @@ def send_reminders(cfg, state, topic, dry_run):
                 ntfy(topic, rem["title"], rem["body"], click=rem.get("url"), tags="bell")
             if not dry_run:
                 sent[rem["name"]] = week
+
+
+EMAIL_RE = re.compile(r"^[\w.+-]+@[\w-]+(\.[\w-]+)+$")
+
+
+def outreach_text(cfg, hit):
+    """The lease-takeover ask for one lead, from the editable config template."""
+    o = cfg["takeover"]["outreach"]
+    street = re.sub(r"^\d+[-\d]*\s+", "", hit.get("address") or "").strip()
+    where = f"on {street} in {hit['hood']}" if street else f"in {hit['hood']}"
+    kind = {None: "apartment", 0: "studio", 1: "1-bedroom"}.get(hit["beds"], f"{hit['beds']}-bedroom")
+    source = sorted(hit["sources"])[0]
+    fields = {"name": o.get("name", ""), "where": where, "kind": kind, "source": source,
+              "title": hit.get("title") or "", "url": hit["url"]}
+    return o["subject"].format(**fields), o["body"].format(**fields)
+
+
+def create_draft(cfg, hit):
+    """Save the outreach message to Gmail Drafts (never sends). Addressed only
+    when the post itself gave an email; otherwise Cole adds the Craigslist
+    relay address or sends it on Facebook."""
+    from email.message import EmailMessage
+    subject, body = outreach_text(cfg, hit)
+    msg = EmailMessage()
+    msg["From"] = cfg["gmail_user"]
+    to = (hit.get("contact_email") or "").strip()
+    if EMAIL_RE.match(to):
+        msg["To"] = to
+    msg["Subject"] = subject
+    msg.set_content(body)
+    try:
+        imap = imaplib.IMAP4_SSL("imap.gmail.com")
+        imap.login(cfg["gmail_user"], os.environ.get("GMAIL_APP_PASSWORD", "").replace(" ", ""))
+        typ, _ = imap.append('"[Gmail]/Drafts"', "(\\Draft)",
+                             imaplib.Time2Internaldate(time.time()), msg.as_bytes())
+        imap.logout()
+        return typ == "OK"
+    except (imaplib.IMAP4.error, OSError) as e:
+        log(f"  draft failed: {e}")
+        return False
 
 
 def alert_problem(state, topic, kind, title, body, dry_run):
@@ -717,7 +828,14 @@ def run(args):
         if prev and (hit["price"] is None or prev["price"] is None or hit["price"] >= prev["price"]):
             continue
         if not args.seed:
-            notify_hit(topic, hit, args.dry_run)
+            drafted = False
+            if hit.get("takeover") and cfg.get("takeover", {}).get("outreach"):
+                if args.dry_run or args.file:
+                    subj, _ = outreach_text(cfg, hit)
+                    log(f"  (would draft: {subj!r})")
+                else:
+                    drafted = create_draft(cfg, hit)
+            notify_hit(topic, hit, args.dry_run, drafted=drafted)
             sent += 1
         state["notified"][key] = {"price": hit["price"], "ts": time.time()}
 

@@ -1,8 +1,18 @@
 # apt-watcher
 
 Long-term rental tracker (`inbox_watcher.py`, rebuilt Oct 2026). Runs on GitHub
-Actions and pushes to ntfy. Leases and lease takeovers only: sublets and short
-stays are always dropped. The old sublet tracker was retired on 2026-10-14.
+Actions and pushes to ntfy. The main search is leases and lease takeovers.
+
+**Takeover leads (added 2026-10-19).** Sublet and temporary posts can also lead
+to a lease takeover, when the tenant is leaving for good. Sources: Craigslist
+"sublets & temporary" (Brooklyn and Manhattan), r/NYCsublets, Listings Project
+sublets, Leasebreak emails and Facebook group emails. Every post gets a scam-risk
+and takeover-odds score from Haiku, and high scam risk is dropped everywhere.
+A sublet becomes a "🔁 Takeover lead" alert when it is a whole apartment in the
+area and budget, the tenant isn't coming back, the odds are at least
+`takeover.min_odds`, and the scam risk is at most `takeover.max_scam`. Each lead
+also saves a lease-takeover message to Gmail **Drafts**, using the
+`takeover.outreach` template. Nothing is ever sent automatically.
 
 The search: solo studio/1BR, $1,000–3,000, in Greenpoint, Williamsburg (north of
 Domino Park, west of the BQE), Fort Greene, Clinton Hill, Boerum Hill, Cobble
