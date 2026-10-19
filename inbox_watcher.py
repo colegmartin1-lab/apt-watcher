@@ -77,6 +77,7 @@ def save_state(path, state):
     state["processed"] = {k: v for k, v in state["processed"].items() if v > cutoff}
     state["notified"] = {k: v for k, v in state["notified"].items() if v["ts"] > cutoff}
     state["posts_seen"] = {k: v for k, v in state.get("posts_seen", {}).items() if v > cutoff}
+    state["replies_seen"] = {k: v for k, v in state.get("replies_seen", {}).items() if v > cutoff}
     path.write_text(json.dumps(state, indent=1, sort_keys=True) + "\n")
 
 
@@ -108,6 +109,46 @@ def fetch_emails(cfg, lookback_days):
         gid = m.group(1) if m else hashlib.sha1(msgdata[0][1]).hexdigest()
         yield gid, email.message_from_bytes(msgdata[0][1])
     imap.logout()
+
+
+def check_replies(cfg, state, topic, dry_run):
+    """Ping the phone when a landlord/manager Cole emailed writes back."""
+    rw = cfg.get("reply_watch", {}).get("domains") or {}
+    if not rw:
+        return
+    seen = state.setdefault("replies_seen", {})
+    try:
+        imap = imaplib.IMAP4_SSL("imap.gmail.com")
+        imap.login(cfg["gmail_user"], os.environ.get("GMAIL_APP_PASSWORD", "").replace(" ", ""))
+        imap.select('"[Gmail]/All Mail"', readonly=True)
+        query = f"from:({' OR '.join(rw)}) newer_than:3d"
+        typ, data = imap.search(None, "X-GM-RAW", f'"{query}"')
+        for num in (data[0].split() if typ == "OK" else []):
+            typ, md = imap.fetch(num, "(X-GM-MSGID BODY.PEEK[])")
+            if typ != "OK" or not md or not isinstance(md[0], tuple):
+                continue
+            gid = re.search(r"X-GM-MSGID (\d+)", md[0][0].decode()).group(1)
+            if gid in seen:
+                continue
+            m = email.message_from_bytes(md[0][1])
+            sender, subject, html_body, text_body = message_parts(m)
+            if sender.lower() == cfg["gmail_user"].lower():
+                seen[gid] = time.time()
+                continue
+            who = next((n for d, n in rw.items() if sender.endswith(d)), sender)
+            text = text_body or (BeautifulSoup(html_body, "html.parser").get_text(" ") if html_body else "")
+            first = re.sub(r"\s+", " ", text).strip()[:180]
+            auto = bool(re.match(r"(automatic reply|auto[- ]?reply|out of (the )?office|autoreply)", subject, re.I))
+            log(f"{'📭 auto-reply' if auto else '📬 reply'} from {who}: {subject[:60]!r}")
+            if topic and not dry_run:
+                ntfy(topic, f"{'📭 Auto-reply' if auto else '📬 Reply'} from {who}", f"{subject}\n{first}",
+                     click="https://mail.google.com/mail/u/0/#inbox", tags="incoming_envelope",
+                     priority="low" if auto else "high")
+            if not dry_run:
+                seen[gid] = time.time()
+        imap.logout()
+    except (imaplib.IMAP4.error, OSError, AttributeError) as e:
+        log(f"reply check failed: {e}")
 
 
 def message_parts(msg):
@@ -730,6 +771,9 @@ def run(args):
             if not args.dry_run:
                 save_state(state_path, state)
             return 1
+
+    if not args.file:
+        check_replies(cfg, state, topic, args.dry_run)
 
     fresh = [(gid, m) for gid, m in msgs if args.file or gid not in state["processed"]]
     log(f"{len(msgs)} alert emails in last {args.days}d, {len(fresh)} new")

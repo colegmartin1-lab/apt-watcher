@@ -572,5 +572,36 @@
       "subject": "Your {kind} {where}: open to a lease takeover?",
       "body": "Hi there,\n\nI came across your post for the {kind} {where} ({source}). I'm looking for a long-term place rather than a sublet, so I wanted to ask: would you, and your landlord, be open to a lease takeover or assignment, with me taking over the lease when you move out?\n\nIf so, I can move quickly and share proof of income and references, and I'm flexible on the move-in date. If not, no worries, and good luck with the move!\n\nThanks,\n{name}\n\n(Re: {title} - {url})\n"
     }
+  },
+  "reply_watch": {
+    "_note": "Landlords/managers Cole emailed (2026-10-19+). Any new email from these domains pings the phone.",
+    "domains": {
+      "freestonepg.com": "Freestone",
+      "bermanrealty.com": "Berman Realty",
+      "brownstonemgt.com": "Brownstone Property Group",
+      "meridianpropertiesllc.com": "Meridian Properties",
+      "akelius.us": "Akelius",
+      "livingny.com": "Living New York",
+      "homebychoicenyc.com": "Home By Choice",
+      "choicenewyork.com": "Choice NY",
+      "ae-re.com": "A&E Real Estate",
+      "amsterdamprop.com": "Nieuw Amsterdam",
+      "sunriserealtyny.com": "Sunrise Real Estate",
+      "erlichmanagement.com": "Erlich Management",
+      "dalanre.com": "Dalan",
+      "kaled.com": "Kaled Management",
+      "langrealty.com": "Lang Realty",
+      "langrealtyny.com": "Lang Realty",
+      "corigin.com": "Corigin",
+      "rancomgmt.com": "Ranco",
+      "parkviewbk.com": "Parkview Management",
+      "elhmgmt.com": "ELH Mgmt",
+      "brodsky.com": "Brodsky",
+      "rockrose.com": "The Everly (Rockrose)",
+      "aryamgmt.com": "Arya Management",
+      "horizonrep.com": "Horizon REP",
+      "miradorrealestate.com": "Mirador (DKLB BKLN)",
+      "concordny.com": "Concord Management"
+    }
   }
 }
