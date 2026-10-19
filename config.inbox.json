@@ -437,6 +437,90 @@
       "url": "https://www.rentcafe.com/apartments/ny/brooklyn/97-columbia-heights/default.aspx",
       "every_minutes": 30,
       "mode": "text"
+    },
+    {
+      "name": "Freestone Property Group",
+      "url": "https://freestonepg.com/availabilities/",
+      "every_minutes": 15
+    },
+    {
+      "name": "Brownstone Property Group",
+      "url": "https://www.brownstonepropertygroup.com/vacancies",
+      "every_minutes": 15
+    },
+    {
+      "name": "Akelius NYC",
+      "url": "https://www.akelius.us/en/rent",
+      "every_minutes": 30
+    },
+    {
+      "name": "Nelson Management",
+      "url": "https://nelsonmanagementgroup.net/rentals",
+      "every_minutes": 30
+    },
+    {
+      "name": "S.R. Nager",
+      "url": "https://www.nagermanagement.com/listings",
+      "every_minutes": 30
+    },
+    {
+      "name": "Alma Realty",
+      "url": "https://www.almarealty.com/properties",
+      "every_minutes": 30
+    },
+    {
+      "name": "Home By Choice",
+      "url": "https://www.homebychoicenyc.com/rent/",
+      "every_minutes": 30
+    },
+    {
+      "name": "Fifth Avenue Committee re-rentals",
+      "url": "https://fifthave.org/re-rental-availabilities/",
+      "every_minutes": 30,
+      "mode": "text"
+    },
+    {
+      "name": "Verdant Fort Greene",
+      "url": "http://verdantfortgreene.com/",
+      "every_minutes": 30,
+      "mode": "text"
+    },
+    {
+      "name": "Ranco vacancies",
+      "url": "https://www.rancocapitalmanagement.com/vacancies",
+      "every_minutes": 30
+    },
+    {
+      "name": "Corigin",
+      "url": "https://www.coriginmanagement.com/",
+      "every_minutes": 30
+    },
+    {
+      "name": "Dalan Rentals",
+      "url": "https://www.dalanrentals.com/",
+      "every_minutes": 15
+    },
+    {
+      "name": "Arya (AppFolio)",
+      "url": "https://arya.appfolio.com/listings",
+      "every_minutes": 30
+    },
+    {
+      "name": "Lang Realty",
+      "url": "https://www.langrealtyny.com/",
+      "every_minutes": 30
+    },
+    {
+      "name": "461 Dean (Greystar)",
+      "url": "https://461dean.com/availability/",
+      "every_minutes": 60,
+      "mode": "text"
+    },
+    {
+      "name": "Irving II · 11-13 Irving Pl",
+      "url": "https://www.rentcafe.com/apartments/ny/brooklyn/11-13-irving-place/default.aspx",
+      "every_minutes": 30,
+      "mode": "text"
     }
   ],
   "_pages_note": "Firm/landlord listing pages. Each is checked every N minutes; only links that are new since the last check are read by Claude Haiku. A page's first check records what's there silently. Add any page by name + url.",
