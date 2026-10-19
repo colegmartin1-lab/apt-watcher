@@ -105,7 +105,8 @@ def fetch_listingsproject(cfg, seen_ids, max_pages=12, max_details=40):
 CL_PRICE = re.compile(r"\$\s*([\d,]+)")
 
 
-def fetch_craigslist(clcfg, seen_ids, place_check, min_price, max_price, log, max_details=40):
+def fetch_craigslist(clcfg, seen_ids, place_check, min_price, max_price, log, max_details=40,
+                     category="sub", label="Craigslist sublets", sublet_context=True):
     """Craigslist "sublets & temporary" search pages (no-JS fallback markup).
 
     Cheap filters run before any AI: price in budget, monthly (not daily/
@@ -114,7 +115,7 @@ def fetch_craigslist(clcfg, seen_ids, place_check, min_price, max_price, log, ma
     in `skipped` so they're marked seen and never fetched again."""
     posts, skipped, details = [], [], 0
     for area in clcfg["areas"]:
-        url = f"https://newyork.craigslist.org/search/{area}/sub"
+        url = f"https://newyork.craigslist.org/search/{area}/{category}"
         r = requests.get(url, params={"min_price": int(min_price * 0.8), "max_price": max_price,
                                       "sort": "date"}, headers=BROWSER_UA, timeout=20)
         r.raise_for_status()
@@ -155,12 +156,14 @@ def fetch_craigslist(clcfg, seen_ids, place_check, min_price, max_price, log, ma
             title = ds.select_one("#titletextonly")
             text = re.sub(r"\s+", " ", body.get_text(" ")).replace("QR Code Link to This Post", "") if body else ""
             listed = f"Listed price: {price_el.get_text(strip=True)}\n" if price_el else ""
-            posts.append({"id": pid, "url": link, "source": "Craigslist sublets",
+            where_posted = "sublets & temporary" if category == "sub" else \
+                "apartments by owner" if category == "abo" else "apartments / housing for rent"
+            posts.append({"id": pid, "url": link, "source": label,
                           "title": (title.get_text(strip=True) if title else a.get_text(strip=True))[:140],
-                          "text": f"Posted in Craigslist 'sublets & temporary'.\n{listed}{attrs}\n{text}"[:MAX_POST_CHARS],
-                          "geo": geo, "sublet_context": True})
+                          "text": f"Posted in Craigslist '{where_posted}'.\n{listed}{attrs}\n{text}"[:MAX_POST_CHARS],
+                          "geo": geo, "sublet_context": sublet_context})
             time.sleep(0.5)
-    log(f"Craigslist sublets: {len(posts)} to read, {len(skipped)} filtered out cheaply")
+    log(f"{label}: {len(posts)} to read, {len(skipped)} filtered out cheaply")
     return posts, skipped
 
 

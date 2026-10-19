@@ -617,7 +617,21 @@
       "goldmontrealty.com": "Goldmont / U.S. Realty",
       "eight80@mns.com": "Eight80 (880 Atlantic)",
       "uarents.com": "UA Rents (352 Myrtle)",
-      "ibecliving.com": "iBEC Living"
+      "ibecliving.com": "iBEC Living",
+      "stardustproperties4u.com": "Tapu (Stardust Properties)",
+      "mythompson1@aol.com": "Marjorie Thompson"
     }
-  }
+  },
+  "craigslist_apartments": [
+    {
+      "name": "Craigslist apartments",
+      "category": "apa",
+      "areas": [
+        "brk",
+        "mnh"
+      ],
+      "max_details": 40,
+      "_note": "NYC Craigslist dropped its separate by-owner/no-fee categories; owner-direct posts are flagged by the AI reader."
+    }
+  ]
 }

@@ -584,6 +584,8 @@ def judge_post(cfg, post, reading):
         flags.append("no price in post")
     if reading.lease == "lease_takeover":
         flags.append("lease takeover")
+    if reading.lister_type == "landlord":
+        flags.append("owner-direct (no broker)")
     if reading.scam_risk == "medium":
         flags.append("possible scam: " + "; ".join(reading.scam_flags[:2]))
     key = listing_key(geo, reading.address, None) if geo and reading.address else \
@@ -627,6 +629,22 @@ def collect_posts(cfg, state, fb_posts, verbose, ai_emails=(), from_files=False)
                 seen[pid] = time.time()
             return got
         fetchers.append(("Craigslist sublets", craigslist))
+    for cl in cfg.get("craigslist_apartments", []):
+        # Regular / by-owner apartment listings: the main lease search.
+        from posts import fetch_craigslist
+
+        def place_check(lat, lon):
+            geo = reverse_geocode(lat, lon)
+            return geo, judge_place(cfg, geo)
+
+        def craigslist_apts(cl=cl):
+            got, skipped = fetch_craigslist(cl, seen, place_check, cfg["rules"]["min_price"],
+                                            cfg["rules"]["max_price"], log, max_details=cl.get("max_details", 30),
+                                            category=cl["category"], label=cl["name"], sublet_context=False)
+            for pid in skipped:
+                seen[pid] = time.time()
+            return got
+        fetchers.append((cl["name"], craigslist_apts))
     for name, fetcher in fetchers:
         try:
             got = fetcher()
