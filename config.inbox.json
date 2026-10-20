@@ -15,7 +15,7 @@
   ],
   "rules": {
     "min_price": 1000,
-    "max_price": 3000,
+    "max_price": 2500,
     "max_beds": 1,
     "neighborhoods": [
       "Greenpoint",
