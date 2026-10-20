@@ -1,7 +1,7 @@
 {
  "feeds": {
   "Brooklyn Group": {
-   "checked": 1792459229.8696697,
+   "checked": 1792460127.574716,
    "seen": {
     "bg:1000": 1792377381.6820872,
     "bg:1001": 1792377381.6820872,
@@ -2067,7 +2067,7 @@
    }
   },
   "Nooklyn": {
-   "checked": 1792459229.8696697,
+   "checked": 1792460127.574716,
    "seen": {
     "nooklyn:100394": 1792377381.6820872,
     "nooklyn:100504": 1792377381.6820872,
@@ -2377,7 +2377,7 @@
     "nooklyn:104006": 1792377381.6820872,
     "nooklyn:104007": 1792377381.6820872,
     "nooklyn:104029": 1792377381.6820872,
-    "nooklyn:104063": 1792373723.1545923,
+    "nooklyn:104063": 1792460127.574716,
     "nooklyn:104064": 1792377381.6820872,
     "nooklyn:104067": 1792331428.2049062,
     "nooklyn:104070": 1792377381.6820872,
@@ -4301,6 +4301,7 @@
   "cl:3JHRt9aaCBhBQ1dNWhrSrX": 1792415137.5913036,
   "cl:3Xo2inAnXb6Ur72RrWt4Xm": 1792414539.343108,
   "cl:3YWY1qrmQbXnnLT6tAwjtr": 1792455929.0118916,
+  "cl:3YgWKXdLzxAJNDYQrZJvtr": 1792460144.3758194,
   "cl:3YqiGtfBEt53c6os9Wff82": 1792413687.3736236,
   "cl:3a1P8Hgg7RWqH4TKPsDMSZ": 1792414873.0404158,
   "cl:3cPsU7Ak9gcmyGVGHM4TJw": 1792414550.005309,
@@ -4378,6 +4379,7 @@
   "cl:6P8V7KEqrePM658Qca51WN": 1792455047.1510212,
   "cl:6WCwkPe6dbrkkMdkpB7Jea": 1792437049.3164618,
   "cl:6Wajzs7hJ3iuTJWZGmXppK": 1792414539.3431127,
+  "cl:6XFmbw6pGKuDwyRBwRmC3w": 1792460143.0491486,
   "cl:6XfNrETPxxMHGwdxWd3p79": 1792455047.15102,
   "cl:6ba2PNVuF3p5TgR1x2yYty": 1792413687.3736165,
   "cl:6ew1QhL55jdScihg4YAooj": 1792414539.3431053,
@@ -4490,6 +4492,7 @@
   "cl:bbqPJnbZNFCfZkbsxq3oEN": 1792414873.0404198,
   "cl:bdG3zByxjuvoWXGn9krLHT": 1792455678.734081,
   "cl:bdnZVWwpdwsBPJhrNznKYd": 1792414557.545495,
+  "cl:bkbw8945kZw6u4A8nbqzLT": 1792460144.3758183,
   "cl:bnSWZY6FWr8sRqNjjkBhjg": 1792414539.343106,
   "cl:bnxdRi1GFAkpHaKHMToxMd": 1792437049.316463,
   "cl:bvkq5RkrXYKg1KQUBuhChM": 1792436475.493428,
@@ -4667,6 +4670,7 @@
   "cl:jpqr78feossNwSCDg8c3qN": 1792437642.025027,
   "cl:jqyStE2KsTmLBrk5V6Gjmi": 1792436756.6148129,
   "cl:jreCEWd6knBtR3ivuWmxxR": 1792437945.168433,
+  "cl:jsjsg6XuNAAGimzLcseJqD": 1792460143.0491502,
   "cl:jtsWSLmdiJMcMrLpcCYHfX": 1792414000.6161742,
   "cl:jyBt4ESr46q99LsraVVgmc": 1792437370.94191,
   "cl:k1FTdbaf94Do7EZpb5RG4w": 1792455678.734086,
@@ -5346,7 +5350,8 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xacfb7/30m_relocating_to_nyc_room_for_nov_1_1217k_north/": 1792452352.0234947,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xad5v9/first_time_home_buyers_part_2_of_3_dos_and_donts/": 1792454460.0705638,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xadf86/seeking_roommates_nov_1_move_in_male/": 1792455050.211098,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xaemuo/looking_for_1_bed_apartment/": 1792458667.4258592
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xaemuo/looking_for_1_bed_apartment/": 1792458667.4258592,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xaf8od/25f_looking_for_a_room_in_brooklyn_2000_budget/": 1792460147.707895
  },
  "processed": {
   "1878912659436325385": 1792025847.640471,
