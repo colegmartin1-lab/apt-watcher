@@ -15,7 +15,7 @@
   ],
   "rules": {
     "min_price": 1000,
-    "max_price": 2500,
+    "max_price": 3000,
     "max_beds": 1,
     "neighborhoods": [
       "Greenpoint",
@@ -620,7 +620,8 @@
       "ibecliving.com": "iBEC Living",
       "stardustproperties4u.com": "Tapu (Stardust Properties)",
       "mythompson1@aol.com": "Marjorie Thompson",
-      "garfieldbrooklyn.com": "Garfield Realty"
+      "garfieldbrooklyn.com": "Garfield Realty",
+      "hous.craigslist.org": "Craigslist poster"
     }
   },
   "craigslist_apartments": [
