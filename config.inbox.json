@@ -11,7 +11,17 @@
     "apartments.com",
     "zumper.com",
     "renthop.com",
-    "leasebreak.com"
+    "leasebreak.com",
+    "compass.com",
+    "corcoran.com",
+    "elliman.com",
+    "bhsusa.com",
+    "serhant.com",
+    "nestseekers.com",
+    "sothebysrealty.com",
+    "cbwarburg.com",
+    "kw.com",
+    "evrealestate.com"
   ],
   "rules": {
     "min_price": 1000,
@@ -521,6 +531,16 @@
       "url": "https://www.rentcafe.com/apartments/ny/brooklyn/11-13-irving-place/default.aspx",
       "every_minutes": 30,
       "mode": "text"
+    },
+    {
+      "name": "Nest Seekers · Brooklyn rentals",
+      "url": "https://www.nestseekers.com/Rentals/brooklyn",
+      "every_minutes": 15
+    },
+    {
+      "name": "Corcoran · Brooklyn rentals",
+      "url": "https://www.corcoran.com/search/for-rent/location/brooklyn-ny/regionId/2",
+      "every_minutes": 15
     }
   ],
   "_pages_note": "Firm/landlord listing pages. Each is checked every N minutes; only links that are new since the last check are read by Claude Haiku. A page's first check records what's there silently. Add any page by name + url.",
@@ -542,6 +562,13 @@
       "from": "[@.]leasebreak\\.com$",
       "skip_subject": "password|verify|confirm|welcome|receipt",
       "base_url": "https://www.leasebreak.com/"
+    },
+    {
+      "name": "Big brokerages",
+      "from": "[@.](compass|corcoran|elliman|bhsusa|serhant|nestseekers|sothebysrealty|cbwarburg|kw|evrealestate)\\.com$",
+      "skip_subject": "^(re|fw|fwd):|password|verif|confirm|welcome|receipt|account|sign ?in|security|unsubscribe",
+      "base_url": "https://www.compass.com/",
+      "_note": "Saved-search alert emails from big brokerages whose sites block bots (Compass, Elliman, BHS, SERHANT, Sotheby's, KW...). Replies/forwards with agents are skipped."
     }
   ],
   "_ai_email_sources_note": "Emails from these senders are split into listing cards and read by Haiku (after a price pre-filter), for sites whose alert layout varies (Leasebreak's weekly list and search alerts).",
