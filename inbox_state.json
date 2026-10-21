@@ -2793,6 +2793,10 @@
    "price": 3000,
    "ts": 1792606255.879953
   },
+  "5b56ce2a8ece38fc": {
+   "price": 2750,
+   "ts": 1792621854.8066523
+  },
   "5d1190dc9afab544": {
    "price": 2600,
    "ts": 1792187067.3140428
@@ -6063,7 +6067,8 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xbznim/park_slope_brooklyn_private_room_in_2br_oct_31/": 1792617366.4425147,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xbzorm/2000month_room_available_near_columbus_circle/": 1792617362.5335956,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xc0i1d/buyer_fees_if_purchasing/": 1792619498.9698727,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xc0klg/looking_for_a_place_to_stay/": 1792619497.1862178
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xc0klg/looking_for_a_place_to_stay/": 1792619497.1862178,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xc1h4b/deciphering_rent_history/": 1792621852.6875393
  },
  "processed": {
   "1878912659436325385": 1792025847.640471,
@@ -6173,7 +6178,10 @@
   "1879683553635760457": 1792606244.0035284,
   "1879683554257118147": 1792606253.011221,
   "1879687955550161128": 1792610430.7191815,
-  "1879691525106465692": 1792613746.7358801
+  "1879691525106465692": 1792613746.7358801,
+  "1879700093430724100": 1792621845.9917893,
+  "1879700117616539717": 1792621846.0067077,
+  "1879700142408276229": 1792621846.0069883
  },
  "reminders_sent": {
   "Listings Project First Access": "2026-43"
