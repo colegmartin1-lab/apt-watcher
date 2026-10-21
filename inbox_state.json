@@ -2886,6 +2886,10 @@
    "price": 1910,
    "ts": 1792456245.708953
   },
+  "cb47b8f281d92afd": {
+   "price": 2500,
+   "ts": 1792592147.1947088
+  },
   "cc2a85cb486f494d": {
    "price": 2150,
    "ts": 1792583065.612059
@@ -2934,7 +2938,7 @@
    }
   },
   "04951a3e31766fbb": {
-   "checked": 1792588543.5601647,
+   "checked": 1792592144.440179,
    "seen": {
     "4b95b0b5b7a96959": 1792555861.181948
    }
@@ -4543,6 +4547,7 @@
   "cl:2ubiEqq9BCKKXoD3N5s1QK": 1792514431.8851385,
   "cl:2wTVE5jdiHHx3N3hn6baMj": 1792550137.6258419,
   "cl:36UCkNPsKUZA7CnJeQgv73": 1792435869.1973426,
+  "cl:37qHix2dnLLihEhP3sUQQd": 1792592144.4358823,
   "cl:3GR96zThTjuvKipUE5DY1X": 1792455047.151019,
   "cl:3HEUj8r9z2kuTrEsBofAr9": 1792436475.4934218,
   "cl:3JHRt9aaCBhBQ1dNWhrSrX": 1792415137.5913036,
