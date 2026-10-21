@@ -2889,8 +2889,8 @@
    "ts": 1792507003.9406471
   },
   "bef0cb8056db0fe5": {
-   "price": 2650,
-   "ts": 1792516868.6625073
+   "price": 2595,
+   "ts": 1792613756.4773395
   },
   "c6b214b550290770": {
    "price": 1910,
@@ -2956,7 +2956,7 @@
    }
   },
   "04951a3e31766fbb": {
-   "checked": 1792610156.0729947,
+   "checked": 1792613753.824853,
    "seen": {
     "4b95b0b5b7a96959": 1792555861.181948
    }
@@ -6037,7 +6037,8 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xbv1fb/master_bedroom_available_in_a_2_bed_in/": 1792607140.3430574,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xbvqf6/savoy_park_apartments/": 1792608656.87243,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xbx2j3/can_i_get_my_deposit_back/": 1792611645.8862588,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xbxvwd/take_the_offer_or_keep_looking/": 1792613189.7974167
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xbxvwd/take_the_offer_or_keep_looking/": 1792613189.7974167,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xby0is/do_not_rent_from_monday_morning_management/": 1792613753.819401
  },
  "processed": {
   "1878912659436325385": 1792025847.640471,
@@ -6146,7 +6147,8 @@
   "1879683082991619130": 1792605653.552979,
   "1879683553635760457": 1792606244.0035284,
   "1879683554257118147": 1792606253.011221,
-  "1879687955550161128": 1792610430.7191815
+  "1879687955550161128": 1792610430.7191815,
+  "1879691525106465692": 1792613746.7358801
  },
  "reminders_sent": {
   "Listings Project First Access": "2026-43"
