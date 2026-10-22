@@ -2878,6 +2878,10 @@
    "price": 2500,
    "ts": 1792436487.4980404
   },
+  "9d325bff863655bd": {
+   "price": 1900,
+   "ts": 1792630563.133507
+  },
   "a46ba30a4579482d": {
    "price": 2750,
    "ts": 1792166839.3887165
@@ -2952,7 +2956,7 @@
    }
   },
   "02ce40a68c1bc982": {
-   "checked": 1792628732.207102,
+   "checked": 1792630547.3944795,
    "seen": {
     "008cec05cb27a1f8": 1792554049.1854963,
     "02ce40a68c1bc982": 1792554049.1854963,
@@ -2968,7 +2972,7 @@
    }
   },
   "0a905052f37cc2ca": {
-   "checked": 1792628732.207102,
+   "checked": 1792630547.3944795,
    "seen": {
     "0a905052f37cc2ca": 1792552555.6844587,
     "4181740518101970": 1792552555.6844587,
@@ -2992,7 +2996,7 @@
    }
   },
   "147fbe927ddd0749": {
-   "checked": 1792628732.207102,
+   "checked": 1792630547.3944795,
    "seen": {
     "358c58d68df85527": 1792592451.3445036,
     "456a95791eba6b3c": 1792592451.3445036,
@@ -3006,7 +3010,7 @@
    "seen": {}
   },
   "1db2371dc32edd42": {
-   "checked": 1792628732.207102,
+   "checked": 1792630547.3944795,
    "seen": {
     "130a9f1dc57df26a": 1792554049.1854963,
     "1db2371dc32edd42": 1792554049.1854963,
@@ -3077,7 +3081,7 @@
    }
   },
   "2262cba0616c8986": {
-   "checked": 1792628732.207102,
+   "checked": 1792630547.3944795,
    "seen": {
     "0c61e90465055918": 1792554049.1854963,
     "2a277db60ee141af": 1792554049.1854963,
@@ -3242,7 +3246,7 @@
    }
   },
   "3d0a3f0bf71cb848": {
-   "checked": 1792628732.207102,
+   "checked": 1792630547.3944795,
    "seen": {
     "337bbd8e95d60089": 1792592451.3445036,
     "83ee8051adb22534": 1792592451.3445036,
@@ -3250,7 +3254,7 @@
    }
   },
   "3dc0c60864a1f403": {
-   "checked": 1792628732.207102,
+   "checked": 1792630547.3944795,
    "seen": {
     "45d7e2a837b7dc97": 1792557757.572322
    }
@@ -3420,7 +3424,7 @@
    }
   },
   "46e98e3fadd451ab": {
-   "checked": 1792628732.207102,
+   "checked": 1792630547.3944795,
    "seen": {}
   },
   "4ae5c56ab4203a1f": {
@@ -3815,7 +3819,7 @@
    }
   },
   "77d1c6cf3a23c49e": {
-   "checked": 1792628732.207102,
+   "checked": 1792630547.3944795,
    "seen": {}
   },
   "786a8b300f5a7fd2": {
@@ -3961,7 +3965,7 @@
    "seen": {}
   },
   "88a51700e00fc312": {
-   "checked": 1792628732.207102,
+   "checked": 1792630547.3944795,
    "seen": {
     "7cc0faee3e9aec53": 1792592451.3445036,
     "e2477b9de903165a": 1792592451.3445036,
@@ -3970,7 +3974,7 @@
    }
   },
   "89446ccce6f8cd29": {
-   "checked": 1792628732.207102,
+   "checked": 1792630547.3944795,
    "seen": {
     "3bcb27247fe22461": 1792554049.1854963,
     "6ff08eb2e2898e26": 1792554049.1854963,
@@ -3988,7 +3992,7 @@
    }
   },
   "8a43479d71a9baf2": {
-   "checked": 1792628732.207102,
+   "checked": 1792630547.3944795,
    "seen": {
     "1a284981a4da9c0b": 1792554049.1854963,
     "20524f768f0fb257": 1792554049.1854963,
@@ -4053,7 +4057,7 @@
    }
   },
   "8b7c0936fa6d7d0e": {
-   "checked": 1792628732.207102,
+   "checked": 1792630547.3944795,
    "seen": {}
   },
   "92a1db7aea5a87d8": {
@@ -4091,7 +4095,7 @@
    }
   },
   "991b4babc5bddce9": {
-   "checked": 1792628732.207102,
+   "checked": 1792630547.3944795,
    "seen": {
     "353e11177ff217fa": 1792554049.1854963
    }
@@ -4224,7 +4228,7 @@
    }
   },
   "a84ba37bad2de74e": {
-   "checked": 1792628732.207102,
+   "checked": 1792630547.3944795,
    "seen": {}
   },
   "aa4faf8a671700f3": {
@@ -4341,7 +4345,7 @@
    }
   },
   "b7c84b2e0e750f47": {
-   "checked": 1792628732.207102,
+   "checked": 1792630547.3944795,
    "seen": {
     "0147712e6a1cb384": 1792504916.962231,
     "0c77622610b6d13d": 1792594273.7163596
@@ -4389,11 +4393,11 @@
    }
   },
   "d5f1fb0118c5a112": {
-   "checked": 1792628732.207102,
+   "checked": 1792630547.3944795,
    "seen": {}
   },
   "de39aaf4393c9317": {
-   "checked": 1792628732.207102,
+   "checked": 1792630547.3944795,
    "seen": {
     "9b40bd237c97fd8d": 1792594273.7163596
    }
@@ -4969,6 +4973,7 @@
   "cl:ey46AphDNJZuL78umwQ6qu": 1792613182.8832808,
   "cl:eyw5frLzZ2HZxiHUHDmNEs": 1792616474.4919653,
   "cl:f1CcKNcLb8YYiGLc9p2qVN": 1792414000.616168,
+  "cl:f1GnKG4TapoJXyoJR1aZLY": 1792630542.4435062,
   "cl:f7YNB4feJYRfPyVwt5dCMM": 1792455348.919546,
   "cl:f7zckMPUpqn3Z5nA38Jbij": 1792415137.5912998,
   "cl:fCydHZp7eB6KYCr5q5DcYz": 1792550137.6258414,
@@ -5372,6 +5377,7 @@
   "cl:sxbpLUt85ewxUMQQrRkt7i": 1792437642.025023,
   "cl:sxu6xzDW3MdyDiELn1cVxt": 1792436164.0554838,
   "cl:t1sjwfbxkPmJhQYNwnMCQB": 1792495848.776051,
+  "cl:t28dXEjHRUwvW5XV4wSLhK": 1792630547.3889036,
   "cl:t38TrNYsC1qDuKjCS4es4i": 1792551650.2539551,
   "cl:t4wdcxrxTyQaR2GxaySPWs": 1792455678.7340853,
   "cl:t6TpRDia9J7AdKaAXyoNSj": 1792414000.6161716,
@@ -6079,7 +6085,8 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xc21jx/is_my_landlord_supposed_to_pay_for_this/": 1792623342.2568514,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xc33je/has_anyone_dealt_with_these_types_of_heater_boxes/": 1792626349.4345894,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xc3lb8/does_anyone_need_someone_to_take_over_their_lease/": 1792627559.4592717,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xc4fr7/iso_room_for_rent_in_brooklyn_for_quiet_60_year/": 1792629950.978667
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xc4fr7/iso_room_for_rent_in_brooklyn_for_quiet_60_year/": 1792629950.978667,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xc4o81/patio_gardens/": 1792630545.991916
  },
  "processed": {
   "1878912659436325385": 1792025847.640471,
