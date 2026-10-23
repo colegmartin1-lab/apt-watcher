@@ -2732,6 +2732,10 @@
  },
  "last_error_alert": 0,
  "notified": {
+  "009544a94a43e41e": {
+   "price": 2895,
+   "ts": 1792786245.5261931
+  },
   "00faa43eb621a725": {
    "price": 1700,
    "ts": 1792550146.6177642
@@ -5463,6 +5467,7 @@
   "cl:n7hzuSreg3RrSzSbBK3TdG": 1792455348.9195492,
   "cl:n9DoYfPhW6pLWmBdYKwoqi": 1792436756.614812,
   "cl:n9W1AcSigqoHdjqXVYDWrB": 1792455348.9195454,
+  "cl:nA8qqxqQ55Y3Ew2M9f4DM3": 1792786241.8448622,
   "cl:nAEWf4NRSMeB5YZTdS8NB2": 1792414000.6161723,
   "cl:nE8Zjcvx1cvP28YRitJEG7": 1792414031.8321095,
   "cl:nEn72b8Geq87maPRx2Wcia": 1792414539.3431096,
