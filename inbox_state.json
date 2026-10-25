@@ -2776,6 +2776,10 @@
    "price": 2750,
    "ts": 1792025850.481298
   },
+  "2e9412baa4188189": {
+   "price": 2800,
+   "ts": 1792893036.611451
+  },
   "301e98cbbaeccfde": {
    "price": 2375,
    "ts": 1792477934.3053641
@@ -5133,6 +5137,7 @@
   "cl:bZNzWfkSsu8ESRvnB5mHU1": 1792579842.7803788,
   "cl:baReab3EXKAiYaY2mQQaWy": 1792413687.37362,
   "cl:bakxNaZ9UxynKT3habTein": 1792852234.8415873,
+  "cl:bauhX6MMTqZtWsk8pkR4An": 1792893034.6238766,
   "cl:bbYyzNqtjcqGaGwnkev88j": 1792414902.9921944,
   "cl:bbqPJnbZNFCfZkbsxq3oEN": 1792414873.0404198,
   "cl:bdG3zByxjuvoWXGn9krLHT": 1792455678.734081,
@@ -6678,7 +6683,8 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xeoiun/anyone_moving_out_of_an_apartment_in_williamsburg/": 1792889139.0875394,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xeokn6/november_sublet_in_lic_1050_utilities/": 1792889136.964802,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xeon1p/2b1b_williamsburg_lease_takeover_nov_1_3800/": 1792889429.1621726,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xep6ym/seeking_1_bed_in_bensonhurst_max_1700_a_month_no/": 1792890934.8879972
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xep6ym/seeking_1_bed_in_bensonhurst_max_1700_a_month_no/": 1792890934.8879972,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xepuex/414_e_58th_solil_management/": 1792893032.9049597
  },
  "processed": {
   "1878912659436325385": 1792025847.640471,
