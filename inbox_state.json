@@ -2996,6 +2996,10 @@
    "price": 1400,
    "ts": 1793022670.04996
   },
+  "992d26e28b849158": {
+   "price": 3000,
+   "ts": 1793121042.091827
+  },
   "9a1d2f319b1e03bb": {
    "price": 3000,
    "ts": 1792166838.2687907
@@ -5142,6 +5146,7 @@
   "cl:6tYkexuq4mV1goRq1LFqU6": 1792415137.5913029,
   "cl:6v7NoroSVFMchRAv2nbYCS": 1792551946.1603556,
   "cl:6z4u5Jx8txMBHgkezMXSvk": 1792413687.373621,
+  "cl:6z71tpBKYNWZbQBJkGHnxA": 1793121033.8258853,
   "cl:6zQWiWWJU4EAnbXJ7xZc4G": 1792594914.803863,
   "cl:74dMSBTDQ1Ry71rgEd9oKT": 1792455348.9195461,
   "cl:74hkkG4zE4j6s5h2TdMj28": 1792515339.0461295,
@@ -7238,7 +7243,9 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xgvs6n/iso_2br_lease_takeover_bk_decjan/": 1793115358.3976622,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xgw84h/new_york_city_requires_natural_gas_detectors/": 1793116532.247318,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xgwnh6/finding_an_apartment_is_hell/": 1793117450.0334394,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xgy8z5/1br1ba_lease_takeover_in_williamsburg_penthouse_w/": 1793120747.0681586
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xgy8z5/1br1ba_lease_takeover_in_williamsburg_penthouse_w/": 1793120747.0681586,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xgybtq/west_village_studio_3000month_rentstabilized/": 1793121038.755955,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xgyc8a/looking_for_room_or_potential_roommates/": 1793121037.2883215
  },
  "problem_alerts": {
   "gmail": 1793033766.0118613
