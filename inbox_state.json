@@ -3113,6 +3113,10 @@
    "price": 2490,
    "ts": 1792455069.3312783
   },
+  "f53ba65cdc5c7920": {
+   "price": 1850,
+   "ts": 1793142057.5307698
+  },
   "f605204cfbb717c7": {
    "price": 2895,
    "ts": 1792436796.3165867
@@ -3422,7 +3426,7 @@
    }
   },
   "25fd51dda77afad8": {
-   "checked": 1793140236.8736048,
+   "checked": 1793142053.151173,
    "seen": {}
   },
   "2e96a3f13d1836e5": {
@@ -4290,7 +4294,7 @@
    "seen": {}
   },
   "88a51700e00fc312": {
-   "checked": 1793140236.8736048,
+   "checked": 1793142053.151173,
    "seen": {
     "7cc0faee3e9aec53": 1793116257.338563,
     "e2477b9de903165a": 1793116257.338563,
@@ -6045,6 +6049,7 @@
   "cl:o9zcyrhSrSgcsTAq9h1wus": 1792890931.0366364,
   "cl:oBB8hbf4M3LSLE2X4R8ZvN": 1792414242.3169484,
   "cl:oCtn9NTvaTdN8Jp4Whddi7": 1792498247.9289405,
+  "cl:oCtoDEvBWiVHW6EU7NZzMb": 1793142048.1214793,
   "cl:oDF393FngJUmJgz3CoWZ2K": 1793045748.7371478,
   "cl:oE6HB3gorBJeJ26NPb1Rvq": 1792435869.1973493,
   "cl:oFnHSrqkCcqb843YVPEAmG": 1792455348.9195504,
@@ -6504,6 +6509,7 @@
   "cl:xjQPcZcu7YcEE26qHu74JC": 1792685744.2625937,
   "cl:xkXdc4x13YkxLu146AFGgr": 1792515048.7226253,
   "cl:xm36HWKx6HUkE6aEHY83YL": 1792437642.0250273,
+  "cl:xm3BdnnDMkUrS3dhWArDXa": 1793142053.1476254,
   "cl:xnZJBbikkb32py4K8hBFAj": 1793130036.0563264,
   "cl:xooZTAzWnjGo54emeVj89B": 1792413845.5202773,
   "cl:xpXEKxbrrXdSVhxZNmXk9n": 1792414242.3169487,
