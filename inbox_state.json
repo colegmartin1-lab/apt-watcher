@@ -1,7 +1,7 @@
 {
  "feeds": {
   "Brooklyn Group": {
-   "checked": 1793114423.8808467,
+   "checked": 1793115326.6165533,
    "seen": {
     "bg:1000": 1793071835.0301561,
     "bg:1001": 1793071835.0301561,
@@ -2069,7 +2069,7 @@
    }
   },
   "Nooklyn": {
-   "checked": 1793114423.8808467,
+   "checked": 1793115326.6165533,
    "seen": {
     "nooklyn:100394": 1793071835.0301561,
     "nooklyn:100504": 1793071835.0301561,
@@ -2097,7 +2097,7 @@
     "nooklyn:101625": 1793071835.0301561,
     "nooklyn:101626": 1793109331.3659675,
     "nooklyn:101628": 1793071835.0301561,
-    "nooklyn:101632": 1793028329.3655667,
+    "nooklyn:101632": 1793115326.6165533,
     "nooklyn:101640": 1793071835.0301561,
     "nooklyn:101641": 1793071835.0301561,
     "nooklyn:101642": 1793071835.0301561,
@@ -2183,11 +2183,11 @@
     "nooklyn:101795": 1793031941.03419,
     "nooklyn:101796": 1793112626.0741222,
     "nooklyn:101797": 1793029227.5248613,
-    "nooklyn:101799": 1793028329.3655667,
+    "nooklyn:101799": 1793115326.6165533,
     "nooklyn:101808": 1793071835.0301561,
     "nooklyn:101810": 1793071835.0301561,
     "nooklyn:101811": 1793047526.4647367,
-    "nooklyn:101813": 1793028329.3655667,
+    "nooklyn:101813": 1793115326.6165533,
     "nooklyn:101814": 1793038527.2908554,
     "nooklyn:101816": 1793034040.4502265,
     "nooklyn:101817": 1793071835.0301561,
@@ -2436,6 +2436,8 @@
     "nooklyn:104171": 1793106347.6772156,
     "nooklyn:104172": 1793111530.9431021,
     "nooklyn:104178": 1793055630.3663588,
+    "nooklyn:104180": 1793115326.6165533,
+    "nooklyn:104181": 1793115326.6165533,
     "nooklyn:10771": 1793071835.0301561,
     "nooklyn:11793": 1793071835.0301561,
     "nooklyn:12720": 1793071835.0301561,
@@ -3147,7 +3149,7 @@
    }
   },
   "0c00d8737b542c75": {
-   "checked": 1793114443.8061726,
+   "checked": 1793115358.401973,
    "seen": {
     "0c00d8737b542c75": 1793070944.188057,
     "0d2a7d92b8eebe6b": 1793070944.188057,
@@ -3177,7 +3179,7 @@
    }
   },
   "1bfa91f7ca26cd75": {
-   "checked": 1793114443.8061726,
+   "checked": 1793115358.401973,
    "seen": {}
   },
   "1db2371dc32edd42": {
@@ -3210,7 +3212,7 @@
    }
   },
   "20de164906bcd513": {
-   "checked": 1793114443.8061726,
+   "checked": 1793115358.401973,
    "seen": {
     "0427cc9fa72034a8": 1793034059.8837233,
     "0483e28b8efe14f6": 1792771862.8929555,
@@ -3382,7 +3384,7 @@
    }
   },
   "356b5879cd4e2e4b": {
-   "checked": 1793114443.8061726,
+   "checked": 1793115358.401973,
    "seen": {
     "0372e9c7a431e3d3": 1793071856.4276955,
     "0377c3b76523fab3": 1793071856.4276955,
@@ -3548,7 +3550,7 @@
    }
   },
   "4509d1c27cc4d597": {
-   "checked": 1793114443.8061726,
+   "checked": 1793115358.401973,
    "seen": {
     "0239a5e0432d48be": 1793045131.9047518,
     "0387f8a4e5e6e5cc": 1793045131.9047518,
@@ -3694,7 +3696,7 @@
    "seen": {}
   },
   "4ae5c56ab4203a1f": {
-   "checked": 1793114443.8061726,
+   "checked": 1793115358.401973,
    "seen": {
     "1ad0776931d32fea": 1793047006.160578,
     "441f24b7da3a45e1": 1793070944.188057,
@@ -3717,7 +3719,7 @@
    }
   },
   "4c40b5f4dfa20c81": {
-   "checked": 1793114443.8061726,
+   "checked": 1793115358.401973,
    "seen": {
     "01656f12fceb5fa3": 1792998348.2805922,
     "0282e6bb62fe04a9": 1792666256.667183,
@@ -3749,7 +3751,7 @@
    }
   },
   "52a484e7c2d52a67": {
-   "checked": 1793114443.8061726,
+   "checked": 1793115358.401973,
    "seen": {}
   },
   "544563e7c245e5ed": {
@@ -3763,7 +3765,7 @@
    }
   },
   "5d353ebb593ad20b": {
-   "checked": 1793114443.8061726,
+   "checked": 1793115358.401973,
    "seen": {}
   },
   "5d92f613bd253843": {
@@ -3894,7 +3896,7 @@
    }
   },
   "6a8f0567c9ab8b31": {
-   "checked": 1793114443.8061726,
+   "checked": 1793115358.401973,
    "seen": {
     "0b7cbc72981c0b70": 1792203628.762504,
     "0cd8108d7312bf0a": 1793070059.909163,
@@ -3924,7 +3926,7 @@
    }
   },
   "6c0b1799cc0b4f7b": {
-   "checked": 1793114443.8061726,
+   "checked": 1793115358.401973,
    "seen": {
     "017bbc10b28cc3f3": 1793070944.188057,
     "01b12a631e88cd34": 1793070944.188057,
@@ -4227,14 +4229,14 @@
    }
   },
   "79503fec19db3cfe": {
-   "checked": 1793114443.8061726,
+   "checked": 1793115358.401973,
    "seen": {
     "5886ae070ea84f79": 1793112644.3653867,
     "e5c1c6951d4cf9ed": 1793112644.3653867
    }
   },
   "79d8e4e9bc610865": {
-   "checked": 1793114443.8061726,
+   "checked": 1793115358.401973,
    "seen": {}
   },
   "88a51700e00fc312": {
@@ -4280,7 +4282,7 @@
    }
   },
   "8b5802c82e6b372c": {
-   "checked": 1793114443.8061726,
+   "checked": 1793115358.401973,
    "seen": {
     "0d74c0f9b41a142f": 1793077256.3456364,
     "1f95f164da9bfe2e": 1792816263.3342495,
@@ -4298,7 +4300,7 @@
    }
   },
   "8b62c97d995d67c3": {
-   "checked": 1793114443.8061726,
+   "checked": 1793115358.401973,
    "seen": {
     "03c702ca7fe35f6a": 1792116944.7537136,
     "09a745c282eb9002": 1793031958.949574,
@@ -4351,7 +4353,7 @@
    }
   },
   "96c87ecf97b2ce00": {
-   "checked": 1793114443.8061726,
+   "checked": 1793115358.401973,
    "seen": {
     "23fe8ed222d658c1": 1793071856.4276955,
     "2b1be838b2746e8a": 1793071856.4276955,
@@ -4508,7 +4510,7 @@
    "seen": {}
   },
   "aa4faf8a671700f3": {
-   "checked": 1793114443.8061726,
+   "checked": 1793115358.401973,
    "seen": {
     "054f986c1f2264b1": 1793070944.188057,
     "1572e4ddbbefb5d4": 1793070944.188057,
@@ -4550,7 +4552,7 @@
    }
   },
   "ac1e96fce21e192a": {
-   "checked": 1793114443.8061726,
+   "checked": 1793115358.401973,
    "seen": {
     "141aa2b0da21fec1": 1793070944.188057,
     "18cee8b92e4d6138": 1793056233.24277,
@@ -4614,7 +4616,7 @@
    }
   },
   "b48a01a8ff75821d": {
-   "checked": 1793114443.8061726,
+   "checked": 1793115358.401973,
    "seen": {
     "30030cdc016ba05b": 1793070944.188057,
     "c3a903bc251b1b39": 1793070944.188057,
@@ -4636,7 +4638,7 @@
    }
   },
   "b9d51d713df441d4": {
-   "checked": 1793114443.8061726,
+   "checked": 1793115358.401973,
    "seen": {
     "024565cb05158794": 1793070944.188057,
     "0f13c282409862f4": 1793070944.188057,
@@ -4654,7 +4656,7 @@
    }
   },
   "d151be452c6edcb7": {
-   "checked": 1793114443.8061726,
+   "checked": 1793115358.401973,
    "seen": {
     "08b14a0a3d034e43": 1793031958.949574,
     "1b2bd48d7e81fd6d": 1793070944.188057,
@@ -4711,7 +4713,7 @@
    "seen": {}
   },
   "fc9df85cad7a305a": {
-   "checked": 1793114443.8061726,
+   "checked": 1793115358.401973,
    "seen": {
     "0288a6e3ab3970c7": 1793049038.9737618,
     "0a545a371fcbd605": 1792203628.762504,
@@ -4748,7 +4750,7 @@
    }
   },
   "fe5818aa0b4a3783": {
-   "checked": 1793114443.8061726,
+   "checked": 1793115358.401973,
    "seen": {
     "0809a32d0b371776": 1792550454.203648,
     "0a6ebd0813c5ab41": 1793070944.188057,
@@ -5096,6 +5098,7 @@
   "cl:6P8V7KEqrePM658Qca51WN": 1792455047.1510212,
   "cl:6PGbrjykG3n6yxi4BJwb57": 1792519254.9114614,
   "cl:6RwJXu6Wa9UXeCAi9YHTK6": 1792463135.2576327,
+  "cl:6VEJwDdZYabMV442k1TtYu": 1793115352.8231802,
   "cl:6WCwkPe6dbrkkMdkpB7Jea": 1792437049.3164618,
   "cl:6Wajzs7hJ3iuTJWZGmXppK": 1792414539.3431127,
   "cl:6X6Az17Rr1dK5okR5GJMyq": 1793020253.5873635,
@@ -5467,6 +5470,7 @@
   "cl:dgasbxYbqC6UcEDBWw94jA": 1792779945.1311343,
   "cl:dgbGYiUfgFQrwXv3BTcTXN": 1792455047.1510224,
   "cl:dhK7owCRmMsozHbSMkviyu": 1792784744.0474658,
+  "cl:dhV1tSdsus8HwAYXB1GujN": 1793115352.823179,
   "cl:dikUWTB99g9wAsBYovUScH": 1792548380.3938627,
   "cl:dikwWKZSjDyHDw5Y7ceSzm": 1792455678.7340813,
   "cl:dj4JU2FVswazdLocyjPNnF": 1792414242.316938,
@@ -5633,6 +5637,7 @@
   "cl:gdFnrTYyo8LAHMrbbEBiQa": 1792437370.9419107,
   "cl:gf8hWMmGwBrESG7988w8A8": 1792605657.1964364,
   "cl:ggRRYaX3ShTovQR9CUJmCs": 1792952443.1730905,
+  "cl:ggjsHyEYJbqG2dMB6wWDTZ": 1793115352.8231804,
   "cl:gh713uLmMWxhUnfASy7Wrg": 1792441535.0584257,
   "cl:gkKD9mNGeXQr83SohdAKgX": 1792455047.1510174,
   "cl:gm5FgWNqPfNot5oQ9sqAGD": 1792543246.8164933,
@@ -5821,6 +5826,7 @@
   "cl:koeiLfrhP4pwnP4oh4hCzy": 1792413839.3953905,
   "cl:kquA37hhAYRUvGjS9qVgXb": 1792435869.1973445,
   "cl:krH6P7c4zwF1MmtNWQy9rG": 1792758050.757195,
+  "cl:ksPnYNnWJLsLkHgr1A4iH8": 1793115352.823177,
   "cl:ktHaT23rMr7fRmuAFMFubL": 1792455678.734082,
   "cl:kvfsfEGgZtMmJRy4DLnFCo": 1792455929.0118937,
   "cl:kx7snReMVfitfoCZ9fa2FH": 1792414873.0404158,
@@ -5890,6 +5896,7 @@
   "cl:nEn72b8Geq87maPRx2Wcia": 1792414539.3431096,
   "cl:nFNxgp1VhFdXtAZFci2VL3": 1792414000.6161737,
   "cl:nFqEKdkK2otB6sNux4CBmy": 1792613186.475608,
+  "cl:nFxVHLheWkbaZ52oeAfYNU": 1793115352.8231795,
   "cl:nGyEngRMkr15fpmeM9xb7T": 1792436756.6148076,
   "cl:nJiPAZ7QC3forKbPYLLmF5": 1792689343.7974353,
   "cl:nJvC48driWvUbRYoJedG4E": 1792606865.0755253,
@@ -5980,6 +5987,7 @@
   "cl:pKVnY1oWkk7vzfeWJEQyHR": 1792611642.4468863,
   "cl:pMcNXQevDDkhEGSm9CcMhu": 1792437049.3164692,
   "cl:pMi1iRYeaxEDeca4kmTfHL": 1792414539.3431118,
+  "cl:pMptYe4AxxyBZxA4dQ1nAb": 1793115352.8231795,
   "cl:pUy9P1vNHTQ7g5ZhEKh5jN": 1793025952.3849826,
   "cl:pWbJzQvTcLjuT12NFbKZS4": 1792437642.0250247,
   "cl:pWwiMVGabUaWopnPc6RWFh": 1792414873.0404167,
@@ -6033,6 +6041,7 @@
   "cl:qgq9FDKF2txqwVhfuN6Tap": 1792414873.0404165,
   "cl:qhVsQFE8XLdfUK1AtPBmmc": 1792414242.3169403,
   "cl:qiybePJDyhCQ3kjr6syTPT": 1793036430.8760831,
+  "cl:qjb4CH7iEE25avNMUHM17K": 1793115352.8231785,
   "cl:qjgBGgiQVDuWve1fPMY7KE": 1792713332.834153,
   "cl:qka8h3Ym7tbHij15pD61So": 1792435869.197348,
   "cl:qkoAbD9EbZ5zJR73mZf9xx": 1792414539.3431122,
@@ -6132,6 +6141,7 @@
   "cl:sKeVMZRTtUR2jrWeVMHKCy": 1792703438.8870869,
   "cl:sLr2BE2xCDTLR4rmxLX7ea": 1792414873.0404139,
   "cl:sLr3Enoa1cPiMMgw6AQzpg": 1792437945.1684349,
+  "cl:sNwwa44QMM9shcqsKovkuF": 1793115352.8231804,
   "cl:sPMtbUT3dmnc445uvxaJCr": 1792761076.2687097,
   "cl:sQfbydah4H9Qyx2PJ54K3s": 1792436475.4934275,
   "cl:sRG6CAv12ggh8w3NomW7BA": 1792778770.8906243,
@@ -6279,6 +6289,7 @@
   "cl:vVA9wuzrQBRXgMqfg96t8w": 1792414539.3431058,
   "cl:vW8LknnJScV6HKKAG8UmXZ": 1792436164.0554845,
   "cl:vWfgVnx7iCVnGWr6tHdUgM": 1792881324.8762894,
+  "cl:vbmPZ11Umvgp9LKJ6FwSGh": 1793115352.82318,
   "cl:ve2MBR4ww71TKv4rdUVMau": 1792437370.9419105,
   "cl:ve9hKPuiQEnnre18aKfzR7": 1792816537.5780387,
   "cl:vgfF7X5Fo1ud7FAaZBZj6Y": 1792437945.16844,
@@ -7188,7 +7199,8 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xgt5xn/crown_heights_rental_needed/": 1793109352.7283063,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xgtdoj/room_for_rent_jersey_city/": 1793109948.2580311,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xgupsc/full_service_condos/": 1793112936.6796336,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xgvbcd/is_32k_rent_too_much_on_165k_base_salary/": 1793114443.801866
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xgvbcd/is_32k_rent_too_much_on_165k_base_salary/": 1793114443.801866,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xgvs6n/iso_2br_lease_takeover_bk_decjan/": 1793115358.3976622
  },
  "problem_alerts": {
   "gmail": 1793033766.0118613
