@@ -3035,6 +3035,10 @@
    "price": 1520,
    "ts": 1792948553.653051
   },
+  "b763e463ffa87935": {
+   "price": 1900,
+   "ts": 1793117457.9999495
+  },
   "b7c84b2e0e750f47": {
    "price": 2990,
    "ts": 1792507003.9406471
@@ -3062,6 +3066,10 @@
   "cc2a85cb486f494d": {
    "price": 2150,
    "ts": 1792583065.612059
+  },
+  "cd73734016dc92de": {
+   "price": 1400,
+   "ts": 1793117456.8190596
   },
   "d217471d1c118ac9": {
    "price": 1340,
@@ -4867,6 +4875,7 @@
   "cl:1LVQL4toJ67u9WR3ffFGus": 1792699094.196068,
   "cl:1LcBxeXhK25Pic9kgNoqbp": 1792526542.9814317,
   "cl:1M8pNN8wBbts6BvZGDNgyB": 1792414873.0404131,
+  "cl:1NJkShjg76vHrcCPNyLMnZ": 1793117446.724579,
   "cl:1NiZyxozLFudKeXnxNYfQg": 1792436756.614809,
   "cl:1PFuJ4pGShALw8B6Ms8icB": 1792435869.1973464,
   "cl:1PqWS1YdneBavd4GuPS8jw": 1792437642.025023,
@@ -5255,6 +5264,7 @@
   "cl:95MYV5GGRgJbFTWqsLgyh9": 1792947667.2800858,
   "cl:95w7LgP8yVGtFqfnoJpUQ1": 1792455678.73408,
   "cl:96LcMn2PVJfVTWQs1E3CUr": 1792414873.0404162,
+  "cl:96SbZrnh3bAh71oruAAiWW": 1793117452.0374248,
   "cl:96XpLzZBWgz2gwFgTjuvmn": 1792455678.7340834,
   "cl:983p1zxTATyLC925F2c6d1": 1792414539.3431065,
   "cl:99k5NcaRe2oQiH8CGEAaxd": 1792714555.3176622,
@@ -5716,6 +5726,7 @@
   "cl:hzU5wtfm7r3BA3KTbXGQ7a": 1792639933.0153801,
   "cl:hzgZ69S5NUNLT4mHhmhAex": 1792614399.0423923,
   "cl:i1NVMu43G5BwSmo752pwHm": 1792694144.9462235,
+  "cl:i2inofB8rtdbntf9uxXetD": 1793117446.7245803,
   "cl:i2w8Mc3eF2ZtvR2ByhNSdk": 1792632068.1035216,
   "cl:i5JTPBc9WRCUHTq6DdYQmg": 1792703438.8870847,
   "cl:i61e1Qr6RfUXdadNXYYJgv": 1792414539.3431132,
@@ -5849,6 +5860,7 @@
   "cl:mCkvAMhwJot67e3yqFzNdq": 1792436475.4934254,
   "cl:mD8qgwNuvGQmKF1oSo9b43": 1792455348.9195426,
   "cl:mG4XGpNtL6YamipxeeMyci": 1792464938.0853586,
+  "cl:mK5Je7XzhYDNrie7YjbzPB": 1793117442.3539312,
   "cl:mKuk8d5ENHcCsnURrwvjKV": 1792436756.6148124,
   "cl:mNEFeYYtgThWDZTSxCbW1u": 1792459532.1038203,
   "cl:mNNn8GNdFcitYk9QPZBorg": 1792551946.1603568,
@@ -6270,6 +6282,7 @@
   "cl:ungZ2ra1ges4UhgN8PSTi7": 1793104539.8967412,
   "cl:uqCz8UkrAM5hm6C1Tz8n1b": 1792724459.7338278,
   "cl:uqpZKhL7QkD2nnAtAT8w6i": 1792455047.1510177,
+  "cl:ur3iXzwYUqPffK3frrH5Do": 1793117454.0244424,
   "cl:uuW81h4rgDuyQomuNuFUDA": 1792413687.3736184,
   "cl:uuoWo3GS6W9DSz7HDvr3G2": 1792613186.4756083,
   "cl:uyCN5VXetKB3e36Z52JSRV": 1792964443.6977134,
@@ -7212,7 +7225,8 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xgupsc/full_service_condos/": 1793112936.6796336,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xgvbcd/is_32k_rent_too_much_on_165k_base_salary/": 1793114443.801866,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xgvs6n/iso_2br_lease_takeover_bk_decjan/": 1793115358.3976622,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xgw84h/new_york_city_requires_natural_gas_detectors/": 1793116532.247318
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xgw84h/new_york_city_requires_natural_gas_detectors/": 1793116532.247318,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xgwnh6/finding_an_apartment_is_hell/": 1793117450.0334394
  },
  "problem_alerts": {
   "gmail": 1793033766.0118613
