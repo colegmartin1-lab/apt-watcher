@@ -1,7 +1,7 @@
 {
  "feeds": {
   "Brooklyn Group": {
-   "checked": 1793058365.627265,
+   "checked": 1793059535.876059,
    "seen": {
     "bg:1000": 1792985128.4569623,
     "bg:1001": 1792985128.4569623,
@@ -2020,7 +2020,7 @@
     "bg:6686": 1792985128.4569623,
     "bg:6687": 1792985128.4569623,
     "bg:6716": 1792985128.4569623,
-    "bg:6717": 1792972524.5350354,
+    "bg:6717": 1793059535.876059,
     "bg:6718": 1793042125.3220289,
     "bg:6719": 1793042125.3220289,
     "bg:6720": 1793042125.3220289,
@@ -2069,7 +2069,7 @@
    }
   },
   "Nooklyn": {
-   "checked": 1793058365.627265,
+   "checked": 1793059535.876059,
    "seen": {
     "nooklyn:100394": 1792985128.4569623,
     "nooklyn:100504": 1792985128.4569623,
@@ -2428,7 +2428,7 @@
     "nooklyn:104159": 1793047526.4647367,
     "nooklyn:104160": 1793047526.4647367,
     "nooklyn:104161": 1793047526.4647367,
-    "nooklyn:104162": 1792972524.5350354,
+    "nooklyn:104162": 1793059535.876059,
     "nooklyn:104164": 1792972524.5350354,
     "nooklyn:104166": 1793022625.322359,
     "nooklyn:104168": 1792868120.8450358,
@@ -2484,7 +2484,7 @@
     "nooklyn:86991": 1793055630.3663588,
     "nooklyn:87011": 1792464692.101154,
     "nooklyn:87012": 1792985128.4569623,
-    "nooklyn:87014": 1792972524.5350354,
+    "nooklyn:87014": 1793059535.876059,
     "nooklyn:87030": 1793055630.3663588,
     "nooklyn:87044": 1792985128.4569623,
     "nooklyn:87045": 1792985128.4569623,
@@ -3143,7 +3143,7 @@
    }
   },
   "0c00d8737b542c75": {
-   "checked": 1793058388.1818337,
+   "checked": 1793059559.0950227,
    "seen": {
     "0c00d8737b542c75": 1792984246.3936968,
     "0d2a7d92b8eebe6b": 1792984246.3936968,
@@ -4219,7 +4219,7 @@
    }
   },
   "79503fec19db3cfe": {
-   "checked": 1793058388.1818337,
+   "checked": 1793059559.0950227,
    "seen": {
     "5886ae070ea84f79": 1793025652.8777092,
     "e5c1c6951d4cf9ed": 1793025652.8777092
@@ -4272,7 +4272,7 @@
    }
   },
   "8b5802c82e6b372c": {
-   "checked": 1793058388.1818337,
+   "checked": 1793059559.0950227,
    "seen": {
     "0d74c0f9b41a142f": 1792990549.5995207,
     "1f95f164da9bfe2e": 1792816263.3342495,
@@ -5382,6 +5382,7 @@
   "cl:cW8Wd3f8F8HvPKn6j94tQ7": 1792572975.2370737,
   "cl:cWEBJUkDX7AfoQXFtTy6XE": 1792413687.3736217,
   "cl:cY7C2uC3JmJXxCmghXaVbn": 1792435869.1973484,
+  "cl:cafjVG9fRGGRp4bHtSDMzi": 1793059555.7162087,
   "cl:cbFG4GQzwEQ3tDL9zqghpo": 1792442147.117707,
   "cl:cbZjnV8yxwBeS656qm5jf4": 1792551946.1603572,
   "cl:cfuBrSRtNveiokRjhF3Gnv": 1792771241.749388,
@@ -7119,7 +7120,8 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xgcl5j/looking_to_rent_33k_budget_in_west_village_upper/": 1793057131.5609663,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xgcpsx/living_right_next_to_a_garage_is_it_safe/": 1793057460.4086008,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xgd06z/spacious_private_bedroom_for_rent_near_fordham/": 1793058388.177952,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xgd80q/furnished_midtown_east_apartment_sublet/": 1793058932.0855277
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xgd80q/furnished_midtown_east_apartment_sublet/": 1793058932.0855277,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xgdhoz/no_gas_for_6_weeks/": 1793059559.0895557
  },
  "problem_alerts": {
   "gmail": 1793033766.0118613
@@ -7286,7 +7288,8 @@
   "1880144495288634117": 1793045727.5558243,
   "1880147357045508660": 1793048431.4171026,
   "1880148648264064024": 1793049645.42587,
-  "1880149673929647185": 1793050534.5885513
+  "1880149673929647185": 1793050534.5885513,
+  "1880158903583968007": 1793059535.7824109
  },
  "reminders_sent": {
   "Listings Project First Access": "2026-43"
