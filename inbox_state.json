@@ -2832,6 +2832,10 @@
    "price": null,
    "ts": 1792026551.7723784
   },
+  "3499f44b1975dca6": {
+   "price": 1850,
+   "ts": 1793134609.5492172
+  },
   "351d89a5e75fd9d5": {
    "price": 2500,
    "ts": 1792609579.9195788
@@ -5453,6 +5457,7 @@
   "cl:bvb4KEvPeN1ye3GNRhaNsP": 1792527346.1940901,
   "cl:bvkq5RkrXYKg1KQUBuhChM": 1792436475.493428,
   "cl:bvtd4i4ZfeyHurK4xMvFXB": 1792414242.3169477,
+  "cl:byDe23eRqz2VoGZjtkgHSU": 1793134599.2514002,
   "cl:byxMgrDTBhYnpK5gfERuis": 1792696242.1717212,
   "cl:c33AdwEujo22jNp6TWQbbg": 1792848662.5739546,
   "cl:c4h1RpbBQwB4UcQVY5NTGx": 1792436174.3152325,
@@ -5952,6 +5957,7 @@
   "cl:mhA5Yv5vYvyLvaqJKf7kcj": 1792692049.2860203,
   "cl:mi8sbDZorRRr1W2hk3hoEr": 1793047547.1769252,
   "cl:mic8vdtihvLwEFgtVwSoAY": 1792455678.7340767,
+  "cl:mnzg65aPt7ni2LLtTc5wYM": 1793134599.2514017,
   "cl:mob3JBQgzB1nZ1tVU9aMiQ": 1792452048.6968,
   "cl:monyCrpdKFyXBuoRh94SMj": 1792511457.6104398,
   "cl:moyuvuB8LLa6XRxns9JUXE": 1792414009.1011486,
@@ -5994,6 +6000,7 @@
   "cl:nUNR3d9wAYcEGdPXqMbM9S": 1792839641.495066,
   "cl:nVrSty2LqFtpfCF1ZLt4uR": 1792455047.1510108,
   "cl:nY5k15KVPNwH7HHFVvigHm": 1792414242.3169463,
+  "cl:nZPHSJAyXfCpgh7oZbLJFC": 1793134599.2514021,
   "cl:naEjgTWDb4jtM2FSNAGRf6": 1793032238.2125854,
   "cl:ndz2goqDrLM4HfpzjQaLEg": 1792414539.343106,
   "cl:neCPnEoj3ZRN6TJJmvYrpu": 1792455047.1510153,
@@ -6160,6 +6167,7 @@
   "cl:rBBkGd1D4Lky4Ktdp9i9Qb": 1792437642.0250285,
   "cl:rBJFKK4FrWAZQHozW6URBu": 1792679440.3832865,
   "cl:rEbeFqtFZkZ9MVLytMLFBp": 1792456832.3780048,
+  "cl:rFwoozXTAAZdwXUyHrUqFJ": 1793134606.663619,
   "cl:rGsxHvwWVrK7g9WhsCvPLu": 1792818059.3881252,
   "cl:rHAi3MgefqpsnLBUgtmEeC": 1793031078.9606814,
   "cl:rHFF28KY9eFgFst5e4ZmgQ": 1792591565.7545323,
@@ -7318,7 +7326,8 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xh3dcy/january_lease_takeover/": 1793132137.367782,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xh3jqx/master_bed_available_in_chelsea_4_bed_2bath_from/": 1793132451.0143542,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xh3q91/ac_removal_requestrule/": 1793133038.958126,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xh3tor/how_is_everyone_dealing_with_ai_in_apartment/": 1793133037.5885277
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xh3tor/how_is_everyone_dealing_with_ai_in_apartment/": 1793133037.5885277,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xh4fx8/apartment_at_122_norfolk_st_between_rivington_and/": 1793134602.7914257
  },
  "problem_alerts": {
   "gmail": 1793033766.0118613
