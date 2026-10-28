@@ -3189,7 +3189,7 @@
    }
   },
   "04951a3e31766fbb": {
-   "checked": 1793185530.5277946,
+   "checked": 1793189308.0548558,
    "seen": {
     "4b95b0b5b7a96959": 1793163949.3084476
    }
@@ -3203,7 +3203,7 @@
    }
   },
   "0c00d8737b542c75": {
-   "checked": 1793188235.9677587,
+   "checked": 1793189308.0548558,
    "seen": {
     "0c00d8737b542c75": 1793157350.8085735,
     "0d2a7d92b8eebe6b": 1793157350.8085735,
@@ -3233,7 +3233,7 @@
    }
   },
   "1bfa91f7ca26cd75": {
-   "checked": 1793188235.9677587,
+   "checked": 1793189308.0548558,
    "seen": {}
   },
   "1db2371dc32edd42": {
@@ -3266,10 +3266,11 @@
    }
   },
   "20de164906bcd513": {
-   "checked": 1793188235.9677587,
+   "checked": 1793189308.0548558,
    "seen": {
     "0427cc9fa72034a8": 1793034059.8837233,
     "0483e28b8efe14f6": 1792771862.8929555,
+    "06a412315e3b7e93": 1793189308.0548558,
     "08f4ddabb8cf989f": 1792786545.060646,
     "096738886e5b4ef9": 1793049038.9737618,
     "0a7dd3567cebf222": 1793018088.5657575,
@@ -3467,7 +3468,7 @@
    }
   },
   "356b5879cd4e2e4b": {
-   "checked": 1793188235.9677587,
+   "checked": 1793189308.0548558,
    "seen": {
     "0372e9c7a431e3d3": 1793159151.2165942,
     "0377c3b76523fab3": 1793159151.2165942,
@@ -3779,7 +3780,7 @@
    "seen": {}
   },
   "4ae5c56ab4203a1f": {
-   "checked": 1793188235.9677587,
+   "checked": 1793189308.0548558,
    "seen": {
     "1ad0776931d32fea": 1793134259.9222324,
     "441f24b7da3a45e1": 1793157350.8085735,
@@ -3802,7 +3803,7 @@
    }
   },
   "4c40b5f4dfa20c81": {
-   "checked": 1793188235.9677587,
+   "checked": 1793189308.0548558,
    "seen": {
     "01656f12fceb5fa3": 1793183457.4610133,
     "0282e6bb62fe04a9": 1792666256.667183,
@@ -3834,7 +3835,7 @@
    }
   },
   "52a484e7c2d52a67": {
-   "checked": 1793188235.9677587,
+   "checked": 1793189308.0548558,
    "seen": {}
   },
   "544563e7c245e5ed": {
@@ -3848,7 +3849,7 @@
    }
   },
   "5d353ebb593ad20b": {
-   "checked": 1793188235.9677587,
+   "checked": 1793189308.0548558,
    "seen": {}
   },
   "5d92f613bd253843": {
@@ -3979,7 +3980,7 @@
    }
   },
   "6a8f0567c9ab8b31": {
-   "checked": 1793188235.9677587,
+   "checked": 1793189308.0548558,
    "seen": {
     "0b7cbc72981c0b70": 1792203628.762504,
     "0cd8108d7312bf0a": 1793157350.8085735,
@@ -4009,7 +4010,7 @@
    }
   },
   "6c0b1799cc0b4f7b": {
-   "checked": 1793188235.9677587,
+   "checked": 1793189308.0548558,
    "seen": {
     "017bbc10b28cc3f3": 1793157350.8085735,
     "01b12a631e88cd34": 1793157350.8085735,
@@ -4312,14 +4313,14 @@
    }
   },
   "79503fec19db3cfe": {
-   "checked": 1793188235.9677587,
+   "checked": 1793189308.0548558,
    "seen": {
     "5886ae070ea84f79": 1793112644.3653867,
     "e5c1c6951d4cf9ed": 1793112644.3653867
    }
   },
   "79d8e4e9bc610865": {
-   "checked": 1793188235.9677587,
+   "checked": 1793189308.0548558,
    "seen": {}
   },
   "88a51700e00fc312": {
@@ -4365,7 +4366,7 @@
    }
   },
   "8b5802c82e6b372c": {
-   "checked": 1793188235.9677587,
+   "checked": 1793189308.0548558,
    "seen": {
     "0d74c0f9b41a142f": 1793163693.1433628,
     "1f95f164da9bfe2e": 1792816263.3342495,
@@ -4383,7 +4384,7 @@
    }
   },
   "8b62c97d995d67c3": {
-   "checked": 1793188235.9677587,
+   "checked": 1793189308.0548558,
    "seen": {
     "03c702ca7fe35f6a": 1792116944.7537136,
     "09a745c282eb9002": 1793118942.4300098,
@@ -4436,7 +4437,7 @@
    }
   },
   "96c87ecf97b2ce00": {
-   "checked": 1793188235.9677587,
+   "checked": 1793189308.0548558,
    "seen": {
     "23fe8ed222d658c1": 1793159151.2165942,
     "2b1be838b2746e8a": 1793159151.2165942,
@@ -4593,7 +4594,7 @@
    "seen": {}
   },
   "aa4faf8a671700f3": {
-   "checked": 1793188235.9677587,
+   "checked": 1793189308.0548558,
    "seen": {
     "054f986c1f2264b1": 1793157350.8085735,
     "1572e4ddbbefb5d4": 1793157350.8085735,
@@ -4635,7 +4636,7 @@
    }
   },
   "ac1e96fce21e192a": {
-   "checked": 1793188235.9677587,
+   "checked": 1793189308.0548558,
    "seen": {
     "141aa2b0da21fec1": 1793157350.8085735,
     "18cee8b92e4d6138": 1793142663.499761,
@@ -4701,7 +4702,7 @@
    }
   },
   "b48a01a8ff75821d": {
-   "checked": 1793188235.9677587,
+   "checked": 1793189308.0548558,
    "seen": {
     "30030cdc016ba05b": 1793157350.8085735,
     "c3a903bc251b1b39": 1793157350.8085735,
@@ -4723,7 +4724,7 @@
    }
   },
   "b9d51d713df441d4": {
-   "checked": 1793188235.9677587,
+   "checked": 1793189308.0548558,
    "seen": {
     "024565cb05158794": 1793157350.8085735,
     "0f13c282409862f4": 1793157350.8085735,
@@ -4741,7 +4742,7 @@
    }
   },
   "d151be452c6edcb7": {
-   "checked": 1793188235.9677587,
+   "checked": 1793189308.0548558,
    "seen": {
     "08b14a0a3d034e43": 1793118942.4300098,
     "1b2bd48d7e81fd6d": 1793157350.8085735,
@@ -4800,7 +4801,7 @@
    "seen": {}
   },
   "fc9df85cad7a305a": {
-   "checked": 1793188235.9677587,
+   "checked": 1793189308.0548558,
    "seen": {
     "0288a6e3ab3970c7": 1793136071.2710278,
     "0a545a371fcbd605": 1792203628.762504,
@@ -4838,7 +4839,7 @@
    }
   },
   "fe5818aa0b4a3783": {
-   "checked": 1793188235.9677587,
+   "checked": 1793189308.0548558,
    "seen": {
     "0809a32d0b371776": 1792550454.203648,
     "0a6ebd0813c5ab41": 1793157350.8085735,
@@ -6580,6 +6581,7 @@
   "cl:xyhDk9pGfYxJf548KQosCZ": 1792455678.7340775,
   "cl:xzHDKzYeBdnQrMoYcJEsWq": 1793021740.3658202,
   "lp:https://www.listingsproject.com/listings/1-650-1br-in-furnished-3br-1ba-bed-stuy-apt-in-unit-w-d-1-block-to-a-c-train": 1792584176.7752051,
+  "lp:https://www.listingsproject.com/listings/1-bed-1-bath-artist-oasis-with-piano-private-patio-jan-feb-2027": 1793189301.849378,
   "lp:https://www.listingsproject.com/listings/1-bed-1-bath-in-downtown-brooklyn": 1792584183.7487986,
   "lp:https://www.listingsproject.com/listings/1-bedroom-2-bathroom-around-85m2-910-sqft-located-in-fort-greene-4a8112e8-865a-479f-b379-83e3ee3a9570": 1792584461.3885076,
   "lp:https://www.listingsproject.com/listings/1-bedroom-available-in-2br-1ba-bushwick-apt-w-backyard-access": 1792033008.3512356,
@@ -6597,6 +6599,7 @@
   "lp:https://www.listingsproject.com/listings/2-bed-2-bath-w-2-parking-spots-storage": 1793188977.282026,
   "lp:https://www.listingsproject.com/listings/2-bed-apartment-in-willaimsburg-great-for-families": 1792584301.9395573,
   "lp:https://www.listingsproject.com/listings/2-bedroom-2-bath-lease-takeover-in-prospect-heights": 1792033023.1929123,
+  "lp:https://www.listingsproject.com/listings/2-bedroom-2-bath-loft-in-greenpoint-01677d32-c3fa-4366-98c6-9f0796894b26": 1793189238.2630215,
   "lp:https://www.listingsproject.com/listings/2-bedroom-apartment-with-backyard-laundry-dishwasher-in-crown-heights": 1792584237.3957849,
   "lp:https://www.listingsproject.com/listings/2-bedroom-lease-takeover-in-bushwick-w-option-to-renew": 1793189025.7668228,
   "lp:https://www.listingsproject.com/listings/2-week-holiday-sublet-brownstone-in-park-slope": 1792584241.33609,
@@ -6604,12 +6607,16 @@
   "lp:https://www.listingsproject.com/listings/7-month-sublet-with-possible-lease-takeover": 1792584429.758836,
   "lp:https://www.listingsproject.com/listings/apart-for-short-term-stay-8f613fe9-a456-4c5b-94c0-90a5dc00a545": 1792413787.3730402,
   "lp:https://www.listingsproject.com/listings/art-studio-for-rent-gowanus-park-slope-2b94464d-afe5-4651-bec6-7ef4a5ac2411": 1792031442.7202334,
+  "lp:https://www.listingsproject.com/listings/available-as-of-december-5-2026-spacious-rental-in-manhattan-furnished-large-2-bdrm-2-bathrm-in-east-village-flexible-term": 1793189308.0497816,
   "lp:https://www.listingsproject.com/listings/available-now-spare-bedroom-with-private-bathroom-in-luxury-coop-e80da773-6178-460f-ba83-da81c2540a76": 1792028432.185957,
   "lp:https://www.listingsproject.com/listings/available-room-in-lic-apartment": 1792033027.2844188,
   "lp:https://www.listingsproject.com/listings/awesome-upscaled-designer-studio-in-brooklyn-054bd26c-be0d-4889-8a39-bd8d71e44b6a": 1792026544.5810964,
   "lp:https://www.listingsproject.com/listings/basement-apartment-for-rent-in-a-private-house-4835b364-d5ae-4e03-9ab9-5dbcea4e9df6": 1793188989.0614758,
+  "lp:https://www.listingsproject.com/listings/beautiful-2-bed-1-5-bath-in-fort-greene-w-peloton-home-office-near-park-subway-christmas-march-april": 1793189256.993693,
   "lp:https://www.listingsproject.com/listings/beautiful-apartment-ues-for-sublet-private-rooftop": 1792413764.4261773,
+  "lp:https://www.listingsproject.com/listings/beautiful-apartment-ues-for-sublet-private-rooftop-1d700f61-87be-416a-9ee8-b5e9af2ee125": 1793189291.1147978,
   "lp:https://www.listingsproject.com/listings/beautiful-bedstuy-brownstone-parlor-floor-2br-1-ba-w-original-charm-new-w-d-utilities-incl": 1792584206.9536705,
+  "lp:https://www.listingsproject.com/listings/beautiful-boerum-hill-2br-available-for-sublet-49b99c07-0c2a-49ea-bc61-cf153106f97a": 1793189208.2798839,
   "lp:https://www.listingsproject.com/listings/beautiful-chelsea-prewar-1-bed-apartment": 1792584515.1762757,
   "lp:https://www.listingsproject.com/listings/beautiful-designer-s-1-bedroom-apartment-private-balcony-manhattan-views-bushwick-brooklyn": 1792584481.1762042,
   "lp:https://www.listingsproject.com/listings/beautiful-pet-friendly-bed-stuy-loft-with-in-unit-laundry": 1792413814.994115,
@@ -6620,6 +6627,7 @@
   "lp:https://www.listingsproject.com/listings/bed-stuy-belle-w-chef-s-kitchen-hot-tub-sauna-gym-avail-nov-15th-411430": 1793188959.2667942,
   "lp:https://www.listingsproject.com/listings/bed-stuy-belle-w-chef-s-kitchen-hot-tub-sauna-gym-avail-nov-15th-7b2d2d09-e775-4d6e-a064-fe730c54e5a2": 1792032998.904393,
   "lp:https://www.listingsproject.com/listings/bed-stuy-lease-take-over": 1792584194.1344652,
+  "lp:https://www.listingsproject.com/listings/bedroom-for-short-term-rent": 1793189206.8087358,
   "lp:https://www.listingsproject.com/listings/bedroom-with-private-bathroom-in-2bed-2bath": 1793189009.6335127,
   "lp:https://www.listingsproject.com/listings/bedstuy-brownstone-room-rental-22886a3c-8322-49eb-9b23-d7214a97898b": 1792032969.373073,
   "lp:https://www.listingsproject.com/listings/below-market-proced-two-bedroom-apartment-in-brand-new-building-on-high-floor-2b39756a-4063-48ba-954c-4bf2a4b5bfc3": 1792033026.0236409,
@@ -6628,6 +6636,7 @@
   "lp:https://www.listingsproject.com/listings/big-bright-tucked-away-williamsburg-condo-with-office-studio-space-d25be41d-0740-4ccd-bf90-54167372e1b3": 1792584443.0849175,
   "lp:https://www.listingsproject.com/listings/big-new-bright-beachfront-3-bedroom-in-rockaway-park-0820a6f6-2412-4a3b-942e-8de196eece4e": 1792413694.2229273,
   "lp:https://www.listingsproject.com/listings/bohemian-brooklyn-loft-with-private-terrace-cb233d65-95dd-4dad-a3a3-17ae467eca4d": 1792027554.6188006,
+  "lp:https://www.listingsproject.com/listings/bohemian-brooklyn-loft-with-private-terrace-db0d766e-5fbb-426b-b4f9-e32aae2ef543": 1793189219.0177534,
   "lp:https://www.listingsproject.com/listings/bohemian-brooklyn-loft-with-private-terrace-fe164e26-482c-4b19-8271-34c41ccf4bc0": 1792584426.1059642,
   "lp:https://www.listingsproject.com/listings/brand-new-one-bed-one-bath-in-boerum-hill": 1792027551.4143906,
   "lp:https://www.listingsproject.com/listings/breezy-unit-in-stuyvesant-heights-top-floor-of-brownstone-fcdd79ce-60b2-4a13-bc61-ea1a36d5364b": 1792584239.6973758,
@@ -6635,13 +6644,17 @@
   "lp:https://www.listingsproject.com/listings/bright-1bed-office-6-month-to-one-year-sublet-carroll-gardens-bk-3900-nov-1st-40f7470d-61c9-4fe3-92e4-3dc13caddf56": 1792415434.096995,
   "lp:https://www.listingsproject.com/listings/bright-1bed-office-6-month-to-one-year-sublet-carroll-gardens-bk-3900-nov-1st-411036": 1792584232.1432722,
   "lp:https://www.listingsproject.com/listings/bright-airy-south-slope-brooklyn-apartment-f86c0753-d8e1-4d67-a981-2ec2e4aea24a": 1792413789.0983295,
+  "lp:https://www.listingsproject.com/listings/bright-cozy-quiet-1br-apartment-in-clinton-hill": 1793189300.3241117,
   "lp:https://www.listingsproject.com/listings/bright-cozyyy-2bed-2bath-in-prospect-open-to-extension": 1792028773.2146556,
+  "lp:https://www.listingsproject.com/listings/bright-cozyyy-2bed-2bath-in-prospect-open-to-extension-2fca06fb-ab33-43d7-9a12-c185005ebf91": 1793189258.4578629,
   "lp:https://www.listingsproject.com/listings/bright-cozyyy-2bed-2bath-in-prospect-open-to-extension-afa526cd-0009-4e95-bd59-e160ef8c1314": 1792584406.5599205,
   "lp:https://www.listingsproject.com/listings/bright-crown-heights-apartment": 1792032992.2454338,
   "lp:https://www.listingsproject.com/listings/bright-crown-heights-apartment-e0530bf1-7b28-47c7-95bc-d014f5f00dee": 1793188949.3064666,
   "lp:https://www.listingsproject.com/listings/bright-fully-furnished-1br-with-balcony-in-the-east-village-410735": 1792584424.043319,
   "lp:https://www.listingsproject.com/listings/bright-furnished-lower-east-side-apartment-january-february": 1792413777.0588994,
   "lp:https://www.listingsproject.com/listings/bright-private-1-br-loft-240-night": 1792584444.9417515,
+  "lp:https://www.listingsproject.com/listings/bright-quiet-2-3-bedroom-apartment-4-night-sublet": 1793189268.7145202,
+  "lp:https://www.listingsproject.com/listings/bright-quiet-and-cozy-apartment-in-soho-4182387a-4b19-4fff-a94f-cebb0cc4d49b": 1793189188.699646,
   "lp:https://www.listingsproject.com/listings/bright-renovated-1br-co-op-direct-sublet-from-owner-available-december-1-2026-washington-heights-192nd-broadway-d61af65e-5c0b-45c6-8c4c-1b9e34455a25": 1792413755.4283564,
   "lp:https://www.listingsproject.com/listings/bright-spacious-perfect-layout-with-breathtaking-view-and-amenities-in-clinton-hill": 1792584199.789926,
   "lp:https://www.listingsproject.com/listings/bright-spacious-room-in-a-four-bedroom-duplex-apartment-bushwick-f738d189-52e4-4d52-ada9-9d905aebd162": 1793189016.9743254,
@@ -6650,13 +6663,18 @@
   "lp:https://www.listingsproject.com/listings/bushwick-2-bed-2bath-musicians-apartment-f3627d1a-3d6d-4c43-997d-6f59467784e7": 1792413785.8277264,
   "lp:https://www.listingsproject.com/listings/bushwick-2-br-1-ba-available-oct-31-nov-1": 1792033011.6835005,
   "lp:https://www.listingsproject.com/listings/charming-2br-bed-stuy-home-private-backyard-faee292d-9489-48e6-8763-3118701d634b": 1792584300.2794523,
+  "lp:https://www.listingsproject.com/listings/charming-furnished-west-village-1br-dec-3-to-may-15": 1793189213.9514651,
   "lp:https://www.listingsproject.com/listings/charming-uws-studio-steps-from-central-park-490f3023-eefa-4fbc-b894-7bdb3031db29": 1792584729.5370662,
+  "lp:https://www.listingsproject.com/listings/charming-uws-studio-steps-from-central-park-80f09961-676b-4fa3-9fa4-24d3e841609c": 1793189175.3105216,
   "lp:https://www.listingsproject.com/listings/chelsea-1-bedroom-for-short-term-sublet-1c8b6c1f-122c-4c95-9f14-8dc89f170acc": 1792413781.520058,
+  "lp:https://www.listingsproject.com/listings/chic-williamsburg-3-bedroom-backyard-c147847b-13cb-429c-b539-f66d170abd57": 1793189295.4592726,
   "lp:https://www.listingsproject.com/listings/classic-2-bedroom-railroad-in-greenpoint-williamsburg": 1792584149.037405,
   "lp:https://www.listingsproject.com/listings/classic-2br-railroad-in-prime-bushwick-6-mo-sublet-with-the-option-to-extend": 1792584228.3075922,
   "lp:https://www.listingsproject.com/listings/clean-quiet-park-avenue-apartment-27cd71e9-16d8-4908-a4cd-5d7208f91e81": 1792413704.159239,
+  "lp:https://www.listingsproject.com/listings/cosy-studio-in-incredible-location-933e9a28-ed17-46c2-8f3f-dbf0a3f6175e": 1793189242.9570534,
   "lp:https://www.listingsproject.com/listings/coveted-vacation-rental-nightly-weekly-monthly": 1792584509.5240185,
   "lp:https://www.listingsproject.com/listings/coveted-vacation-rental-now-for-longer-sublet-2e5d7899-a675-4543-88ed-043e9c050d59": 1792413773.9882324,
+  "lp:https://www.listingsproject.com/listings/cozy-and-central-east-village-studio-november": 1793189283.1527414,
   "lp:https://www.listingsproject.com/listings/cozy-apartment-in-a-lovely-bed-stuy-brownstone-1b63c22b-1f54-48e3-b936-fff45785a5c2": 1792413796.687263,
   "lp:https://www.listingsproject.com/listings/cozy-convient-fully-furnished-room-in-n-williamsburg-all-utilities-included-work-from-home-6198a10c-e20d-4267-a28d-0fb1c679f4a4": 1792584196.024402,
   "lp:https://www.listingsproject.com/listings/cozy-convient-fully-furnished-room-in-n-williamsburg-all-utilities-included-work-from-home-abf4db25-9612-4258-b156-40cdf0165228": 1793189032.90759,
@@ -6682,6 +6700,7 @@
   "lp:https://www.listingsproject.com/listings/furnished-1br-1ba-with-rooftop-gym-4-300-month-nov-jan": 1792426556.89491,
   "lp:https://www.listingsproject.com/listings/furnished-1br-by-the-cortelyou-q-oct-20-jan-10-flexible-move-in": 1792584478.7885041,
   "lp:https://www.listingsproject.com/listings/furnished-1br-in-inwood-manhattan-utilities-included-near-parks-subway": 1792584516.9227707,
+  "lp:https://www.listingsproject.com/listings/furnished-2-bedroom-in-brooklyn-heights-utilities-included-5300-month-or-1-400-week-71bbcb93-d3a0-4951-9495-8f1ae038d824": 1793189305.926901,
   "lp:https://www.listingsproject.com/listings/furnished-2br-2ba-apartment-w-gym-and-rooftop-in-downtown-brooklyn": 1792584428.1046546,
   "lp:https://www.listingsproject.com/listings/furnished-2br-duplex-with-private-roof-terrace-bed-stuy-steps-to-the-a-c": 1792032986.3864756,
   "lp:https://www.listingsproject.com/listings/furnished-2br-les-chinatown-sublet-january-february-great-wfh-setup": 1792584284.119718,
@@ -6710,7 +6729,9 @@
   "lp:https://www.listingsproject.com/listings/huge-sunny-prospect-park-south-pre-war-1-br-apartment-32ca8bec-6df3-4494-8a7c-4eea5b1c3bf2": 1792584513.1776376,
   "lp:https://www.listingsproject.com/listings/iso-kind-responsible-roomie-to-share-cute-space-in-bed-stuy": 1793189011.3597739,
   "lp:https://www.listingsproject.com/listings/iso-roommate-in-sunlit-bushwick-apt": 1792584130.4008658,
+  "lp:https://www.listingsproject.com/listings/king-sized-bedroom-available-in-fort-tryon-pre-war-gem-park-views-sunlight": 1793189198.0627944,
   "lp:https://www.listingsproject.com/listings/kips-bay-full-1-bedroom-for-rent": 1792584132.5054576,
+  "lp:https://www.listingsproject.com/listings/large-1-bed-apartment-by-prospect-park-in-prospect-heights-a7720e21-cd7c-480c-a7f1-c208fb99c346": 1793189179.8632824,
   "lp:https://www.listingsproject.com/listings/large-1-bedroom-with-backyard-in-greenpoint-with-semi-private-yard": 1792584474.7121997,
   "lp:https://www.listingsproject.com/listings/large-2-bedroom-apartment-in-bushwick": 1792584453.8996763,
   "lp:https://www.listingsproject.com/listings/large-airy-2-bedroom-w-balcony-in-heart-of-fort-greene-for-nov": 1792031750.653585,
@@ -6724,6 +6745,7 @@
   "lp:https://www.listingsproject.com/listings/large-room-for-rent-in-heart-of-clinton-hill": 1792584136.144703,
   "lp:https://www.listingsproject.com/listings/large-room-for-sublet-in-flatbush-brownstone": 1792413759.1016686,
   "lp:https://www.listingsproject.com/listings/large-studio-in-fidi-move-in-ready-or-furnished": 1792584217.6455905,
+  "lp:https://www.listingsproject.com/listings/large-studio-in-fidi-move-in-ready-or-furnished-a8a94bcf-71d7-4afa-87b9-401f83b269d7": 1793189171.7558224,
   "lp:https://www.listingsproject.com/listings/large-studio-in-newer-building-with-roof-deck-built-right-a0e0d9d1-70f3-4301-abf2-18212c1b1180": 1793188964.3289971,
   "lp:https://www.listingsproject.com/listings/large-sun-drenched-3-br-duplex-with-private-yard-gated-parking-eco-friendly-finishes": 1792032997.6128683,
   "lp:https://www.listingsproject.com/listings/large-sunny-bedroom-in-2000sf-modern-gorgeous-loft": 1792032658.6945565,
@@ -6748,6 +6770,7 @@
   "lp:https://www.listingsproject.com/listings/massive-2-bedroom-2-5-bath-duplex-with-2-private-balconies-private-entrance-in-bushwick-5c351a08-8b78-47f4-98fb-a60e2f2c2c79": 1792158052.2966437,
   "lp:https://www.listingsproject.com/listings/micro-studio-apartment-on-quiet-uws-block-steps-from-the-1-2-3-subway": 1792027834.6368563,
   "lp:https://www.listingsproject.com/listings/midtown-room-for-rent-full-or-part-time": 1792584422.497744,
+  "lp:https://www.listingsproject.com/listings/modern-2br-2ba-in-williamsburg-12min-to-manhattan-5ad2cf07-6a76-40ca-9d0b-b45838f5222f": 1793189222.308626,
   "lp:https://www.listingsproject.com/listings/modern-greenpoint-apartment-close-to-transportation": 1792026627.3795352,
   "lp:https://www.listingsproject.com/listings/modern-sun-filled-1br-in-bedstuy-apt-w-exposed-brick-nov-1-jan-31-flexible-dates": 1792590053.6456332,
   "lp:https://www.listingsproject.com/listings/new-luxury-2b2b-with-large-balcony-in-prime-brooklyn-c01f4231-4135-4c0e-8201-c196aa87a829": 1792032961.9480386,
@@ -6786,10 +6809,12 @@
   "lp:https://www.listingsproject.com/listings/room-for-rent-in-an-artist-loft-9004c9a8-5948-49b2-99da-49d2dd1536ea": 1792032999.9968169,
   "lp:https://www.listingsproject.com/listings/room-for-rent-in-central-harlem-410077": 1792413751.7112124,
   "lp:https://www.listingsproject.com/listings/room-for-rent-in-two-bedroom-bed-stuy": 1793189042.3206124,
+  "lp:https://www.listingsproject.com/listings/room-for-sublet-in-prospect-heights-brooklyn": 1793189286.73818,
   "lp:https://www.listingsproject.com/listings/room-in-2-bdrm-apt-in-washington-heights-in-prime-location": 1792033021.939512,
   "lp:https://www.listingsproject.com/listings/room-in-2-bdrm-apt-in-washington-heights-in-prime-location-482eb79f-12d6-49b8-a9fe-af8faffde247": 1792584157.0861192,
   "lp:https://www.listingsproject.com/listings/room-in-2-bdrm-apt-in-washington-heights-in-prime-location-ae6f8142-446d-4900-beb0-96b7ab08650b": 1793188970.1121676,
   "lp:https://www.listingsproject.com/listings/room-in-3bd-prime-bushwick-location": 1792032966.4615905,
+  "lp:https://www.listingsproject.com/listings/room-in-beautiful-industrial-loft-0d0092a9-05c4-4333-a32e-cf476f39a49c": 1793189263.2378852,
   "lp:https://www.listingsproject.com/listings/room-in-beautiful-renovated-clinton-hill-apartment-available-for-sublet": 1792413746.5325973,
   "lp:https://www.listingsproject.com/listings/room-in-charming-crown-heights-apartment": 1792584161.3011043,
   "lp:https://www.listingsproject.com/listings/room-in-greenpoint-7aa2873d-e563-4534-98b2-68081a97c49b": 1792584213.6693308,
@@ -6797,26 +6822,36 @@
   "lp:https://www.listingsproject.com/listings/room-in-sunny-artistic-2bd-loft-with-manhattan-views-red-hook-410326": 1792033003.7995582,
   "lp:https://www.listingsproject.com/listings/room-in-williamsburg-luxury-building": 1792032979.670014,
   "lp:https://www.listingsproject.com/listings/seeking-furnished-dog-friendly-brooklyn-sublet-oct-nov-start-3-6-months-up-to-3-200-4106cd94-6683-44fe-b406-cebeca8517d6": 1792030234.9005105,
+  "lp:https://www.listingsproject.com/listings/serene-winter-home-bed-stuy-bright-friendly-2-br-with-garden-december-january-4dc6fdc1-8d1c-4f65-946f-822e7bae563e": 1793189252.4861875,
   "lp:https://www.listingsproject.com/listings/short-or-long-term-room-for-rent-in-williamsburg-4b9eb177-cd5b-49a1-af78-8b3735d425a7": 1792032996.4334295,
   "lp:https://www.listingsproject.com/listings/short-term-furnished-entire-apartment-12-10-26-3-24-27": 1792413739.5387073,
+  "lp:https://www.listingsproject.com/listings/short-term-stays-nov-dec-jan-large-modern-1br-by-dumbo-w-d-doorman-roof-wfh": 1793189264.799418,
   "lp:https://www.listingsproject.com/listings/small-studio-loft-in-chelsea-hudson-yards": 1792028142.8266098,
   "lp:https://www.listingsproject.com/listings/south-slope-large-2-1-with-in-unit-w-d-and-dishwasher-28cc15e9-6ce7-46f9-a439-01c0bdd01c20": 1792584223.354729,
   "lp:https://www.listingsproject.com/listings/spacious-1b-in-fort-greene-46th-floor-open-sunset-and-water-views-nov-20-jan-3": 1792584465.4999442,
   "lp:https://www.listingsproject.com/listings/spacious-1br-apartment-all-yours": 1792584471.6681828,
   "lp:https://www.listingsproject.com/listings/spacious-1br-in-cobble-hill-8ef65892-6435-4d37-a893-53f0266d342e": 1792026545.9920893,
   "lp:https://www.listingsproject.com/listings/spacious-2-bedroom-in-crown-heights-sublet-12-22-1-21": 1792584295.3253932,
+  "lp:https://www.listingsproject.com/listings/spacious-2br-in-quiet-bed-stuy": 1793189202.5290034,
   "lp:https://www.listingsproject.com/listings/spacious-and-beautiful-room-for-rent-in-flatbush": 1792032965.3985672,
   "lp:https://www.listingsproject.com/listings/spacious-and-beautiful-room-for-rent-in-flatbush-1065edf3-9ef2-4fbc-ae4e-0ef8d6138d5c": 1793188975.7028825,
   "lp:https://www.listingsproject.com/listings/spacious-and-quiet-1br-530f7dc5-377f-4364-a971-3ca3da92ddf6": 1793189002.7446444,
+  "lp:https://www.listingsproject.com/listings/spacious-apartment-steps-from-hewes-street-jmz-411684": 1793189173.3016582,
+  "lp:https://www.listingsproject.com/listings/spacious-cozy-1-bed-1-bath-in-clinton-hill": 1793189227.827744,
+  "lp:https://www.listingsproject.com/listings/spacious-one-bedroom-available-over-thanksgiving-holiday-2921e149-4fcf-4370-8ac4-832c58ee56c4": 1793189224.0786147,
   "lp:https://www.listingsproject.com/listings/spacious-quiet-2br-apartment-with-flex-room-l-m-trains-utilities-internet-included": 1792584153.6867344,
   "lp:https://www.listingsproject.com/listings/spacious-room-in-peaceful-3br-great-location-8670c341-3454-4280-ba59-bff4afe62c70": 1792028141.6224377,
+  "lp:https://www.listingsproject.com/listings/studio-apartment-in-luxury-tower-in-williambsurg-utilities-included": 1793189274.8516374,
+  "lp:https://www.listingsproject.com/listings/stunning-2b-2ba-corner-unit-overlooking-fort-greene-park-425d6d9a-f54f-47e5-919a-c7cfd2639e09": 1793189210.394444,
   "lp:https://www.listingsproject.com/listings/stunning-49th-floor-1br-in-luxury-brooklyn-crossing-panoramic-views-rooftop-pool-no-broker-fee": 1792584118.185777,
+  "lp:https://www.listingsproject.com/listings/stunning-architect-designed-home-3br-2-bath-ea0f7387-1493-422d-9ce1-d4df7099fe22": 1793189231.4850602,
   "lp:https://www.listingsproject.com/listings/stunning-architect-designed-home-3br-2-bath-fedb6f99-6241-4f10-9ff2-808017954df7": 1792584434.9200656,
   "lp:https://www.listingsproject.com/listings/stunning-fidi-studio-nov-dec-to-may": 1792764361.2697346,
   "lp:https://www.listingsproject.com/listings/stunning-fort-green-loft-with-2-working-spaces-and-amazing-natural-light-52e04697-a670-4ea7-b677-44263310323d": 1792413792.9796453,
   "lp:https://www.listingsproject.com/listings/stunning-modern-3-bedroom-2-bath": 1793188925.6299558,
   "lp:https://www.listingsproject.com/listings/stylish-3-bedroom-brooklyn-brownstone-duplex-w-huge-garden-db76b7c4-5057-4289-ad40-d517f7bd3b49": 1792413819.6512227,
   "lp:https://www.listingsproject.com/listings/sublease-available-ruby-chelsea-nyc-studio-fully-furnished-1e0430ec-7ed0-47de-aa86-5e4facffe1c0": 1792584306.7681031,
+  "lp:https://www.listingsproject.com/listings/sublet-1-bedroom-apt-in-east-williamsburg": 1793189272.2240102,
   "lp:https://www.listingsproject.com/listings/subletting-1b-1ba-in-jackson-heights-11-25-1-15": 1792026541.4590216,
   "lp:https://www.listingsproject.com/listings/sun-drenched-2-bedroom-2-bath-luxury-apt-in-prospect-heights": 1792584192.5603812,
   "lp:https://www.listingsproject.com/listings/sun-drenched-2-bedroom-flex-3-2-bath-luxury-apt-in-prospect-heights": 1793188990.9054656,
@@ -6826,10 +6861,15 @@
   "lp:https://www.listingsproject.com/listings/sun-drenched-newly-renovated-3-bedroom-in-historic-stuyvesant-heights": 1793188922.7342072,
   "lp:https://www.listingsproject.com/listings/sun-drenched-studio-half-a-block-from-central-park-west-505cc97b-2fa3-40c9-9f23-5940721e8729": 1792413723.6468236,
   "lp:https://www.listingsproject.com/listings/sun-filled-room-in-south-williamsburg-1-500-month": 1793188952.6180189,
+  "lp:https://www.listingsproject.com/listings/sun-filled-west-village-apt-in-charming-prewar-building": 1793189245.48572,
+  "lp:https://www.listingsproject.com/listings/sunlit-furnished-1br-williamsburg-loft-in-unit-laundry-near-bedford-l-b8da9fdb-10c1-4372-910f-bb4d72789bde": 1793189279.6722128,
   "lp:https://www.listingsproject.com/listings/sunny-1-bedroom-1-bathroom-2-month-sublet-in-fort-greene-november-december": 1792413721.3109179,
+  "lp:https://www.listingsproject.com/listings/sunny-1-bedroom-in-ridgewood-queens-with-private-backyard": 1793189250.9003341,
   "lp:https://www.listingsproject.com/listings/sunny-3-bed-2-bath-in-ridgewood-move-in-ready-or-furnished": 1792032963.6289055,
   "lp:https://www.listingsproject.com/listings/sunny-and-charming-prospect-heights-apartment-43e3afa3-532e-4f4d-84cd-06e9bf9af70a": 1792584275.4890432,
   "lp:https://www.listingsproject.com/listings/sunny-crown-heights-room-w-massive-closet-space-off-franklin-ave": 1792413753.3224556,
+  "lp:https://www.listingsproject.com/listings/sunny-east-williamsburg-1br-winter-sublet-wfh-setup-gym-3-min-to-l": 1793189195.9852374,
+  "lp:https://www.listingsproject.com/listings/sunny-fort-greene-3-bedroom-office-next-to-park-c48fcb49-27bf-4fcf-ae35-aa061c66a4e5": 1793189192.8705645,
   "lp:https://www.listingsproject.com/listings/sunny-furnished-east-village-room-near-union-sq-w-d-in-unit-sublet-short-or-long-term-3e6fe926-c85c-40c6-8c17-bbd2fd218246": 1792584413.2075691,
   "lp:https://www.listingsproject.com/listings/sunny-large-2-bedroom-apt-in-bushwick-ridgewood-border": 1792415755.827874,
   "lp:https://www.listingsproject.com/listings/sunny-one-bedroom-apartment-in-crown-heights-brooklyn-410164": 1792413805.9010751,
@@ -6837,6 +6877,7 @@
   "lp:https://www.listingsproject.com/listings/sunny-room-in-3bd-1ba": 1793188947.8351462,
   "lp:https://www.listingsproject.com/listings/sunny-room-in-ridgewood-apartment-with-big-backyard": 1792584527.931571,
   "lp:https://www.listingsproject.com/listings/sunny-top-floor-1-bedroom-furnished-washer-dryer": 1792413709.1600673,
+  "lp:https://www.listingsproject.com/listings/thanksgiving-week-only-nov-21-to-27-big-sunny-1br-in-fort-greene-clinton-hill": 1793189183.8139226,
   "lp:https://www.listingsproject.com/listings/the-tree-house-suite-a-two-rooms-private-suite-in-a-co-living-house-the-elton": 1792031138.391781,
   "lp:https://www.listingsproject.com/listings/two-bedroom-chelsea-flexible-dates": 1792584431.546761,
   "lp:https://www.listingsproject.com/listings/ues-studio-private-patio-rent-stabilized-3-800": 1792032977.9022918,
@@ -6848,6 +6889,7 @@
   "lp:https://www.listingsproject.com/listings/whimsical-1-bedroom-apt-with-in-unit-laundry-private-balcony-84ce07f1-0f55-4e6c-b0f9-c8df8f30d6f9": 1792584519.2387724,
   "lp:https://www.listingsproject.com/listings/williamsburg-1-bed-1-sofa-bed-1-5-bath-loft-apt-apartment-with-balcony-756d797b-72c0-40d1-b2cf-63ab125c5783": 1792413705.6493573,
   "lp:https://www.listingsproject.com/listings/williamsburg-1-bedroom-flexible-dates-4300-all-included-lease-takeover-possible": 1792026547.1632783,
+  "lp:https://www.listingsproject.com/listings/williamsburg-apartment-dd35809c-132e-4848-a1d2-6c5053533faf": 1793189233.5174987,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1x5708b/goldfarb_apartments/": 1792026536.3169794,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1x57kmx/21f_looking_for_1bd1bath_in_any_borough_cityfheps/": 1792026534.5701616,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1x57prr/1_month_at_outpost_harlem/": 1792026533.5035396,
