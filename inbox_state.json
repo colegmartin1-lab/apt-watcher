@@ -1,7 +1,7 @@
 {
  "feeds": {
   "Brooklyn Group": {
-   "checked": 1793195125.478873,
+   "checked": 1793196055.446686,
    "seen": {
     "bg:1000": 1793158235.5554085,
     "bg:1001": 1793158235.5554085,
@@ -2070,7 +2070,7 @@
    }
   },
   "Nooklyn": {
-   "checked": 1793195125.478873,
+   "checked": 1793196055.446686,
    "seen": {
     "nooklyn:100394": 1793158235.5554085,
     "nooklyn:100504": 1793158235.5554085,
@@ -2096,7 +2096,7 @@
     "nooklyn:101623": 1793158235.5554085,
     "nooklyn:101624": 1793158235.5554085,
     "nooklyn:101625": 1793158235.5554085,
-    "nooklyn:101626": 1793109331.3659675,
+    "nooklyn:101626": 1793196055.446686,
     "nooklyn:101628": 1793158235.5554085,
     "nooklyn:101632": 1793115326.6165533,
     "nooklyn:101640": 1793158235.5554085,
@@ -2110,7 +2110,7 @@
     "nooklyn:101652": 1793158235.5554085,
     "nooklyn:101653": 1793158235.5554085,
     "nooklyn:101655": 1793158235.5554085,
-    "nooklyn:101656": 1793109331.3659675,
+    "nooklyn:101656": 1793196055.446686,
     "nooklyn:101664": 1793158235.5554085,
     "nooklyn:101665": 1793158235.5554085,
     "nooklyn:101666": 1793158235.5554085,
@@ -2149,7 +2149,7 @@
     "nooklyn:101722": 1793122523.7943552,
     "nooklyn:101723": 1793158235.5554085,
     "nooklyn:101724": 1793158235.5554085,
-    "nooklyn:101726": 1793109331.3659675,
+    "nooklyn:101726": 1793196055.446686,
     "nooklyn:101728": 1793122523.7943552,
     "nooklyn:101736": 1793158235.5554085,
     "nooklyn:101738": 1793158235.5554085,
@@ -2165,14 +2165,14 @@
     "nooklyn:101761": 1793158235.5554085,
     "nooklyn:101762": 1793158235.5554085,
     "nooklyn:101763": 1793158235.5554085,
-    "nooklyn:101765": 1793109331.3659675,
+    "nooklyn:101765": 1793196055.446686,
     "nooklyn:101766": 1793158235.5554085,
     "nooklyn:101767": 1793158235.5554085,
     "nooklyn:101768": 1793158235.5554085,
     "nooklyn:101769": 1793158235.5554085,
     "nooklyn:101770": 1792146322.445701,
     "nooklyn:101771": 1793158235.5554085,
-    "nooklyn:101772": 1793109331.3659675,
+    "nooklyn:101772": 1793196055.446686,
     "nooklyn:101773": 1793158235.5554085,
     "nooklyn:101774": 1793118924.2866428,
     "nooklyn:101775": 1793118924.2866428,
@@ -2433,7 +2433,7 @@
     "nooklyn:104164": 1792972524.5350354,
     "nooklyn:104166": 1793022625.322359,
     "nooklyn:104168": 1792868120.8450358,
-    "nooklyn:104169": 1793109331.3659675,
+    "nooklyn:104169": 1793196055.446686,
     "nooklyn:104171": 1793193340.6928606,
     "nooklyn:104172": 1793111530.9431021,
     "nooklyn:104178": 1793142640.6513453,
@@ -2964,6 +2964,10 @@
   "7cc4c59eb762217a": {
    "price": 1720,
    "ts": 1792594917.5438063
+  },
+  "7dbcf16ced3bf618": {
+   "price": 1575,
+   "ts": 1793196107.2818718
   },
   "7df7b629673b3697": {
    "price": 2500,
@@ -5979,6 +5983,7 @@
   "cl:kitxZNNN7bn3g9cinaxeEy": 1792508497.7112944,
   "cl:kkK4Fx6hrFT9misNiEmmYA": 1792453535.914298,
   "cl:koeiLfrhP4pwnP4oh4hCzy": 1792413839.3953905,
+  "cl:kppoERP8edzsCkrmBSVXyg": 1793196088.369062,
   "cl:kquA37hhAYRUvGjS9qVgXb": 1792435869.1973445,
   "cl:krH6P7c4zwF1MmtNWQy9rG": 1792758050.757195,
   "cl:ksPnYNnWJLsLkHgr1A4iH8": 1793115352.823177,
@@ -7534,7 +7539,9 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xhf0tv/lisiting_astoria_2_bed_1_bath_1_room_novdec/": 1793163344.5051117,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xhhc6x/repost2330_2bd1ba_apt_in_ocean_hills_brooklyn/": 1793171751.8296847,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xhjucf/lease_break_question_calculating_fmv/": 1793181652.0867393,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xhmadf/looking_for_sublet_in_nyc_asap_max_budget_3k/": 1793189448.3225377
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xhmadf/looking_for_sublet_in_nyc_asap_max_budget_3k/": 1793189448.3225377,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xhoswk/uws_furnished_studio_sublet_available_nov_15/": 1793196084.2698894,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xhothc/will_a_stinky_stale_apartment_smell_go_away/": 1793196081.7755191
  },
  "problem_alerts": {
   "gmail": 1793033766.0118613
