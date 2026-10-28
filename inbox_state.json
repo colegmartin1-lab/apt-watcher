@@ -1,7 +1,7 @@
 {
  "feeds": {
   "Brooklyn Group": {
-   "checked": 1793229926.025234,
+   "checked": 1793230834.5457027,
    "seen": {
     "bg:1000": 1793158235.5554085,
     "bg:1001": 1793158235.5554085,
@@ -2071,7 +2071,7 @@
    }
   },
   "Nooklyn": {
-   "checked": 1793229926.025234,
+   "checked": 1793230834.5457027,
    "seen": {
     "nooklyn:100394": 1793158235.5554085,
     "nooklyn:100504": 1793158235.5554085,
@@ -2104,7 +2104,7 @@
     "nooklyn:101641": 1793158235.5554085,
     "nooklyn:101642": 1793158235.5554085,
     "nooklyn:101643": 1793158235.5554085,
-    "nooklyn:101645": 1793144429.0248208,
+    "nooklyn:101645": 1793230834.5457027,
     "nooklyn:101647": 1793158235.5554085,
     "nooklyn:101649": 1793158235.5554085,
     "nooklyn:101651": 1793207130.0730972,
@@ -3295,7 +3295,7 @@
    }
   },
   "1dc0ba05146f742f": {
-   "checked": 1793228795.308433,
+   "checked": 1793230856.2989893,
    "seen": {
     "0993825173af2327": 1793201441.6833382,
     "5404edae94f0da25": 1793201441.6833382,
@@ -4384,7 +4384,7 @@
    "seen": {}
   },
   "88a51700e00fc312": {
-   "checked": 1793228795.308433,
+   "checked": 1793230856.2989893,
    "seen": {
     "7cc0faee3e9aec53": 1793203238.5634787,
     "e2477b9de903165a": 1793203238.5634787,
@@ -4650,7 +4650,7 @@
    }
   },
   "a84ba37bad2de74e": {
-   "checked": 1793228795.308433,
+   "checked": 1793230856.2989893,
    "seen": {}
   },
   "aa4faf8a671700f3": {
@@ -7723,7 +7723,8 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xi19t7/rent_stabilized_1bd1ba_prospect_heights/": 1793223360.8279893,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xi1qfa/holiday_tips_for_doorman_and_sup/": 1793224544.6361666,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xi2jv6/spuyten_duyvil_bronx_apt_for_lease_18k_studio/": 1793226369.607793,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xi2zwd/rooms_available_in_bedstuybushwick_12001450mo/": 1793227540.4895134
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xi2zwd/rooms_available_in_bedstuybushwick_12001450mo/": 1793227540.4895134,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xi48uh/lease_takeover_starting_december_1st_2026/": 1793230856.2935631
  },
  "problem_alerts": {
   "gmail": 1793033766.0118613
@@ -7922,7 +7923,8 @@
   "1880324576943386611": 1793217337.7280326,
   "1880326932529232213": 1793219728.7894168,
   "1880331550531203081": 1793223927.4151757,
-  "1880332061045675137": 1793224521.5629525
+  "1880332061045675137": 1793224521.5629525,
+  "1880338629605454440": 1793230834.3258846
  },
  "reminders_sent": {
   "Listings Project First Access": "2026-44"
