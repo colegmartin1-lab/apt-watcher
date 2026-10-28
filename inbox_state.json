@@ -1,7 +1,7 @@
 {
  "feeds": {
   "Brooklyn Group": {
-   "checked": 1793198133.9805672,
+   "checked": 1793199031.5147996,
    "seen": {
     "bg:1000": 1793158235.5554085,
     "bg:1001": 1793158235.5554085,
@@ -2070,7 +2070,7 @@
    }
   },
   "Nooklyn": {
-   "checked": 1793198133.9805672,
+   "checked": 1793199031.5147996,
    "seen": {
     "nooklyn:100394": 1793158235.5554085,
     "nooklyn:100504": 1793158235.5554085,
@@ -2176,13 +2176,13 @@
     "nooklyn:101773": 1793158235.5554085,
     "nooklyn:101774": 1793118924.2866428,
     "nooklyn:101775": 1793118924.2866428,
-    "nooklyn:101776": 1793112626.0741222,
+    "nooklyn:101776": 1793199031.5147996,
     "nooklyn:101784": 1793158235.5554085,
     "nooklyn:101785": 1793158235.5554085,
     "nooklyn:101786": 1793158235.5554085,
     "nooklyn:101789": 1793163676.620358,
     "nooklyn:101795": 1793118924.2866428,
-    "nooklyn:101796": 1793112626.0741222,
+    "nooklyn:101796": 1793199031.5147996,
     "nooklyn:101797": 1793116232.008619,
     "nooklyn:101799": 1793115326.6165533,
     "nooklyn:101808": 1793158235.5554085,
@@ -7556,7 +7556,8 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xhmadf/looking_for_sublet_in_nyc_asap_max_budget_3k/": 1793189448.3225377,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xhoswk/uws_furnished_studio_sublet_available_nov_15/": 1793196084.2698894,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xhothc/will_a_stinky_stale_apartment_smell_go_away/": 1793196081.7755191,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xhp0rc/2250_1_bedroom_available_in_3bed_2_bath/": 1793196635.6001906
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xhp0rc/2250_1_bedroom_available_in_3bed_2_bath/": 1793196635.6001906,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xhq2kg/best_way_to_apply_for_apartments_on_streeteasy/": 1793199052.4659486
  },
  "problem_alerts": {
   "gmail": 1793033766.0118613
