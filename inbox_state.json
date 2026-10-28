@@ -1,7 +1,7 @@
 {
  "feeds": {
   "Brooklyn Group": {
-   "checked": 1793205328.104692,
+   "checked": 1793206229.2549548,
    "seen": {
     "bg:1000": 1793158235.5554085,
     "bg:1001": 1793158235.5554085,
@@ -2070,7 +2070,7 @@
    }
   },
   "Nooklyn": {
-   "checked": 1793205328.104692,
+   "checked": 1793206229.2549548,
    "seen": {
     "nooklyn:100394": 1793158235.5554085,
     "nooklyn:100504": 1793158235.5554085,
@@ -2885,6 +2885,10 @@
   "3eacb5f932809eaf": {
    "price": 1900,
    "ts": 1792938063.1008143
+  },
+  "42c49b063eb80184": {
+   "price": 1700,
+   "ts": 1793206268.830934
   },
   "445e3ecf89cbd50d": {
    "price": 2990,
@@ -4332,7 +4336,7 @@
    }
   },
   "79503fec19db3cfe": {
-   "checked": 1793205352.7811146,
+   "checked": 1793206263.9014297,
    "seen": {
     "5886ae070ea84f79": 1793199377.8336957,
     "e5c1c6951d4cf9ed": 1793199377.8336957
@@ -4655,7 +4659,7 @@
    }
   },
   "ac1e96fce21e192a": {
-   "checked": 1793205352.7811146,
+   "checked": 1793206263.9014297,
    "seen": {
     "141aa2b0da21fec1": 1793157350.8085735,
     "18cee8b92e4d6138": 1793142663.499761,
@@ -4788,7 +4792,7 @@
    }
   },
   "d5f1fb0118c5a112": {
-   "checked": 1793204456.055014,
+   "checked": 1793206263.9014297,
    "seen": {}
   },
   "de39aaf4393c9317": {
@@ -5498,6 +5502,7 @@
   "cl:b6k8jetqW3B81dSDrvnXM3": 1792497942.1823537,
   "cl:bAo6bzQYTYgdxSZGcd7TqL": 1792455678.734085,
   "cl:bBGuUZYP3XpbGUt7257mMq": 1792437642.025023,
+  "cl:bCqkKDy4SnvLZCawTUmouU": 1793206263.8968065,
   "cl:bEi5Bd8XkKsV89EthPfxHR": 1792673163.7757432,
   "cl:bGKbwPbUBqWqnkq1Y7ktAQ": 1792437945.168441,
   "cl:bGLFAK2wJUgbwKumXfMV5E": 1792492533.662233,
@@ -5753,6 +5758,7 @@
   "cl:fXVBCEHKZELEfZZ2f8wAax": 1792455678.7340853,
   "cl:fZ19Tk3cXtWubNkJufSmdU": 1792781505.0717013,
   "cl:fZBNsizFVuRgMuEHoPM7mw": 1792455678.734082,
+  "cl:fZHeJcShrXBRXLqsb9hAZb": 1793206252.343157,
   "cl:faAQq6jQi276zVTW9RsWKc": 1792778765.1856883,
   "cl:ffE2p84wZtPka2xH6c3c8b": 1793116256.3401797,
   "cl:fg1dQxPUv86WMjN1aTPzvu": 1792455678.7340827,
@@ -6351,6 +6357,7 @@
   "cl:s5yaoSaVM4WcZZuVQNpWSm": 1793037938.6780462,
   "cl:s85y4HapMfeQsDhX3PwCJD": 1792691760.811163,
   "cl:sBHN3FGhMLk59nZn8praaN": 1793015437.0178583,
+  "cl:sC3Cua2gmSMhKWqRbCXJBG": 1793206252.343155,
   "cl:sC68NemYx7WNdzvrySNawd": 1792413687.3736248,
   "cl:sCncSVKKncaMTz8mJdAsaj": 1792436164.0554833,
   "cl:sE8vP6xzdruAhRbiaBRgLL": 1792965647.2441418,
@@ -7598,7 +7605,9 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xhr4j9/ues_huge_2_bed_2_bath_w_laundry_7000_available_now/": 1793201441.678448,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xhrdc9/soma_vs_wrey_vs_pearl_pine_which_would_you/": 1793201747.6144228,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xhs4vq/thinking_about_a_sublet_or_lease_takeover_in_nyc/": 1793203560.8064609,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xhsdpo/500_woodside_november_25th_to_december_9th/": 1793203840.1190045
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xhsdpo/500_woodside_november_25th_to_december_9th/": 1793203840.1190045,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xhtcvf/8000_furnished_1br1ba_sublet_in_midtown_manhattan/": 1793206260.734019,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xhtdu7/1544_room_w_utilities_available_in_bushwick_2/": 1793206256.3579931
  },
  "problem_alerts": {
   "gmail": 1793033766.0118613
