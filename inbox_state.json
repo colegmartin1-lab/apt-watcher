@@ -1,7 +1,7 @@
 {
  "feeds": {
   "Brooklyn Group": {
-   "checked": 1793202657.423297,
+   "checked": 1793203537.7626412,
    "seen": {
     "bg:1000": 1793158235.5554085,
     "bg:1001": 1793158235.5554085,
@@ -2070,7 +2070,7 @@
    }
   },
   "Nooklyn": {
-   "checked": 1793202657.423297,
+   "checked": 1793203537.7626412,
    "seen": {
     "nooklyn:100394": 1793158235.5554085,
     "nooklyn:100504": 1793158235.5554085,
@@ -3464,7 +3464,7 @@
    }
   },
   "25fd51dda77afad8": {
-   "checked": 1793201747.6188238,
+   "checked": 1793203560.8118625,
    "seen": {}
   },
   "2e96a3f13d1836e5": {
@@ -4321,7 +4321,7 @@
    }
   },
   "79503fec19db3cfe": {
-   "checked": 1793202676.6835191,
+   "checked": 1793203560.8118625,
    "seen": {
     "5886ae070ea84f79": 1793199377.8336957,
     "e5c1c6951d4cf9ed": 1793199377.8336957
@@ -7577,7 +7577,8 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xhq2kg/best_way_to_apply_for_apartments_on_streeteasy/": 1793199052.4659486,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xhqag4/is_it_normal_to_pay_400_more_for_master_bedroom/": 1793199377.8282733,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xhr4j9/ues_huge_2_bed_2_bath_w_laundry_7000_available_now/": 1793201441.678448,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xhrdc9/soma_vs_wrey_vs_pearl_pine_which_would_you/": 1793201747.6144228
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xhrdc9/soma_vs_wrey_vs_pearl_pine_which_would_you/": 1793201747.6144228,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xhs4vq/thinking_about_a_sublet_or_lease_takeover_in_nyc/": 1793203560.8064609
  },
  "problem_alerts": {
   "gmail": 1793033766.0118613
@@ -7767,7 +7768,8 @@
   "1880302857976621977": 1793196627.3330672,
   "1880303707125093075": 1793197529.8193514,
   "1880304749570351374": 1793198430.5050843,
-  "1880307969283406553": 1793201431.8030307
+  "1880307969283406553": 1793201431.8030307,
+  "1880309914735001196": 1793203537.5396218
  },
  "reminders_sent": {
   "Listings Project First Access": "2026-44"
