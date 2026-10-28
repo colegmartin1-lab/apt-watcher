@@ -1,7 +1,7 @@
 {
  "feeds": {
   "Brooklyn Group": {
-   "checked": 1793200831.2112906,
+   "checked": 1793201727.3502855,
    "seen": {
     "bg:1000": 1793158235.5554085,
     "bg:1001": 1793158235.5554085,
@@ -2070,7 +2070,7 @@
    }
   },
   "Nooklyn": {
-   "checked": 1793200831.2112906,
+   "checked": 1793201727.3502855,
    "seen": {
     "nooklyn:100394": 1793158235.5554085,
     "nooklyn:100504": 1793158235.5554085,
@@ -2098,7 +2098,7 @@
     "nooklyn:101625": 1793158235.5554085,
     "nooklyn:101626": 1793196055.446686,
     "nooklyn:101628": 1793158235.5554085,
-    "nooklyn:101632": 1793115326.6165533,
+    "nooklyn:101632": 1793201727.3502855,
     "nooklyn:101640": 1793158235.5554085,
     "nooklyn:101641": 1793158235.5554085,
     "nooklyn:101642": 1793158235.5554085,
@@ -2184,11 +2184,11 @@
     "nooklyn:101795": 1793118924.2866428,
     "nooklyn:101796": 1793199031.5147996,
     "nooklyn:101797": 1793116232.008619,
-    "nooklyn:101799": 1793115326.6165533,
+    "nooklyn:101799": 1793201727.3502855,
     "nooklyn:101808": 1793158235.5554085,
     "nooklyn:101810": 1793158235.5554085,
     "nooklyn:101811": 1793134238.095746,
-    "nooklyn:101813": 1793115326.6165533,
+    "nooklyn:101813": 1793201727.3502855,
     "nooklyn:101814": 1793125226.679192,
     "nooklyn:101816": 1793120722.6167688,
     "nooklyn:101817": 1793158235.5554085,
@@ -2437,8 +2437,8 @@
     "nooklyn:104171": 1793193340.6928606,
     "nooklyn:104172": 1793198133.9805672,
     "nooklyn:104178": 1793142640.6513453,
-    "nooklyn:104180": 1793115326.6165533,
-    "nooklyn:104181": 1793115326.6165533,
+    "nooklyn:104180": 1793201727.3502855,
+    "nooklyn:104181": 1793201727.3502855,
     "nooklyn:10771": 1793158235.5554085,
     "nooklyn:11793": 1793158235.5554085,
     "nooklyn:12720": 1793158235.5554085,
@@ -2468,6 +2468,7 @@
     "nooklyn:7554": 1793116232.008619,
     "nooklyn:83926": 1793158235.5554085,
     "nooklyn:84744": 1793071835.0301561,
+    "nooklyn:85144": 1793201727.3502855,
     "nooklyn:85480": 1793124323.9646394,
     "nooklyn:86019": 1793122523.7943552,
     "nooklyn:86784": 1793158235.5554085,
@@ -3462,7 +3463,7 @@
    }
   },
   "25fd51dda77afad8": {
-   "checked": 1793199377.8336957,
+   "checked": 1793201747.6188238,
    "seen": {}
   },
   "2e96a3f13d1836e5": {
@@ -4319,7 +4320,7 @@
    }
   },
   "79503fec19db3cfe": {
-   "checked": 1793200530.4872425,
+   "checked": 1793201747.6188238,
    "seen": {
     "5886ae070ea84f79": 1793199377.8336957,
     "e5c1c6951d4cf9ed": 1793199377.8336957
@@ -7566,7 +7567,8 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xhp0rc/2250_1_bedroom_available_in_3bed_2_bath/": 1793196635.6001906,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xhq2kg/best_way_to_apply_for_apartments_on_streeteasy/": 1793199052.4659486,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xhqag4/is_it_normal_to_pay_400_more_for_master_bedroom/": 1793199377.8282733,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xhr4j9/ues_huge_2_bed_2_bath_w_laundry_7000_available_now/": 1793201441.678448
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xhr4j9/ues_huge_2_bed_2_bath_w_laundry_7000_available_now/": 1793201441.678448,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xhrdc9/soma_vs_wrey_vs_pearl_pine_which_would_you/": 1793201747.6144228
  },
  "problem_alerts": {
   "gmail": 1793033766.0118613
