@@ -3292,7 +3292,7 @@
    }
   },
   "147fbe927ddd0749": {
-   "checked": 1793298641.7062275,
+   "checked": 1793300449.739027,
    "seen": {
     "358c58d68df85527": 1793291434.880713,
     "456a95791eba6b3c": 1793291434.880713,
@@ -4864,7 +4864,7 @@
    }
   },
   "d5f1fb0118c5a112": {
-   "checked": 1793298641.7062275,
+   "checked": 1793300449.739027,
    "seen": {}
   },
   "de39aaf4393c9317": {
@@ -6535,6 +6535,7 @@
   "cl:rjqJqej4qyPPKgqYeXN9u6": 1792940130.894579,
   "cl:rmmi9t4ML6cDimnqzUFYoN": 1792687548.197183,
   "cl:rnwQ7V3BCWnqSRw2Qa4hKF": 1793236259.0488834,
+  "cl:rp2jXvPejSLuzXandaCSxT": 1793300446.7225368,
   "cl:rpp8Ptcy2ZBh2643W9jP5r": 1792806032.3142273,
   "cl:rrCi4xLxz6ck86up22LFjm": 1792436164.055494,
   "cl:rre8xuNX19V3sMxqoCd8uW": 1792437370.9419053,
@@ -7881,7 +7882,8 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xisavj/check_you_building_before_signing_a_lease/": 1793299257.0092711,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xisboo/rs_studio_downtown_seeking_rs_1bed_uptown_and/": 1793299254.7400892,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xisd1l/29y_f_cat_looking_for_roomroommate_in_brooklyn/": 1793299538.0769944,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xisls6/are_people_marking_apartments_to_break_into/": 1793299834.742745
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xisls6/are_people_marking_apartments_to_break_into/": 1793299834.742745,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xisu8n/e_bikes/": 1793300449.734441
  },
  "problem_alerts": {
   "gmail": 1793033766.0118613
@@ -8092,7 +8094,8 @@
   "1880397791257997912": 1793287232.4691648,
   "1880398565632230389": 1793288126.2224703,
   "1880400972709756117": 1793290227.8699837,
-  "1880403860096815194": 1793292932.3737829
+  "1880403860096815194": 1793292932.3737829,
+  "1880411776417889526": 1793300440.3589637
  },
  "reminders_sent": {
   "Listings Project First Access": "2026-44"
