@@ -3074,6 +3074,10 @@
    "price": 2500,
    "ts": 1793241063.2318122
   },
+  "a08a10f2e1eb11c3": {
+   "price": 1900,
+   "ts": 1793273443.5676267
+  },
   "a410c1b1a31b203f": {
    "price": 1428,
    "ts": 1793187150.5537071
@@ -5962,6 +5966,7 @@
   "cl:hTm8EjVBpUHTg9NSjYpUG3": 1792414873.0404196,
   "cl:hV9C16tRP1AnZ8YWFoS2cD": 1793102125.8072226,
   "cl:hXReoMSRypd5usfPmEfsWs": 1792414539.3431103,
+  "cl:hXiAM3XXDH4h1be3QeWuuv": 1793273436.8438709,
   "cl:hYbH4EZXyTVc7nvQiN7RJV": 1792722332.002875,
   "cl:hYiHZKv6dSANPY9ksKPEsU": 1792436475.4934237,
   "cl:hbv6qp1KCKYZYQzqKT6fS4": 1792437642.0250266,
@@ -6378,6 +6383,7 @@
   "cl:qV98fjXXYFakvMJ5uzwhv7": 1792539430.8142288,
   "cl:qXSEaBTVF7WkiMamVivjKj": 1793237452.7843218,
   "cl:qXptYjye2y33sx27obPf59": 1792519254.9114609,
+  "cl:qdefCJxUXd9BbQRBESAsVf": 1793273436.8438725,
   "cl:qe5yPXcJusgxL4NC39smbx": 1793200850.1477902,
   "cl:qeTGiw3pmDb6V1m1ZCBBm6": 1792413687.3736212,
   "cl:qgEmPocYqTm8DEN9sDUTwp": 1792415137.5912998,
@@ -6585,6 +6591,7 @@
   "cl:tnD8DU3fiHWYDmqyQZHYTo": 1793122069.059444,
   "cl:tnaj4ttjDyQd9F1sJkbQgR": 1792443338.7262807,
   "cl:tnsx59Bke74c4ubb2D3iz4": 1793230236.8423567,
+  "cl:toZFG7P9oJWywqfW2yvzno": 1793273441.1058915,
   "cl:tos7FbU56CGeYMYJJ1LnDZ": 1792532745.142483,
   "cl:tpibXX3PQTYAvt15GSxfbb": 1792697436.0188887,
   "cl:ttLbwdgh5m9frunkmyksZt": 1793058036.1790848,
@@ -7781,7 +7788,8 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xi98g8/question_about_lease_break/": 1793244645.4121032,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xia4bf/dime_square_1_bedroom_with_great_light/": 1793247334.6543608,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xiaoku/no_fee_4_brooklyn_apartments_direct_from/": 1793249438.197193,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xibklv/dt_brooklyn_building_recs/": 1793252451.231335
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xibklv/dt_brooklyn_building_recs/": 1793252451.231335,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xihea1/these_records_show_broker_fee_violations_as_nycs/": 1793273439.6629028
  },
  "problem_alerts": {
   "gmail": 1793033766.0118613
