@@ -3262,7 +3262,7 @@
    }
   },
   "04951a3e31766fbb": {
-   "checked": 1793301632.1862946,
+   "checked": 1793305248.259973,
    "seen": {
     "4b95b0b5b7a96959": 1793251231.8705938
    }
@@ -3323,7 +3323,7 @@
    }
   },
   "1dc0ba05146f742f": {
-   "checked": 1793303429.4545112,
+   "checked": 1793305248.259973,
    "seen": {
     "0993825173af2327": 1793289048.0342424,
     "5404edae94f0da25": 1793289048.0342424,
@@ -4419,7 +4419,7 @@
    "seen": {}
   },
   "88a51700e00fc312": {
-   "checked": 1793303429.4545112,
+   "checked": 1793305248.259973,
    "seen": {
     "7cc0faee3e9aec53": 1793290859.591763,
     "e2477b9de903165a": 1793290859.591763,
@@ -5652,6 +5652,7 @@
   "cl:bH2G2wcSr6ni8R3VjFxzea": 1792414242.3169413,
   "cl:bHeProDCtvZZ2z49ijeLwt": 1792510260.6706314,
   "cl:bHm3D8FoJEGdPyj8xnRo5i": 1792436164.0554814,
+  "cl:bJFcFJN8JiecXuaEfbsEyh": 1793305248.2552233,
   "cl:bKScZQn5Na7jR6DZq18YKL": 1792414242.3169425,
   "cl:bLX65pzch6SYmAEPudmiPT": 1792436475.4934216,
   "cl:bMakvttqeKb8uXi7d43mWE": 1792437049.3164654,
@@ -7908,7 +7909,8 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xisls6/are_people_marking_apartments_to_break_into/": 1793299834.742745,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xisu8n/e_bikes/": 1793300449.734441,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xiuf34/8000_for_entire_period_145day_furnished_1br1ba/": 1793304060.143281,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xiufls/harlem_studio_available_for_sublet_flexible_dates/": 1793304058.0024028
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xiufls/harlem_studio_available_for_sublet_flexible_dates/": 1793304058.0024028,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xiuyja/2500_1br_rent_stabilized_in_astoria_for_dec_1st/": 1793305243.1896002
  },
  "problem_alerts": {
   "gmail": 1793033766.0118613
