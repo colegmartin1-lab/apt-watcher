@@ -1,7 +1,7 @@
 {
  "feeds": {
   "Brooklyn Group": {
-   "checked": 1793283627.7624078,
+   "checked": 1793284557.7008307,
    "seen": {
     "bg:1000": 1793245234.5839334,
     "bg:1001": 1793245234.5839334,
@@ -2071,7 +2071,7 @@
    }
   },
   "Nooklyn": {
-   "checked": 1793283627.7624078,
+   "checked": 1793284557.7008307,
    "seen": {
     "nooklyn:100394": 1793245234.5839334,
     "nooklyn:100504": 1793245234.5839334,
@@ -2124,7 +2124,7 @@
     "nooklyn:101676": 1793245234.5839334,
     "nooklyn:101677": 1793245234.5839334,
     "nooklyn:101679": 1792377381.6820872,
-    "nooklyn:101680": 1793198133.9805672,
+    "nooklyn:101680": 1793284557.7008307,
     "nooklyn:101688": 1793245234.5839334,
     "nooklyn:101689": 1793245234.5839334,
     "nooklyn:101690": 1793245234.5839334,
@@ -2437,7 +2437,7 @@
     "nooklyn:104168": 1792868120.8450358,
     "nooklyn:104169": 1793282732.3259032,
     "nooklyn:104171": 1793280045.7768948,
-    "nooklyn:104172": 1793198133.9805672,
+    "nooklyn:104172": 1793284557.7008307,
     "nooklyn:104178": 1793229054.863431,
     "nooklyn:104180": 1793201727.3502855,
     "nooklyn:104181": 1793201727.3502855,
@@ -2461,7 +2461,7 @@
     "nooklyn:1532": 1793245234.5839334,
     "nooklyn:16264": 1793245234.5839334,
     "nooklyn:16528": 1793245234.5839334,
-    "nooklyn:19021": 1793198133.9805672,
+    "nooklyn:19021": 1793284557.7008307,
     "nooklyn:20163": 1792029920.0166667,
     "nooklyn:23324": 1793205328.104692,
     "nooklyn:25111": 1793245234.5839334,
@@ -4395,7 +4395,7 @@
    }
   },
   "79503fec19db3cfe": {
-   "checked": 1793283647.03856,
+   "checked": 1793284580.5232284,
    "seen": {
     "5886ae070ea84f79": 1793199377.8336957,
     "e5c1c6951d4cf9ed": 1793199377.8336957
@@ -7814,7 +7814,8 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xibklv/dt_brooklyn_building_recs/": 1793252451.231335,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xihea1/these_records_show_broker_fee_violations_as_nycs/": 1793273439.6629028,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xikly1/go_management_contact_information/": 1793282136.9815588,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xil1ml/roommate_2391mo_net_private_room_own_bath_in_new/": 1793283041.115783
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xil1ml/roommate_2391mo_net_private_room_own_bath_in_new/": 1793283041.115783,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xilpvw/1_bedroom_w119th/": 1793284580.219848
  },
  "problem_alerts": {
   "gmail": 1793033766.0118613
