@@ -21,7 +21,9 @@
     "sothebysrealty.com",
     "cbwarburg.com",
     "kw.com",
-    "evrealestate.com"
+    "evrealestate.com",
+    "rentreboot.com",
+    "leaseswap.nyc"
   ],
   "rules": {
     "min_price": 1000,
@@ -669,6 +671,31 @@
       ],
       "max_details": 40,
       "_note": "NYC Craigslist dropped its separate by-owner/no-fee categories; owner-direct posts are flagged by the AI reader."
+    }
+  ],
+  "_spotlights_note": "Corners worth a ping at ANY price (still studio/1BR only, no rooms/sales). Matches a map pin within radius_m, a house number in range on the listed streets, or the corner named in text, in any alert email, feed, post or page. Expires on 'until'.",
+  "spotlights": [
+    {
+      "name": "N 8th & Berry",
+      "why": "Pear NYC posted new apartments here (2026-10-29)",
+      "hood": "Williamsburg",
+      "lat": 40.71919,
+      "lon": -73.95797,
+      "radius_m": 110,
+      "corner": "\\b(?:(?:n|no|north)\\.?\\s*8(?:th)?(?:\\s*st(?:reet)?\\.?)?\\s*(?:&|and|@|/|at|\\+)\\s*berry|berry(?:\\s*st(?:reet)?\\.?)?\\s*(?:&|and|@|/|at|\\+)\\s*(?:n|no|north)\\.?\\s*8(?:th)?)\\b",
+      "streets": [
+        {
+          "pattern": "(?:n|no|north)\\.?\\s*8(?:th)?\\b",
+          "from": 100,
+          "to": 155
+        },
+        {
+          "pattern": "berry\\b",
+          "from": 69,
+          "to": 125
+        }
+      ],
+      "until": "2027-01-31"
     }
   ]
 }

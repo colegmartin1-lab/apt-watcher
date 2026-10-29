@@ -31,6 +31,7 @@ import hashlib
 import html
 import imaplib
 import json
+import math
 import os
 import re
 import sys
@@ -78,6 +79,7 @@ def save_state(path, state):
     state["notified"] = {k: v for k, v in state["notified"].items() if v["ts"] > cutoff}
     state["posts_seen"] = {k: v for k, v in state.get("posts_seen", {}).items() if v > cutoff}
     state["replies_seen"] = {k: v for k, v in state.get("replies_seen", {}).items() if v > cutoff}
+    state["spotlight_emails"] = {k: v for k, v in state.get("spotlight_emails", {}).items() if v > cutoff}
     path.write_text(json.dumps(state, indent=1, sort_keys=True) + "\n")
 
 
@@ -454,6 +456,63 @@ def hood_from_text(cfg, text):
     return None
 
 
+# --------------------------------------------------------------------------
+# spotlights: specific corners worth hearing about at any price
+# --------------------------------------------------------------------------
+
+def _spot_text_hit(s, text):
+    """Match object if text names the corner or a house number on its block."""
+    if s.get("corner"):
+        m = re.search(s["corner"], text, re.I)
+        if m:
+            return m
+    for st in s.get("streets", []):
+        # (?<!...) so "$3,100 N 8th" doesn't read as house number 100
+        for m in re.finditer(rf"(?<![\d,$.])\b(\d{{2,4}})[a-z]?\s+{st['pattern']}", text, re.I):
+            if st["from"] <= int(m.group(1)) <= st["to"]:
+                return m
+    return None
+
+
+def spotlight_match(cfg, geo=None, text=""):
+    """The configured spotlight this listing sits in, or None: a map pin
+    within radius_m of the corner, or the address/corner named in the text."""
+    today = time.strftime("%Y-%m-%d")
+    for s in cfg.get("spotlights", []):
+        if s.get("until") and today > s["until"]:
+            continue
+        if geo and geo.get("lat") is not None and geo.get("confidence", 1) >= 0.8:
+            dy = (geo["lat"] - s["lat"]) * 111_000
+            dx = (geo["lon"] - s["lon"]) * 111_000 * math.cos(math.radians(s["lat"]))
+            if math.hypot(dx, dy) <= s.get("radius_m", 100):
+                return s
+        if text and _spot_text_hit(s, text):
+            return s
+    return None
+
+
+def spotlight_email(cfg, state, topic, gid, sender, subject, html_body, text_body, dry_run):
+    """Any alert email that mentions a spotlight address pings, even when no
+    parser understands it (StreetEasy building alerts, newsletters...)."""
+    seen = state.setdefault("spotlight_emails", {})
+    if not cfg.get("spotlights") or gid in seen:
+        return
+    body = BeautifulSoup(html_body, "html.parser").get_text(" ") if html_body else text_body
+    text = clean_text(f"{subject} {body}")
+    s = spotlight_match(cfg, None, text)
+    if not s:
+        return
+    m = _spot_text_hit(s, text)
+    snippet = text[max(0, m.start() - 90):m.end() + 90] if m else ""
+    title = f"📍 {s['name']} in an email"
+    log(f"  📍 SPOTLIGHT {s['name']} | {sender} · {subject[:60]!r} | …{snippet}…")
+    if not dry_run and topic:
+        click = f"https://mail.google.com/mail/u/0/#all/{int(gid):x}" if gid.isdigit() else None
+        ntfy(topic, title, f"{subject}\nfrom {sender}\n…{snippet}…", click=click,
+             tags="round_pushpin", priority="high")
+        seen[gid] = time.time()
+
+
 def norm_unit(u):
     return re.sub(r"[^a-z0-9]", "", (u or "").lower())
 
@@ -494,14 +553,17 @@ def notify_hit(topic, hit, dry_run, drafted=False):
             lines.append("✉️ Message drafted in Gmail: review & send")
             actions = (f"view, Open listing, {hit['url']}; "
                        "view, Gmail drafts, https://mail.google.com/mail/u/0/#drafts")
+    if hit.get("spotlight"):
+        title = f"📍 {hit['spotlight']} · " + title
     lines += [f"⚠️ {f}" for f in hit["flags"]]
     body = "\n".join(lines)
     # People's posts get snapped up fastest, so they always ring.
-    prio = "high" if hit["is_post"] or (hit["price"] or 0) <= 2500 else "default"
+    prio = "high" if hit["is_post"] or hit.get("spotlight") or (hit["price"] or 0) <= 2500 else "default"
     log(f"  ✅ NOTIFY {title} | {' | '.join(lines)} | {hit['url']}")
     if not dry_run and topic:
         ntfy(topic, title, body, click=hit["url"], priority=prio, actions=actions,
-             tags="repeat" if hit.get("takeover") else "speech_balloon" if hit["is_post"] else "house")
+             tags="round_pushpin" if hit.get("spotlight") else "repeat" if hit.get("takeover")
+             else "speech_balloon" if hit["is_post"] else "house")
         time.sleep(1)
 
 
@@ -555,8 +617,12 @@ def judge_post(cfg, post, reading):
             return None, "furnished-rental operator"
         if ODDS[reading.scam_risk] > ODDS[t.get("max_scam", "medium")]:
             return None, f"scam risk {reading.scam_risk}"
+    # A spotlight corner counts at any price: you want to see what they ask.
+    spot = spotlight_match(cfg, post.get("geo"), " ".join(
+        filter(None, [post.get("title"), reading.address, reading.summary, post.get("text", "")[:3000]])))
     # People often leave the price out ("DM for details"); still worth a ping.
-    why = judge_size_price(cfg, reading.price_monthly, reading.bedrooms, price_required=False)
+    why = judge_size_price(cfg, None if spot else reading.price_monthly, reading.bedrooms,
+                           price_required=False)
     if why:
         return None, why
     flags, geo = [], post.get("geo")  # Craigslist posts carry their own map pin
@@ -567,10 +633,12 @@ def judge_post(cfg, post, reading):
         geo = geocode(reading.address, hint or cfg.get("default_borough", "Brooklyn"),
                       explicit=bool(hint))
     if geo and geo.get("confidence", 0) >= 0.8:
-        why = judge_place(cfg, geo)
+        why = None if spot else judge_place(cfg, geo)
         if why:
             return None, why
         hood = geo["hood"]
+    elif spot:
+        hood = spot.get("hood", "")
     else:
         hood = hood_from_text(cfg, reading.neighborhood) or \
             hood_from_text(cfg, post["title"])
@@ -596,7 +664,7 @@ def judge_post(cfg, post, reading):
             "flags": flags, "is_post": True, "takeover": takeover,
             "why": "; ".join(reading.takeover_reasons[:2]), "title": post["title"],
             "address": reading.address, "available": reading.available,
-            "contact_email": reading.contact_email}, None
+            "contact_email": reading.contact_email, "spotlight": spot and spot["name"]}, None
 
 
 def collect_posts(cfg, state, fb_posts, verbose, ai_emails=(), from_files=False):
@@ -815,25 +883,38 @@ def run(args):
             batch[hit["key"]] = hit
 
     def consider_card(c):
-        """A structured listing (alert email or JSON feed) → batch if it passes."""
+        """A structured listing (alert email or JSON feed) → batch if it passes.
+        True if it was a spotlight listing."""
         geo = geocode(c["address"], c.get("borough") or cfg.get("default_borough", "Brooklyn"),
                       explicit=bool(c.get("borough")))
-        why = judge(cfg, c, geo)
+        spot = spotlight_match(cfg, geo, c["address"])
+        if spot:  # any price, any neighborhood label: still not gone/sale/room/2BR+
+            why = judge(cfg, {**c, "price": None}, None) if c["is_gone"] or c["is_sale"] or c["is_room"] \
+                else judge_size_price(cfg, None, c["beds"], price_required=False)
+        else:
+            why = judge(cfg, c, geo)
         if why:
             if args.verbose:
                 log(f"   ✗ [{c['source']}] {c['address']} {c['unit'] or ''} ${c['price']} "
                     f"{beds_label(c['beds'])} [{geo['hood'] if geo else '?'}] — {why}")
-            return
+            return False
         unit = f" #{c['unit']}" if c["unit"] else ""
         add({"key": listing_key(geo, c["address"], c["unit"]), "price": c["price"],
-             "beds": c["beds"], "hood": geo["hood"], "line": c["address"] + unit,
-             "url": c.get("url"), "sources": {c["source"]}, "flags": [],
-             "is_post": False})
+             "beds": c["beds"], "hood": geo["hood"] if geo else spot.get("hood", ""),
+             "line": c["address"] + unit, "url": c.get("url"), "sources": {c["source"]},
+             "flags": [], "is_post": False, "spotlight": spot and spot["name"]})
+        return bool(spot)
 
     for gid, m in fresh:
         sender, subject, html_body, text_body = message_parts(m)
         ai_rule = next((r for r in cfg.get("ai_email_sources", [])
                         if re.search(r["from"], sender)), None)
+        cards = None if ai_rule or sender.endswith("facebookmail.com") else \
+            parse_email(cfg, sender, subject, html_body, text_body)
+        if not any(spotlight_match(cfg, None, c["address"]) for c in cards or []):
+            # (a parsed spotlight listing gets its own, richer alert below)
+            spotlight_email(cfg, state, topic, gid, sender, subject, html_body, text_body,
+                            args.dry_run or bool(args.file))
         if ai_rule:
             if not re.search(ai_rule.get("skip_subject", "$^"), subject, re.I) and html_body:
                 from pages import link_cards
@@ -852,7 +933,6 @@ def run(args):
             elif not args.file:
                 state["processed"][gid] = time.time()
             continue
-        cards = parse_email(cfg, sender, subject, html_body, text_body)
         if cards is None:
             if args.verbose:
                 log(f"skip {sender} · {subject[:60]!r} (not a saved-search alert)")
