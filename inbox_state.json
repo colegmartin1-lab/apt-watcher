@@ -1,7 +1,7 @@
 {
  "feeds": {
   "Brooklyn Group": {
-   "checked": 1793251528.7482932,
+   "checked": 1793252428.6214926,
    "seen": {
     "bg:1000": 1793245234.5839334,
     "bg:1001": 1793245234.5839334,
@@ -2071,7 +2071,7 @@
    }
   },
   "Nooklyn": {
-   "checked": 1793251528.7482932,
+   "checked": 1793252428.6214926,
    "seen": {
     "nooklyn:100394": 1793245234.5839334,
     "nooklyn:100504": 1793245234.5839334,
@@ -3313,7 +3313,7 @@
    }
   },
   "1fef656362975758": {
-   "checked": 1793248571.2020822,
+   "checked": 1793252451.236662,
    "seen": {
     "8aa24f6fc3e11696": 1793211930.4532504,
     "a9e206c1265e3fca": 1792859436.0341265
@@ -7771,7 +7771,8 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xi8xro/question_about_rent_stabilization/": 1793243737.7324853,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xi98g8/question_about_lease_break/": 1793244645.4121032,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xia4bf/dime_square_1_bedroom_with_great_light/": 1793247334.6543608,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xiaoku/no_fee_4_brooklyn_apartments_direct_from/": 1793249438.197193
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xiaoku/no_fee_4_brooklyn_apartments_direct_from/": 1793249438.197193,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xibklv/dt_brooklyn_building_recs/": 1793252451.231335
  },
  "problem_alerts": {
   "gmail": 1793033766.0118613
