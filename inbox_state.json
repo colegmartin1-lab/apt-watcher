@@ -1,7 +1,7 @@
 {
  "feeds": {
   "Brooklyn Group": {
-   "checked": 1793241632.7043896,
+   "checked": 1793242523.950708,
    "seen": {
     "bg:1000": 1793158235.5554085,
     "bg:1001": 1793158235.5554085,
@@ -2071,7 +2071,7 @@
    }
   },
   "Nooklyn": {
-   "checked": 1793241632.7043896,
+   "checked": 1793242523.950708,
    "seen": {
     "nooklyn:100394": 1793158235.5554085,
     "nooklyn:100504": 1793158235.5554085,
@@ -3676,7 +3676,7 @@
    }
   },
   "43493170cf87c2e7": {
-   "checked": 1793240433.4432025,
+   "checked": 1793242546.84371,
    "seen": {
     "129a0aeeaa6a8996": 1793163693.1433628,
     "16ab7a72409f2a8f": 1793163693.1433628,
@@ -4836,7 +4836,7 @@
    }
   },
   "d5f1fb0118c5a112": {
-   "checked": 1793240750.026612,
+   "checked": 1793242546.84371,
    "seen": {}
   },
   "de39aaf4393c9317": {
@@ -5489,6 +5489,7 @@
   "cl:9XC447h8diV9zWNQQUkF9R": 1792435869.197342,
   "cl:9XF3tcQiNsN6dYQSxoSQhC": 1792684753.5414507,
   "cl:9XtVGuaPk4R9Na1WnkKmH8": 1793023843.451007,
+  "cl:9ZmvHpbExpn88QZWByaVtn": 1793242543.6095521,
   "cl:9Znv7t22BpTaUfqajCQdkD": 1792444533.7570777,
   "cl:9a5eX7vpBM46vX7irEZWhi": 1792525545.3583884,
   "cl:9bmUTfvSQgLmBQc2gSzC82": 1792981231.6716273,
@@ -7749,7 +7750,8 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xi6vtu/lease_takeover_fidi_studio_at_63_wall_st/": 1793237731.713474,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xi7g4r/lease_takeover_fidi_studio_at_63_wall_st/": 1793239243.5935845,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xi7i7s/nyc_buildings_that_allow_flex_walls/": 1793239578.754038,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xi87yj/is_this_a_craigslist_scam/": 1793241654.914385
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xi87yj/is_this_a_craigslist_scam/": 1793241654.914385,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xi8i6f/roommate_search_for_nov_move/": 1793242546.8396528
  },
  "problem_alerts": {
   "gmail": 1793033766.0118613
