@@ -1,7 +1,7 @@
 {
  "feeds": {
   "Brooklyn Group": {
-   "checked": 1793280045.7768948,
+   "checked": 1793280928.2686312,
    "seen": {
     "bg:1000": 1793245234.5839334,
     "bg:1001": 1793245234.5839334,
@@ -2071,7 +2071,7 @@
    }
   },
   "Nooklyn": {
-   "checked": 1793280045.7768948,
+   "checked": 1793280928.2686312,
    "seen": {
     "nooklyn:100394": 1793245234.5839334,
     "nooklyn:100504": 1793245234.5839334,
@@ -2997,6 +2997,10 @@
   "7cc4c59eb762217a": {
    "price": 1720,
    "ts": 1792594917.5438063
+  },
+  "7cf6d7354bd0fe9b": {
+   "price": 1600,
+   "ts": 1793280955.9561336
   },
   "7dbcf16ced3bf618": {
    "price": 1575,
@@ -4390,7 +4394,7 @@
    }
   },
   "79503fec19db3cfe": {
-   "checked": 1793280064.6831136,
+   "checked": 1793280953.7020898,
    "seen": {
     "5886ae070ea84f79": 1793199377.8336957,
     "e5c1c6951d4cf9ed": 1793199377.8336957
@@ -5078,6 +5082,7 @@
   "cl:1zfU64e7JLFdEtmGwD3HKU": 1792666843.6456313,
   "cl:22hWfdffMvXFTECDH5XPeS": 1792779655.6865835,
   "cl:23xhzvWLGrjFEfsVMTiQae": 1792414242.316949,
+  "cl:25ruiY3x5FrBy5iZ7D4Nf7": 1793280953.6977098,
   "cl:2ArLRcFbpv17vtmbt3HJWy": 1792414539.343112,
   "cl:2B9rP9c75CkqEwb5QEarH6": 1792413687.3736203,
   "cl:2BmpGKj9xEcVK3dA2Cbk6k": 1792455929.0118933,
@@ -5472,6 +5477,7 @@
   "cl:8nSJhTPDiYiv5mc5URqw5c": 1792896948.6509154,
   "cl:8o5AVaKX4ATcoAhNuK6yAx": 1792689341.5621045,
   "cl:8p8YzfNNhCTbT6ArbMm77U": 1792938042.0005786,
+  "cl:8q56xUhVUBoS96xR8UP3t4": 1793280946.2774274,
   "cl:8uFu32ZKo1SZPHnFmBCnA4": 1793029840.4047937,
   "cl:8uGTuQFSfbHz1RwAufE4v6": 1792685744.2625942,
   "cl:8ueoVJRNYbVvLvFq1DobHz": 1793126730.5793839,
@@ -5711,6 +5717,7 @@
   "cl:dDXAVsQXDzRcCkAV7zyzrc": 1793213143.40791,
   "cl:dE4h85Jcoo2iS41PN1dhj8": 1792438252.4690788,
   "cl:dErLDvteS17sZCbz31dbNo": 1792591565.7545333,
+  "cl:dGBqZ7egP9hKLWZxQAHXtT": 1793280946.277429,
   "cl:dGQKdoYpwgyuyNDCZZvj8H": 1793031078.9606786,
   "cl:dGbgd8FiujFt7XCbuD4CgL": 1792938944.9814076,
   "cl:dGj8tG93rJC53sv2mCQSdh": 1792612262.1565385,
