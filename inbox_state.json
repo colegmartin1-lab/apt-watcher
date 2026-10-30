@@ -3150,6 +3150,10 @@
    "price": 2595,
    "ts": 1792613756.4773395
   },
+  "c0c568e94f82b881": {
+   "price": 2875,
+   "ts": 1793371246.490572
+  },
   "c0d159ca0943ccc2": {
    "price": 2999,
    "ts": 1793212841.7908332
@@ -3568,7 +3572,7 @@
    }
   },
   "25fd51dda77afad8": {
-   "checked": 1793369438.8749444,
+   "checked": 1793371243.2127197,
    "seen": {}
   },
   "2e96a3f13d1836e5": {
@@ -6356,6 +6360,7 @@
   "cl:nRL9cgUacb7bnjybZrfbv1": 1792415137.5912967,
   "cl:nRN9J5VCeSb5BRYKWzgYC3": 1793301046.362043,
   "cl:nT1yb8qQHx9Q8Xy8PR3P5c": 1792965649.4606512,
+  "cl:nTVeoizyRuDMzXPn1oLakM": 1793371239.4432187,
   "cl:nUNR3d9wAYcEGdPXqMbM9S": 1792839641.495066,
   "cl:nUrUj71EVeWphjaDZiDWQu": 1793208051.691911,
   "cl:nVrSty2LqFtpfCF1ZLt4uR": 1792455047.1510108,
@@ -6925,6 +6930,7 @@
   "cl:wxC1HrSo8RbAhKzaajoAQR": 1792711863.137127,
   "cl:wxTxwJzHDvVQsowaDsKHzy": 1792413835.2526286,
   "cl:wyAWk9ASHUyZhpenbcZw3h": 1792467370.9613564,
+  "cl:wzwU6MiKBWEYyecThPHKEk": 1793371239.4432204,
   "cl:x1BiQtnSHGPih1q6oRV2KJ": 1792414000.616174,
   "cl:x3Cbb9vGw2EyeLnSka7fsW": 1793021434.87634,
   "cl:x3FWSKrvXNRRdehvPhAG3h": 1792415137.591298,
@@ -8005,7 +8011,8 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xjet5v/gramercy_sublet_through_summer/": 1793365554.7217612,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xjg65m/iso_room_urgently/": 1793369146.1562498,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xjgc83/is_bridgeview_69_adams_street_really_that_bad/": 1793369438.869367,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xjgd73/queer_couple_iso_petfriendly_roommates/": 1793369437.334833
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xjgd73/queer_couple_iso_petfriendly_roommates/": 1793369437.334833,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xjh4cz/lease_takeover_on_2_bed2bath_balcony_in_fort/": 1793371243.2067778
  },
  "problem_alerts": {
   "gmail": 1793033766.0118613
@@ -8226,7 +8233,8 @@
   "1880467047009947488": 1793353225.8572216,
   "1880482140980567574": 1793367626.1126146,
   "1880482150077391904": 1793367626.1379325,
-  "1880484628124894096": 1793370636.8806987
+  "1880484628124894096": 1793370636.8806987,
+  "1880485721473738314": 1793371234.2241948
  },
  "reminders_sent": {
   "Listings Project First Access": "2026-44"
