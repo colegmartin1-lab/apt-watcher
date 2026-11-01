@@ -2888,6 +2888,10 @@
    "price": 2375,
    "ts": 1792477934.3053641
   },
+  "30d6b5090ec868d5": {
+   "price": 1700,
+   "ts": 1793548863.90999
+  },
   "31d7390ec783c21a": {
    "price": 1400,
    "ts": 1793400654.7499046
@@ -3275,6 +3279,10 @@
   "e94942e3c4769422": {
    "price": 1900,
    "ts": 1793452597.3729417
+  },
+  "e9faa7a9f11bc184": {
+   "price": 1900,
+   "ts": 1793548864.9561946
   },
   "efd4e1af3a86d741": {
    "price": 1700,
@@ -5236,6 +5244,7 @@
   "cl:1tK9ZGzGX4nZyVNsypjgP2": 1792435869.1973433,
   "cl:1trDKwJMTvMYiUKsZyJ6Zf": 1792413687.3736265,
   "cl:1v56D8ptevbZV1uTG6WVEw": 1792455683.1611063,
+  "cl:1v8hwuAPQdWKgvvc3mWH2q": 1793548851.4844806,
   "cl:1vq4NmEnucFQP5KUFtrEt2": 1792967727.1192575,
   "cl:1wSaxQkkMuRuVAKfYVqLTb": 1792857927.6384923,
   "cl:1z13Z5kh87kBva6YrGqEUw": 1793385337.8442688,
@@ -6880,6 +6889,7 @@
   "cl:ryhiRhsboB8MVEuyJG9HbP": 1793040034.7171876,
   "cl:rymkwnHbB14Rh8TvWyC721": 1793263233.3501432,
   "cl:rzA8ySHaGHRBKMUv8wyaBA": 1792639933.0153828,
+  "cl:rzr2XvCm4WzUbFJRvujGZb": 1793548847.6898193,
   "cl:s1cmnsbu7dZtxZUSuTpHTS": 1792436164.0554929,
   "cl:s1yLfS5GapPza9bcn4arCc": 1793140854.568125,
   "cl:s3tpW4ptcUj4idFaskoXbD": 1793068960.160935,
@@ -6981,6 +6991,7 @@
   "cl:tSEyQ6ZxwM1U3pEkiSXY4f": 1793201438.095871,
   "cl:tTBZxMn1UDdcnTKW38ideV": 1792463438.4594326,
   "cl:tUB4NBK9XvegoJcCYzHSS4": 1793298939.2004547,
+  "cl:tUiq81GDYW8ofUi7VaRiVY": 1793548861.4535642,
   "cl:tXD6NiAFGvdFpNh9RRnGeC": 1792519254.9114606,
   "cl:tYG76BQ7fr7yyHzQDhniY3": 1792435869.1973429,
   "cl:tYRm4sGARpcJkv2cm4EAx1": 1792435869.197349,
@@ -7111,6 +7122,7 @@
   "cl:vZLcXwfeq5Ee3f7PFR5MoQ": 1793373348.5824275,
   "cl:vZMiiLaE3AM3Q9L2t7tBJz": 1793385337.8442683,
   "cl:vbmPZ11Umvgp9LKJ6FwSGh": 1793115352.82318,
+  "cl:vduTLfKDxP3xTBS4CwXHYn": 1793548849.9729278,
   "cl:ve2MBR4ww71TKv4rdUVMau": 1792437370.9419105,
   "cl:ve9hKPuiQEnnre18aKfzR7": 1792816537.5780387,
   "cl:vemzpk1MtQmbiFSkkQV2j4": 1793463960.679922,
@@ -8359,7 +8371,8 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xl4n37/studio_in_columbus_circle_2900/": 1793544034.1735945,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xl4yip/quietquaint_area_that_still_has_vibrant/": 1793544928.843304,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xl60df/removed_by_reddit/": 1793547345.430589,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xl64x4/sublet_1br_apartment_in_manhattan_valley_4020month/": 1793547634.2189808
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xl64x4/sublet_1br_apartment_in_manhattan_valley_4020month/": 1793547634.2189808,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xl6kw4/2_bedroom1_bath_apartment_in_yorkville_on_ues/": 1793548845.4025943
  },
  "problem_alerts": {
   "gmail": 1793033766.0118613
