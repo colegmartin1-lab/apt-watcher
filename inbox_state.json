@@ -1,7 +1,7 @@
 {
  "feeds": {
   "Brooklyn Group": {
-   "checked": 1793561124.21848,
+   "checked": 1793562025.014195,
    "seen": {
     "bg:1000": 1793505026.9910805,
     "bg:1001": 1793505026.9910805,
@@ -2071,7 +2071,7 @@
    }
   },
   "Nooklyn": {
-   "checked": 1793561124.21848,
+   "checked": 1793562025.014195,
    "seen": {
     "nooklyn:100394": 1793505026.9910805,
     "nooklyn:100504": 1793505026.9910805,
@@ -2531,7 +2531,7 @@
     "nooklyn:92027": 1793505026.9910805,
     "nooklyn:92040": 1792377381.6820872,
     "nooklyn:92182": 1793505026.9910805,
-    "nooklyn:92184": 1793474731.8036618,
+    "nooklyn:92184": 1793562025.014195,
     "nooklyn:92385": 1793505026.9910805,
     "nooklyn:92393": 1793505026.9910805,
     "nooklyn:92627": 1793505026.9910805,
@@ -3352,7 +3352,7 @@
    }
   },
   "04951a3e31766fbb": {
-   "checked": 1793558447.4823496,
+   "checked": 1793562055.0991995,
    "seen": {
     "4b95b0b5b7a96959": 1793515228.4417026
    }
@@ -3413,7 +3413,7 @@
    }
   },
   "1dc0ba05146f742f": {
-   "checked": 1793560246.855499,
+   "checked": 1793562055.0991995,
    "seen": {
     "0993825173af2327": 1793551248.291112,
     "5404edae94f0da25": 1793551248.291112,
@@ -3666,7 +3666,7 @@
    }
   },
   "25fd51dda77afad8": {
-   "checked": 1793560246.855499,
+   "checked": 1793562055.0991995,
    "seen": {}
   },
   "2e96a3f13d1836e5": {
@@ -3822,7 +3822,7 @@
    }
   },
   "43493170cf87c2e7": {
-   "checked": 1793560246.855499,
+   "checked": 1793562055.0991995,
    "seen": {
     "129a0aeeaa6a8996": 1793512846.5361667,
     "16ab7a72409f2a8f": 1793512846.5361667,
@@ -8394,7 +8394,9 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xlado2/looking_for_roommates/": 1793557549.2901964,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xlazhz/looking_for_a_furnished_sublet_in_nyc_dec_16/": 1793559032.179187,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xlb1u0/1br_furnished_apartment_in_sunnyside_2550month/": 1793559379.9673665,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xlbyfj/spacious_room_in_convenient_east_village_location/": 1793561436.5102682
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xlbyfj/spacious_room_in_convenient_east_village_location/": 1793561436.5102682,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xlc931/lease_takeover_chelsea_1b1br_4450_landlordapproved/": 1793562055.0936537,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xlcbgv/lease_takeover_reassignment_big_studio_at_the/": 1793562053.7511842
  },
  "problem_alerts": {
   "gmail": 1793033766.0118613
