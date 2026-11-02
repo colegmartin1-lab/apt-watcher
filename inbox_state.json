@@ -3434,7 +3434,7 @@
    }
   },
   "20de164906bcd513": {
-   "checked": 1793581528.4253714,
+   "checked": 1793582436.4906433,
    "seen": {
     "0253d87e47fbbdb6": 1793467545.0760386,
     "03d6a576e64375d4": 1793312743.239743,
@@ -3848,7 +3848,7 @@
    }
   },
   "4509d1c27cc4d597": {
-   "checked": 1793568933.99298,
+   "checked": 1793582436.4906433,
    "seen": {
     "0239a5e0432d48be": 1793502329.896679,
     "0387f8a4e5e6e5cc": 1793502329.896679,
@@ -4206,7 +4206,7 @@
    }
   },
   "6a8f0567c9ab8b31": {
-   "checked": 1793581528.4253714,
+   "checked": 1793582436.4906433,
    "seen": {
     "0b7cbc72981c0b70": 1792203628.762504,
     "0cd8108d7312bf0a": 1793505047.026728,
@@ -5543,6 +5543,7 @@
   "cl:6HtGWyQr1hJHTUS4vKfffG": 1793197248.2663212,
   "cl:6HtJaSwHVa9GHAzszq4BDA": 1792414242.3169446,
   "cl:6LGf18Tahc8Mp7ayXpjHN5": 1793301956.1953287,
+  "cl:6M5kVBDaJ5p6fqgRj4VG5N": 1793582433.9469173,
   "cl:6MspbmsP47Pz8dDLJ3x7vM": 1792413687.3736193,
   "cl:6P8V7KEqrePM658Qca51WN": 1792455047.1510212,
   "cl:6PGbrjykG3n6yxi4BJwb57": 1792519254.9114614,
@@ -8444,7 +8445,8 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xlial9/iso_2bedroom_for_rent_in_manhattan/": 1793577349.4324682,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xlibsi/rbm_managementprospect_realtor_scam/": 1793577638.431191,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xliqff/west_facing_or_north_facing/": 1793578530.600975,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xljbk5/monthly_selfpromotion_thread/": 1793580335.1713345
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xljbk5/monthly_selfpromotion_thread/": 1793580335.1713345,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xlk2n0/lease_takeover_1_bed_2_bath_aqua_house_180_water/": 1793582436.4866564
  },
  "problem_alerts": {
   "gmail": 1793033766.0118613
@@ -8693,7 +8695,8 @@
   "1880673233103523744": 1793550026.1137125,
   "1880674123730831338": 1793550633.969745,
   "1880677322690909192": 1793553926.1315548,
-  "1880684638696294480": 1793560832.5637462
+  "1880684638696294480": 1793560832.5637462,
+  "1880707220968695117": 1793582429.5864987
  },
  "reminders_sent": {
   "Listings Project First Access": "2026-44"
