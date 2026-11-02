@@ -1,7 +1,7 @@
 {
  "feeds": {
   "Brooklyn Group": {
-   "checked": 1793582727.3815544,
+   "checked": 1793583632.8473053,
    "seen": {
     "bg:1000": 1793505026.9910805,
     "bg:1001": 1793505026.9910805,
@@ -2071,7 +2071,7 @@
    }
   },
   "Nooklyn": {
-   "checked": 1793582727.3815544,
+   "checked": 1793583632.8473053,
    "seen": {
     "nooklyn:100394": 1793505026.9910805,
     "nooklyn:100504": 1793505026.9910805,
@@ -3356,7 +3356,7 @@
    }
   },
   "04951a3e31766fbb": {
-   "checked": 1793580046.2865295,
+   "checked": 1793583651.9244611,
    "seen": {
     "4b95b0b5b7a96959": 1793515228.4417026
    }
@@ -3417,7 +3417,7 @@
    }
   },
   "1dc0ba05146f742f": {
-   "checked": 1793581843.0924,
+   "checked": 1793583651.9244611,
    "seen": {
     "0993825173af2327": 1793551248.291112,
     "5404edae94f0da25": 1793551248.291112,
@@ -3670,7 +3670,7 @@
    }
   },
   "25fd51dda77afad8": {
-   "checked": 1793581843.0924,
+   "checked": 1793583651.9244611,
    "seen": {}
   },
   "2e96a3f13d1836e5": {
@@ -3826,7 +3826,7 @@
    }
   },
   "43493170cf87c2e7": {
-   "checked": 1793581843.0924,
+   "checked": 1793583651.9244611,
    "seen": {
     "129a0aeeaa6a8996": 1793512846.5361667,
     "16ab7a72409f2a8f": 1793512846.5361667,
@@ -4543,7 +4543,7 @@
    }
   },
   "79503fec19db3cfe": {
-   "checked": 1793582749.0806198,
+   "checked": 1793583651.9244611,
    "seen": {
     "5886ae070ea84f79": 1793547345.434399,
     "e5c1c6951d4cf9ed": 1793547345.434399
@@ -6727,6 +6727,7 @@
   "cl:oxh2PnjSDuTy4yzZCRrrG1": 1793460344.8113987,
   "cl:ozCE71sH9YEQ6oPos91Fib": 1793322063.6111522,
   "cl:ozKsPu1MexRphMqpkyCHvE": 1792436169.832648,
+  "cl:ozohFcgYYmUjVDDWQyG4kF": 1793583649.079301,
   "cl:p2cnQZntoxx2SD277cN6jC": 1792549553.6157794,
   "cl:p2dKBSJe9H1AjgR3y7KHYm": 1792436770.9549668,
   "cl:p3MZVhdK6pjSV5S2k8RT6X": 1792782706.7937422,
@@ -8447,7 +8448,8 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xliqff/west_facing_or_north_facing/": 1793578530.600975,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xljbk5/monthly_selfpromotion_thread/": 1793580335.1713345,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xlk2n0/lease_takeover_1_bed_2_bath_aqua_house_180_water/": 1793582436.4866564,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xlk8uc/looking_to_rent_weekends_only/": 1793583035.904724
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xlk8uc/looking_to_rent_weekends_only/": 1793583035.904724,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xlkiv1/2bd_2ba_jersey_city_lease_takeover_10_mins_to/": 1793583651.917908
  },
  "problem_alerts": {
   "gmail": 1793033766.0118613
