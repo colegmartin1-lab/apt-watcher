@@ -1,7 +1,7 @@
 {
  "feeds": {
   "Brooklyn Group": {
-   "checked": 1793598926.3723838,
+   "checked": 1793599856.5262196,
    "seen": {
     "bg:1000": 1793591720.98452,
     "bg:1001": 1793591720.98452,
@@ -2071,7 +2071,7 @@
    }
   },
   "Nooklyn": {
-   "checked": 1793598926.3723838,
+   "checked": 1793599856.5262196,
    "seen": {
     "nooklyn:100394": 1793591720.98452,
     "nooklyn:100504": 1793591720.98452,
@@ -3417,7 +3417,7 @@
    }
   },
   "1dc0ba05146f742f": {
-   "checked": 1793598047.2086272,
+   "checked": 1793599879.599029,
    "seen": {
     "0993825173af2327": 1793551248.291112,
     "5404edae94f0da25": 1793551248.291112,
@@ -3427,7 +3427,7 @@
    }
   },
   "1fef656362975758": {
-   "checked": 1793596245.0482972,
+   "checked": 1793599879.599029,
    "seen": {
     "8aa24f6fc3e11696": 1793560246.855499,
     "a9e206c1265e3fca": 1792859436.0341265
@@ -3826,25 +3826,25 @@
    }
   },
   "43493170cf87c2e7": {
-   "checked": 1793598047.2086272,
+   "checked": 1793599879.599029,
    "seen": {
-    "129a0aeeaa6a8996": 1793512846.5361667,
-    "16ab7a72409f2a8f": 1793512846.5361667,
-    "2be5cd8f76976328": 1793512846.5361667,
-    "2d38c3849918b54d": 1793512846.5361667,
-    "34185c2d7d44aec8": 1793512846.5361667,
-    "393471fafb4b4f72": 1793512846.5361667,
-    "3cd97bc16d452e45": 1793512846.5361667,
-    "43493170cf87c2e7": 1793512846.5361667,
-    "58abfc061259ec7c": 1793512846.5361667,
-    "66d3c328f918126e": 1793512846.5361667,
-    "6f36f8cd68a79e48": 1793512846.5361667,
-    "76f638aacb600af0": 1793512846.5361667,
-    "89314c1d9a3624cb": 1793512846.5361667,
-    "92b8eceb85d702a2": 1793512846.5361667,
-    "a67f74f2bbdd3692": 1793512846.5361667,
-    "dc9cabe092898495": 1793512846.5361667,
-    "f89b38ff859bba71": 1793512846.5361667
+    "129a0aeeaa6a8996": 1793599879.599029,
+    "16ab7a72409f2a8f": 1793599879.599029,
+    "2be5cd8f76976328": 1793599879.599029,
+    "2d38c3849918b54d": 1793599879.599029,
+    "34185c2d7d44aec8": 1793599879.599029,
+    "393471fafb4b4f72": 1793599879.599029,
+    "3cd97bc16d452e45": 1793599879.599029,
+    "43493170cf87c2e7": 1793599879.599029,
+    "58abfc061259ec7c": 1793599879.599029,
+    "66d3c328f918126e": 1793599879.599029,
+    "6f36f8cd68a79e48": 1793599879.599029,
+    "76f638aacb600af0": 1793599879.599029,
+    "89314c1d9a3624cb": 1793599879.599029,
+    "92b8eceb85d702a2": 1793599879.599029,
+    "a67f74f2bbdd3692": 1793599879.599029,
+    "dc9cabe092898495": 1793599879.599029,
+    "f89b38ff859bba71": 1793599879.599029
    }
   },
   "4509d1c27cc4d597": {
@@ -8475,7 +8475,8 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xlmg5m/iso_nyc_sublet_december_1_budget_up_to_3650/": 1793589634.1418114,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xlmxzf/murray_hill_looking_for_a_roommate_3br2ba_middec/": 1793591147.0055044,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xlnanf/looking_for_apartment_from_june_to_august/": 1793592327.3351107,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xlnyyr/need_someone_to_take_over_my_lease_alcove_studio/": 1793594449.2967713
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xlnyyr/need_someone_to_take_over_my_lease_alcove_studio/": 1793594449.2967713,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xlpkdq/lease_takeover_spacious_flex_1_bedroom_at_65th/": 1793599879.5933845
  },
  "problem_alerts": {
   "gmail": 1793033766.0118613
