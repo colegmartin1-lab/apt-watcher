@@ -3434,7 +3434,7 @@
    }
   },
   "20de164906bcd513": {
-   "checked": 1793586928.112878,
+   "checked": 1793587836.5895376,
    "seen": {
     "0253d87e47fbbdb6": 1793467545.0760386,
     "03d6a576e64375d4": 1793312743.239743,
@@ -4206,7 +4206,7 @@
    }
   },
   "6a8f0567c9ab8b31": {
-   "checked": 1793586928.112878,
+   "checked": 1793587836.5895376,
    "seen": {
     "0b7cbc72981c0b70": 1792203628.762504,
     "0cd8108d7312bf0a": 1793505047.026728,
@@ -5503,6 +5503,7 @@
   "cl:5q6v51ZhHQocG1qwZYrbqt": 1792437049.3164644,
   "cl:5qDJu2rSh4W8i71CK4YhRS": 1792456241.2210927,
   "cl:5rANnWsqhFyHvNhLaqDkzM": 1792455678.7340803,
+  "cl:5rEeEuW1J6XT9apPETTaDw": 1793587831.1484091,
   "cl:5rYpRTAVrA7sV1FPYdAQ5Q": 1792437642.0250287,
   "cl:5s22u2CaQGXdvLSTtg3f3v": 1792778509.452314,
   "cl:5sF3NUrT6X1xcLfDxhU4dT": 1793319991.1631362,
@@ -6912,6 +6913,7 @@
   "cl:riBvtxgxzmLLxtWk44imqq": 1792436164.0554862,
   "cl:riGgabhQPPMXMkPCZZSnWu": 1792853427.8641233,
   "cl:rjqJqej4qyPPKgqYeXN9u6": 1792940130.894579,
+  "cl:rkQQsYsBncWCXW6f8Ay13Q": 1793587831.148407,
   "cl:rmmi9t4ML6cDimnqzUFYoN": 1792687548.197183,
   "cl:rnwQ7V3BCWnqSRw2Qa4hKF": 1793236259.0488834,
   "cl:rp2jXvPejSLuzXandaCSxT": 1793300446.7225368,
@@ -8456,7 +8458,9 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xlkiv1/2bd_2ba_jersey_city_lease_takeover_10_mins_to/": 1793583651.917908,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xlks7m/moving_to_nyc/": 1793584544.9317453,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xlkxce/iso_sublet_1151120_or_full_month_of_nov/": 1793584850.9506133,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xlljf9/sublet_in_stuyvesant_town_janmar_2027/": 1793586641.9615257
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xlljf9/sublet_in_stuyvesant_town_janmar_2027/": 1793586641.9615257,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xllvcr/lease_takeover_astoria_29002_bed/": 1793587836.584739,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xllwy8/looking_for_a_studio_apartment_or_private_room/": 1793587833.6634011
  },
  "problem_alerts": {
   "gmail": 1793033766.0118613
