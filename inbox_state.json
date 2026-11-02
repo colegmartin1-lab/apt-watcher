@@ -1,7 +1,7 @@
 {
  "feeds": {
   "Brooklyn Group": {
-   "checked": 1793657439.8850768,
+   "checked": 1793658331.3474727,
    "seen": {
     "bg:1000": 1793591720.98452,
     "bg:1001": 1793591720.98452,
@@ -2071,7 +2071,7 @@
    }
   },
   "Nooklyn": {
-   "checked": 1793657439.8850768,
+   "checked": 1793658331.3474727,
    "seen": {
     "nooklyn:100394": 1793591720.98452,
     "nooklyn:100504": 1793591720.98452,
@@ -2453,8 +2453,8 @@
     "nooklyn:104213": 1793640049.4789152,
     "nooklyn:104214": 1793640049.4789152,
     "nooklyn:104215": 1793640049.4789152,
-    "nooklyn:104216": 1793571922.3332236,
-    "nooklyn:104217": 1793571922.3332236,
+    "nooklyn:104216": 1793658331.3474727,
+    "nooklyn:104217": 1793658331.3474727,
     "nooklyn:104219": 1793575524.1448984,
     "nooklyn:104225": 1793640954.9335682,
     "nooklyn:104231": 1793643931.0081985,
@@ -3459,7 +3459,7 @@
    }
   },
   "1dc0ba05146f742f": {
-   "checked": 1793656579.095211,
+   "checked": 1793658352.6915994,
    "seen": {
     "0993825173af2327": 1793638271.5959437,
     "5404edae94f0da25": 1793638271.5959437,
@@ -3723,7 +3723,7 @@
    }
   },
   "25fd51dda77afad8": {
-   "checked": 1793656579.095211,
+   "checked": 1793658352.6915994,
    "seen": {}
   },
   "2e96a3f13d1836e5": {
@@ -3879,7 +3879,7 @@
    }
   },
   "43493170cf87c2e7": {
-   "checked": 1793656579.095211,
+   "checked": 1793658352.6915994,
    "seen": {
     "129a0aeeaa6a8996": 1793599879.599029,
     "16ab7a72409f2a8f": 1793599879.599029,
@@ -8652,7 +8652,8 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xm9zdk/automatic_door_bottom_for_rental/": 1793654785.421782,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xma2ku/3_bed_2_bath_sundrenched_apartment_for_rent_lease/": 1793655037.4964056,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xmb0ng/government_waste_at_its_most_egregious/": 1793657149.201644,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xmbbt5/1_bedroom_apartment_in_sunnyside_queens_rent/": 1793658039.0560548
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xmbbt5/1_bedroom_apartment_in_sunnyside_queens_rent/": 1793658039.0560548,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xmbhvk/apartment_in_brooklyn_ny/": 1793658352.6851516
  },
  "problem_alerts": {
   "gmail": 1793033766.0118613
