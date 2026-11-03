@@ -1,7 +1,7 @@
 {
  "feeds": {
   "Brooklyn Group": {
-   "checked": 1793711726.3239217,
+   "checked": 1793712636.9004962,
    "seen": {
     "bg:1000": 1793678450.6757634,
     "bg:1001": 1793678450.6757634,
@@ -2071,7 +2071,7 @@
    }
   },
   "Nooklyn": {
-   "checked": 1793711726.3239217,
+   "checked": 1793712636.9004962,
    "seen": {
     "nooklyn:100394": 1793678450.6757634,
     "nooklyn:100504": 1793678450.6757634,
@@ -2158,7 +2158,7 @@
     "nooklyn:101741": 1793680232.7851021,
     "nooklyn:101743": 1793678450.6757634,
     "nooklyn:101744": 1793678450.6757634,
-    "nooklyn:101745": 1793578228.2303445,
+    "nooklyn:101745": 1793712636.9004962,
     "nooklyn:101746": 1793678450.6757634,
     "nooklyn:101748": 1793678450.6757634,
     "nooklyn:101752": 1793678450.6757634,
@@ -3476,7 +3476,7 @@
    }
   },
   "1dc0ba05146f742f": {
-   "checked": 1793710854.6874883,
+   "checked": 1793712662.8633902,
    "seen": {
     "0993825173af2327": 1793638271.5959437,
     "5404edae94f0da25": 1793638271.5959437,
@@ -3486,7 +3486,7 @@
    }
   },
   "1fef656362975758": {
-   "checked": 1793709051.3905616,
+   "checked": 1793712662.8633902,
    "seen": {
     "8aa24f6fc3e11696": 1793647543.7396116,
     "a9e206c1265e3fca": 1792859436.0341265
@@ -3897,7 +3897,7 @@
    }
   },
   "43493170cf87c2e7": {
-   "checked": 1793710854.6874883,
+   "checked": 1793712662.8633902,
    "seen": {
     "129a0aeeaa6a8996": 1793687462.9950202,
     "16ab7a72409f2a8f": 1793687462.9950202,
@@ -4278,7 +4278,7 @@
    }
   },
   "6a8f0567c9ab8b31": {
-   "checked": 1793711742.862209,
+   "checked": 1793712662.8633902,
    "seen": {
     "0b7cbc72981c0b70": 1792203628.762504,
     "0cd8108d7312bf0a": 1793678728.1190875,
@@ -4653,7 +4653,7 @@
    }
   },
   "8a43479d71a9baf2": {
-   "checked": 1793710854.6874883,
+   "checked": 1793712662.8633902,
    "seen": {
     "1a284981a4da9c0b": 1793692534.3072724,
     "20524f768f0fb257": 1793692534.3072724,
@@ -6464,6 +6464,7 @@
   "cl:h2pn8DCfmTcyh1eSXPwJsn": 1792695338.3896675,
   "cl:h3jsjCD4putm1LP6HkDrLw": 1792699094.1960676,
   "cl:h3nHRcgf7RopYAnptV7nL5": 1793266840.3030481,
+  "cl:h4txcedqCsyUJwnuxWAYNb": 1793712658.895305,
   "cl:h62TdD5KqQqvYLhAr2sh7M": 1792437370.9419074,
   "cl:h7JJ1hEZuaZGEJhHQQdRbN": 1792707095.5964546,
   "cl:h7PksG5dpUTPZzCJJ7wTbd": 1792617359.0998683,
@@ -7342,6 +7343,7 @@
   "cl:ukuHyhtuoRtfgvRTWmJQyu": 1792797933.8430212,
   "cl:ungZ2ra1ges4UhgN8PSTi7": 1793104539.8967412,
   "cl:unkPa2thdtT66ajywBftoo": 1793201438.0958683,
+  "cl:unrXLhXE7GFU5RgmFXfqBi": 1793712657.149405,
   "cl:uqCz8UkrAM5hm6C1Tz8n1b": 1792724459.7338278,
   "cl:uqpZKhL7QkD2nnAtAT8w6i": 1792455047.1510177,
   "cl:ur3iXzwYUqPffK3frrH5Do": 1793117454.0244424,
@@ -8756,7 +8758,8 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xmkr68/safety_of_irving_square_park_area/": 1793684436.4691958,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xmoh8e/nyc_900_apartment_hunting/": 1793698275.7890534,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xmqc6a/room_available_in_2br_hudson_yards_garment/": 1793704857.3067849,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xmsofg/looking_for_an_intense_movers_referral/": 1793712037.1494331
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xmsofg/looking_for_an_intense_movers_referral/": 1793712037.1494331,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xmsyp5/lease_takeover_for_2_bed_2_bath_starting_dec_1/": 1793712662.858105
  },
  "problem_alerts": {
   "gmail": 1793033766.0118613
