@@ -1,7 +1,7 @@
 {
  "feeds": {
   "Brooklyn Group": {
-   "checked": 1793666428.6624932,
+   "checked": 1793667324.8395512,
    "seen": {
     "bg:1000": 1793591720.98452,
     "bg:1001": 1793591720.98452,
@@ -2071,7 +2071,7 @@
    }
   },
   "Nooklyn": {
-   "checked": 1793666428.6624932,
+   "checked": 1793667324.8395512,
    "seen": {
     "nooklyn:100394": 1793591720.98452,
     "nooklyn:100504": 1793591720.98452,
@@ -2923,6 +2923,10 @@
    "price": 1400,
    "ts": 1793400654.7499046
   },
+  "31e46b7dd7df9193": {
+   "price": 1400,
+   "ts": 1793667356.6524827
+  },
   "32111846ddd97ff2": {
    "price": null,
    "ts": 1792026551.7723784
@@ -3460,7 +3464,7 @@
    }
   },
   "1dc0ba05146f742f": {
-   "checked": 1793665551.542394,
+   "checked": 1793667351.8810108,
    "seen": {
     "0993825173af2327": 1793638271.5959437,
     "5404edae94f0da25": 1793638271.5959437,
@@ -3724,7 +3728,7 @@
    }
   },
   "25fd51dda77afad8": {
-   "checked": 1793665551.542394,
+   "checked": 1793667351.8810108,
    "seen": {}
   },
   "2e96a3f13d1836e5": {
@@ -3880,7 +3884,7 @@
    }
   },
   "43493170cf87c2e7": {
-   "checked": 1793665551.542394,
+   "checked": 1793667351.8810108,
    "seen": {
     "129a0aeeaa6a8996": 1793599879.599029,
     "16ab7a72409f2a8f": 1793599879.599029,
@@ -5430,6 +5434,7 @@
   "cl:3fEn3nkUmLdpMBoD97DPV8": 1792437370.9419093,
   "cl:3fLuQpS6k2VaaUXYegX6aZ": 1792673163.7757416,
   "cl:3faFv3c3Bfe1k3zMZTMUNM": 1793500843.624832,
+  "cl:3hEdQZB14HT7yYJYuqmwKi": 1793667351.8743823,
   "cl:3iZKX2fumpRvoKnNCFdBuU": 1792435869.1973488,
   "cl:3jQAKbTrrv6325YCaMrkwh": 1792436756.6148064,
   "cl:3jaTuo3b7exdQ9gF77kRpY": 1792445452.898635,
@@ -5444,6 +5449,7 @@
   "cl:3pA71aWnDJ77dx3vVunQYy": 1793451636.5277364,
   "cl:3q71Gyt6rT1p8jrZVxHjCv": 1792819073.2552726,
   "cl:3qHaShqPJpSspR7qAFFyBS": 1792671041.0024712,
+  "cl:3qrgHmxb2Dh6vSpGFNkvLg": 1793667347.1714427,
   "cl:3qzJuRSxw3HbZ6TkrAVbpu": 1792437945.1684315,
   "cl:3rW35BmFdMKGWkSq6SC6SV": 1792439436.5795226,
   "cl:3rjrhTYJDtt6dRAGaAD2DS": 1793450442.0163107,
@@ -8664,7 +8670,8 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xmcc2g/am_i_making_a_mistake_by_backing_out_of_a/": 1793660445.5888872,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xmdr7p/bedstuy_1_bed15_bath_duplex_with_wd_available_121/": 1793664077.952134,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xmeej9/fidi_lease_takeover_huge_822_sq_ft_highfloor/": 1793665843.8416815,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xmet4r/searching_iso_room_in_shared_space_or_1brstudio/": 1793666747.3106713
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xmet4r/searching_iso_room_in_shared_space_or_1brstudio/": 1793666747.3106713,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xmez8w/need_a_lawyer_squatter_situation_in_nyc/": 1793667350.3834648
  },
  "problem_alerts": {
   "gmail": 1793033766.0118613
