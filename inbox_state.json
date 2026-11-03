@@ -1,7 +1,7 @@
 {
  "feeds": {
   "Brooklyn Group": {
-   "checked": 1793674559.8217394,
+   "checked": 1793675636.2150464,
    "seen": {
     "bg:1000": 1793591720.98452,
     "bg:1001": 1793591720.98452,
@@ -2071,7 +2071,7 @@
    }
   },
   "Nooklyn": {
-   "checked": 1793674559.8217394,
+   "checked": 1793675636.2150464,
    "seen": {
     "nooklyn:100394": 1793591720.98452,
     "nooklyn:100504": 1793591720.98452,
@@ -3084,8 +3084,8 @@
    "ts": 1793478646.2620173
   },
   "7cc4c59eb762217a": {
-   "price": 1720,
-   "ts": 1792594917.5438063
+   "price": 1700,
+   "ts": 1793675682.7576013
   },
   "7cf6d7354bd0fe9b": {
    "price": 1600,
@@ -3390,14 +3390,14 @@
  },
  "pages": {
   "00c5b83d74bbe593": {
-   "checked": 1793673661.881066,
+   "checked": 1793675666.53661,
    "seen": {
     "48d63f934a87036b": 1793602861.191439,
     "bd7b14ab632cc156": 1793602861.191439
    }
   },
   "02ce40a68c1bc982": {
-   "checked": 1793673661.881066,
+   "checked": 1793675666.53661,
    "seen": {
     "008cec05cb27a1f8": 1793606451.383609,
     "02ce40a68c1bc982": 1793606451.383609,
@@ -3413,7 +3413,7 @@
    }
   },
   "0a905052f37cc2ca": {
-   "checked": 1793673661.881066,
+   "checked": 1793675666.53661,
    "seen": {
     "0a905052f37cc2ca": 1793602861.191439,
     "4181740518101970": 1793602861.191439,
@@ -3442,7 +3442,7 @@
    }
   },
   "147fbe927ddd0749": {
-   "checked": 1793673661.881066,
+   "checked": 1793675666.53661,
    "seen": {
     "358c58d68df85527": 1793638849.720562,
     "456a95791eba6b3c": 1793638849.720562,
@@ -3456,7 +3456,7 @@
    "seen": {}
   },
   "1db2371dc32edd42": {
-   "checked": 1793673661.881066,
+   "checked": 1793675666.53661,
    "seen": {
     "130a9f1dc57df26a": 1793604648.2473118,
     "1db2371dc32edd42": 1793604648.2473118,
@@ -3706,7 +3706,7 @@
    }
   },
   "2262cba0616c8986": {
-   "checked": 1793673661.881066,
+   "checked": 1793675666.53661,
    "seen": {
     "0c61e90465055918": 1793079930.290765,
     "19d3fb7ab218b975": 1793051153.0718398,
@@ -3875,7 +3875,7 @@
    }
   },
   "3d0a3f0bf71cb848": {
-   "checked": 1793673661.881066,
+   "checked": 1793675666.53661,
    "seen": {
     "337bbd8e95d60089": 1793638849.720562,
     "83ee8051adb22534": 1793638849.720562,
@@ -3883,7 +3883,7 @@
    }
   },
   "3dc0c60864a1f403": {
-   "checked": 1793673661.881066,
+   "checked": 1793675666.53661,
    "seen": {
     "45d7e2a837b7dc97": 1793615453.8481221
    }
@@ -4055,7 +4055,7 @@
    }
   },
   "46e98e3fadd451ab": {
-   "checked": 1793673661.881066,
+   "checked": 1793675666.53661,
    "seen": {}
   },
   "4ae5c56ab4203a1f": {
@@ -4471,7 +4471,7 @@
    }
   },
   "77d1c6cf3a23c49e": {
-   "checked": 1793673661.881066,
+   "checked": 1793675666.53661,
    "seen": {}
   },
   "786a8b300f5a7fd2": {
@@ -4617,7 +4617,7 @@
    "seen": {}
   },
   "88a51700e00fc312": {
-   "checked": 1793673661.881066,
+   "checked": 1793675666.53661,
    "seen": {
     "7cc0faee3e9aec53": 1793638849.720562,
     "e2477b9de903165a": 1793638849.720562,
@@ -4626,7 +4626,7 @@
    }
   },
   "89446ccce6f8cd29": {
-   "checked": 1793673661.881066,
+   "checked": 1793675666.53661,
    "seen": {
     "3bcb27247fe22461": 1793604648.2473118,
     "6ff08eb2e2898e26": 1793604648.2473118,
@@ -4644,7 +4644,7 @@
    }
   },
   "8a43479d71a9baf2": {
-   "checked": 1793673661.881066,
+   "checked": 1793675666.53661,
    "seen": {
     "1a284981a4da9c0b": 1793604648.2473118,
     "20524f768f0fb257": 1793604648.2473118,
@@ -4713,7 +4713,7 @@
    }
   },
   "8b7c0936fa6d7d0e": {
-   "checked": 1793673661.881066,
+   "checked": 1793675666.53661,
    "seen": {}
   },
   "92a1db7aea5a87d8": {
@@ -4751,7 +4751,7 @@
    }
   },
   "991b4babc5bddce9": {
-   "checked": 1793673661.881066,
+   "checked": 1793675666.53661,
    "seen": {
     "353e11177ff217fa": 1793604648.2473118
    }
@@ -4884,7 +4884,7 @@
    }
   },
   "a84ba37bad2de74e": {
-   "checked": 1793673661.881066,
+   "checked": 1793675666.53661,
    "seen": {}
   },
   "aa4faf8a671700f3": {
@@ -5025,7 +5025,7 @@
    }
   },
   "b7c84b2e0e750f47": {
-   "checked": 1793673661.881066,
+   "checked": 1793675666.53661,
    "seen": {
     "0147712e6a1cb384": 1792504916.962231,
     "0c77622610b6d13d": 1793640636.8835468
@@ -5077,11 +5077,11 @@
    }
   },
   "d5f1fb0118c5a112": {
-   "checked": 1793673661.881066,
+   "checked": 1793675666.53661,
    "seen": {}
   },
   "de39aaf4393c9317": {
-   "checked": 1793673661.881066,
+   "checked": 1793675666.53661,
    "seen": {
     "1c69562a0ff12d61": 1793031079.69976,
     "2dcfc2dd2db252af": 1793229332.759352,
@@ -7074,6 +7074,7 @@
   "cl:rfh859aKGddbnY9ge3utcS": 1792436756.614813,
   "cl:rfjE22bdeR3XTTCY4G8KGT": 1793043639.0378768,
   "cl:rgKLTWqKbH5JAFhvZgTte6": 1792440993.4890323,
+  "cl:rh3SDn9Chssqa1HTE6t8Cb": 1793675659.4401565,
   "cl:riBvtxgxzmLLxtWk44imqq": 1792436164.0554862,
   "cl:riGgabhQPPMXMkPCZZSnWu": 1792853427.8641233,
   "cl:rjqJqej4qyPPKgqYeXN9u6": 1792940130.894579,
@@ -7231,6 +7232,7 @@
   "cl:tpibXX3PQTYAvt15GSxfbb": 1792697436.0188887,
   "cl:ttLbwdgh5m9frunkmyksZt": 1793058036.1790848,
   "cl:ttfCauWZ1RLPWYXuyQGADu": 1793438126.6448932,
+  "cl:tty2zbaypksYEE31rU9LB1": 1793675666.5299919,
   "cl:tu8zgHjNVUMJg1vJRMqRqJ": 1793295642.5273137,
   "cl:twRAp4gocfmcryU7bDf6Yw": 1793656233.8686876,
   "cl:twiNdQDADtp2E7nz96UA7P": 1793399435.071258,
@@ -8689,7 +8691,9 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xmf6cf/bedroom_available_in_west_harlem_apartment_1400mo/": 1793667935.3873894,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xmgi8q/iso_2_bedroom_in_harlembronxuwsues/": 1793671536.3471332,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xmh115/room_wanted_25m_audio_engineer_moving_from_la_to/": 1793673068.5529118,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xmhmrx/iso_room_or_studio_move_in_around_nov_12_16/": 1793674843.1323903
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xmhmrx/iso_room_or_studio_move_in_around_nov_12_16/": 1793674843.1323903,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xmhw4d/seeking_studio_or_1_bed_starting_now/": 1793675665.048637,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xmhzm9/brooklyn_greenwood_heightssunset_park_private_bed/": 1793675663.195838
  },
  "problem_alerts": {
   "gmail": 1793033766.0118613
