@@ -1,7 +1,7 @@
 {
  "feeds": {
   "Brooklyn Group": {
-   "checked": 1793829033.1193078,
+   "checked": 1793829931.4982746,
    "seen": {
     "bg:1000": 1793765434.7149205,
     "bg:1001": 1793765434.7149205,
@@ -2024,7 +2024,7 @@
     "bg:6718": 1793824557.0642095,
     "bg:6719": 1793824557.0642095,
     "bg:6720": 1793824557.0642095,
-    "bg:6721": 1793742633.6113741,
+    "bg:6721": 1793829931.4982746,
     "bg:6722": 1793817329.3534436,
     "bg:6723": 1793746229.4924624,
     "bg:6724": 1793746229.4924624,
@@ -2076,7 +2076,7 @@
    }
   },
   "Nooklyn": {
-   "checked": 1793829033.1193078,
+   "checked": 1793829931.4982746,
    "seen": {
     "nooklyn:100394": 1793765434.7149205,
     "nooklyn:100504": 1793765434.7149205,
@@ -2421,7 +2421,7 @@
     "nooklyn:104131": 1793813756.6698248,
     "nooklyn:104132": 1793307703.774196,
     "nooklyn:104135": 1793820930.7864635,
-    "nooklyn:104136": 1793742633.6113741,
+    "nooklyn:104136": 1793829931.4982746,
     "nooklyn:104137": 1793749830.9052079,
     "nooklyn:104139": 1793813756.6698248,
     "nooklyn:104140": 1793813756.6698248,
@@ -4735,7 +4735,7 @@
    }
   },
   "79503fec19db3cfe": {
-   "checked": 1793829056.341482,
+   "checked": 1793829955.8962684,
    "seen": {
     "5886ae070ea84f79": 1793808373.3345525,
     "e5c1c6951d4cf9ed": 1793808373.3345525
@@ -4773,7 +4773,7 @@
    }
   },
   "8a43479d71a9baf2": {
-   "checked": 1793828159.8866394,
+   "checked": 1793829955.8962684,
    "seen": {
     "1a284981a4da9c0b": 1793780151.1943016,
     "20524f768f0fb257": 1793780151.1943016,
@@ -9291,7 +9291,8 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xnzcqy/anyone_moving_in_decemberjanuary_looking_for_a/": 1793825148.2290897,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xnzdsr/spacious_2br_with_private_balcony_upper_west_side/": 1793825468.540596,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xnztk0/lease_takeover_sunny_1_bedroom_hunters_point_lic/": 1793826360.1698737,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xo0c7t/lease_takeover_rent_stabilized_1bd1ba_in_bushwick/": 1793827583.9276567
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xo0c7t/lease_takeover_rent_stabilized_1bd1ba_in_bushwick/": 1793827583.9276567,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xo1cqz/34m_looking_for_a_onebedroom_sublet_in/": 1793829955.8919902
  },
  "problem_alerts": {
   "gmail": 1793033766.0118613
