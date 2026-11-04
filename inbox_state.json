@@ -1,7 +1,7 @@
 {
  "feeds": {
   "Brooklyn Group": {
-   "checked": 1793818231.7633173,
+   "checked": 1793819139.5339587,
    "seen": {
     "bg:1000": 1793765434.7149205,
     "bg:1001": 1793765434.7149205,
@@ -2075,7 +2075,7 @@
    }
   },
   "Nooklyn": {
-   "checked": 1793818231.7633173,
+   "checked": 1793819139.5339587,
    "seen": {
     "nooklyn:100394": 1793765434.7149205,
     "nooklyn:100504": 1793765434.7149205,
@@ -4766,7 +4766,7 @@
    }
   },
   "8a43479d71a9baf2": {
-   "checked": 1793817346.4382124,
+   "checked": 1793819166.3023782,
    "seen": {
     "1a284981a4da9c0b": 1793780151.1943016,
     "20524f768f0fb257": 1793780151.1943016,
@@ -9250,7 +9250,8 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xnvld4/waterfront_onebed_pool_in_greenpoint_4940/": 1793816460.6744359,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xnvrvm/1_room_dec_1_kips_bay_2050mo/": 1793817042.943301,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xnw5t9/2_bedroom_apt_for_rent_kew_gardens_nov_15_dec_1/": 1793817932.1958475,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xnw70h/west_168th_ac1_trains_4bd_2bath_5000_dm_if/": 1793817930.5560575
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xnw70h/west_168th_ac1_trains_4bd_2bath_5000_dm_if/": 1793817930.5560575,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xnwran/sublease_for_student_for_winter_break/": 1793819166.2980618
  },
  "problem_alerts": {
   "gmail": 1793033766.0118613
