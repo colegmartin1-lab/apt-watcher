@@ -1,7 +1,7 @@
 {
  "feeds": {
   "Brooklyn Group": {
-   "checked": 1793799324.787888,
+   "checked": 1793800243.8874965,
    "seen": {
     "bg:1000": 1793765434.7149205,
     "bg:1001": 1793765434.7149205,
@@ -2075,7 +2075,7 @@
    }
   },
   "Nooklyn": {
-   "checked": 1793799324.787888,
+   "checked": 1793800243.8874965,
    "seen": {
     "nooklyn:100394": 1793765434.7149205,
     "nooklyn:100504": 1793765434.7149205,
@@ -3400,6 +3400,10 @@
   "e9faa7a9f11bc184": {
    "price": 1900,
    "ts": 1793548864.9561946
+  },
+  "ecdcc45e160c94cd": {
+   "price": 2930,
+   "ts": 1793800267.5544913
   },
   "efd4e1af3a86d741": {
    "price": 1700,
@@ -9142,7 +9146,8 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xnez7x/nyc_apartment_with_pest_complaints/": 1793766939.9419577,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xno0he/sunny_topfloor_1br_in_bedstuy/": 1793798468.8169658,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xno6f5/upper_east_side_lease_takeover_1_bedroom_3395month/": 1793799052.3408556,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xno79c/iso_a_roommate_for_a_2bed_1_bath_in_bushwick_1700/": 1793799050.2414875
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xno79c/iso_a_roommate_for_a_2bed_1_bath_in_bushwick_1700/": 1793799050.2414875,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xnontu/bright_studio_3k_bk_heights_lease_takeover/": 1793800264.8906026
  },
  "problem_alerts": {
   "gmail": 1793033766.0118613
@@ -9434,7 +9439,8 @@
   "1880888423801406839": 1793755229.242746,
   "1880893579415784699": 1793760025.3512383,
   "1880918619630502459": 1793784038.9056516,
-  "1880930613649261799": 1793795539.259927
+  "1880930613649261799": 1793795539.259927,
+  "1880935844615519588": 1793800243.755113
  },
  "reminders_sent": {
   "Listings Project First Access": "2026-45"
