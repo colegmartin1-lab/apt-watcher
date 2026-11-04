@@ -1,7 +1,7 @@
 {
  "feeds": {
   "Brooklyn Group": {
-   "checked": 1793815529.7109492,
+   "checked": 1793816435.2333617,
    "seen": {
     "bg:1000": 1793765434.7149205,
     "bg:1001": 1793765434.7149205,
@@ -2075,7 +2075,7 @@
    }
   },
   "Nooklyn": {
-   "checked": 1793815529.7109492,
+   "checked": 1793816435.2333617,
    "seen": {
     "nooklyn:100394": 1793765434.7149205,
     "nooklyn:100504": 1793765434.7149205,
@@ -2471,7 +2471,7 @@
     "nooklyn:104249": 1793735431.8109255,
     "nooklyn:104250": 1793735431.8109255,
     "nooklyn:104251": 1793739930.7400258,
-    "nooklyn:104253": 1793729135.5751286,
+    "nooklyn:104253": 1793816435.2333617,
     "nooklyn:104254": 1793732756.355359,
     "nooklyn:10771": 1793158235.5554085,
     "nooklyn:11793": 1793765434.7149205,
@@ -2551,6 +2551,7 @@
     "nooklyn:92385": 1793765434.7149205,
     "nooklyn:92393": 1793765434.7149205,
     "nooklyn:92627": 1793765434.7149205,
+    "nooklyn:92805": 1793816435.2333617,
     "nooklyn:93022": 1793765434.7149205,
     "nooklyn:93045": 1793765434.7149205,
     "nooklyn:93046": 1793765434.7149205,
@@ -3843,7 +3844,7 @@
    }
   },
   "25fd51dda77afad8": {
-   "checked": 1793814648.6961446,
+   "checked": 1793816460.679648,
    "seen": {}
   },
   "2e96a3f13d1836e5": {
@@ -7003,6 +7004,7 @@
   "cl:mhYqtWcQKdKiYqRGXyYctC": 1793215246.3776665,
   "cl:mi8sbDZorRRr1W2hk3hoEr": 1793047547.1769252,
   "cl:mic8vdtihvLwEFgtVwSoAY": 1792455678.7340767,
+  "cl:mmSkwFrh2vjhpMUuVgGPwW": 1793816456.7777855,
   "cl:mnzg65aPt7ni2LLtTc5wYM": 1793134599.2514017,
   "cl:moWxieHA1pfJb1drbS2c7X": 1793614235.922271,
   "cl:mob3JBQgzB1nZ1tVU9aMiQ": 1792452048.6968,
@@ -7357,6 +7359,7 @@
   "cl:rP2oFJDUjpE5sjMjqLqLX1": 1792437370.9419038,
   "cl:rPxmbD4usmd2Q5nPbQY4ed": 1792811461.3615093,
   "cl:rQ6jMRvqBi5aRtAdwnYB2v": 1793028691.8455086,
+  "cl:rR2Zr8pKzrhMPvUZF46N7t": 1793816456.7777839,
   "cl:rRqZj3Bym5tTkzwcAKBXar": 1793124638.3551152,
   "cl:rSgTMa1k8mprAN38kNCKPh": 1792414889.4964304,
   "cl:rU6iGJzp19UNnf4XAPxfJN": 1793423735.4376879,
@@ -9227,7 +9230,8 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xnuiwy/2_bed_1_bath_in_midtown_manhattan_available_as/": 1793814038.098876,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xnv1sc/sunny_private_room_in_a_2br_les_apartment/": 1793815247.6958396,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xnvcco/2_bedroom_apt_for_rent_kew_gardens_nov_15_dec_1/": 1793815845.471808,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xnvcgj/2_bedroom_apt_for_rent_kew_gardens_nov_15_dec_1/": 1793815843.7122915
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xnvcgj/2_bedroom_apt_for_rent_kew_gardens_nov_15_dec_1/": 1793815843.7122915,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xnvld4/waterfront_onebed_pool_in_greenpoint_4940/": 1793816460.6744359
  },
  "problem_alerts": {
   "gmail": 1793033766.0118613
