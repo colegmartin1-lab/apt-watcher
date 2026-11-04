@@ -1,7 +1,7 @@
 {
  "feeds": {
   "Brooklyn Group": {
-   "checked": 1793820930.7864635,
+   "checked": 1793821831.451651,
    "seen": {
     "bg:1000": 1793765434.7149205,
     "bg:1001": 1793765434.7149205,
@@ -2075,7 +2075,7 @@
    }
   },
   "Nooklyn": {
-   "checked": 1793820930.7864635,
+   "checked": 1793821831.451651,
    "seen": {
     "nooklyn:100394": 1793765434.7149205,
     "nooklyn:100504": 1793765434.7149205,
@@ -3512,7 +3512,7 @@
    }
   },
   "04951a3e31766fbb": {
-   "checked": 1793818252.4388628,
+   "checked": 1793821855.7339377,
    "seen": {
     "4b95b0b5b7a96959": 1793774435.2296596
    }
@@ -3584,7 +3584,7 @@
    }
   },
   "1fef656362975758": {
-   "checked": 1793818252.4388628,
+   "checked": 1793821855.7339377,
    "seen": {
     "00c9bd3100c36331": 1793745639.326626,
     "8aa24f6fc3e11696": 1793734578.4901497,
@@ -3857,7 +3857,7 @@
    }
   },
   "25fd51dda77afad8": {
-   "checked": 1793820046.517383,
+   "checked": 1793821855.7339377,
    "seen": {}
   },
   "2e96a3f13d1836e5": {
@@ -7255,6 +7255,7 @@
   "cl:pvB6J5uHSdcLBjV4nUyorK": 1793197248.2663243,
   "cl:pvHtSjsLgEV7VfcCPuTB1u": 1793208051.6919117,
   "cl:pwSx9Go9r1M8NdCFAz9iVx": 1793251890.5729587,
+  "cl:pwndreE5UFfeYbuWeGEWqf": 1793821850.308075,
   "cl:pzD1F7ewZuQknoxFK3kp9F": 1793214049.5673714,
   "cl:pzfHgHKcGKDcjsRFSVEn8Z": 1792671041.0024698,
   "cl:pzrFc84qymUavqyraNMACE": 1792961747.7779372,
@@ -9269,7 +9270,9 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xnw5t9/2_bedroom_apt_for_rent_kew_gardens_nov_15_dec_1/": 1793817932.1958475,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xnw70h/west_168th_ac1_trains_4bd_2bath_5000_dm_if/": 1793817930.5560575,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xnwran/sublease_for_student_for_winter_break/": 1793819166.2980618,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xnxnz6/ring_camera_on_neighbors_door/": 1793821249.0375285
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xnxnz6/ring_camera_on_neighbors_door/": 1793821249.0375285,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xnxuuu/looking_for_a_room_for_3_nights_november_48/": 1793821855.7300835,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xnxvc8/looking_for_a_room_for_3_nights_november_48/": 1793821853.6437
  },
  "problem_alerts": {
   "gmail": 1793033766.0118613
