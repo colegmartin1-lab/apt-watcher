@@ -3313,6 +3313,10 @@
    "price": 2800,
    "ts": 1793367635.1258802
   },
+  "c288be4c0c371aa9": {
+   "price": 2950,
+   "ts": 1793803248.3770828
+  },
   "c54b7cbbeb54be4f": {
    "price": null,
    "ts": 1793249449.1156063
@@ -3485,7 +3489,7 @@
    }
   },
   "04951a3e31766fbb": {
-   "checked": 1793799641.002491,
+   "checked": 1793803244.4780447,
    "seen": {
     "4b95b0b5b7a96959": 1793774435.2296596
    }
@@ -3557,7 +3561,7 @@
    }
   },
   "1fef656362975758": {
-   "checked": 1793799641.002491,
+   "checked": 1793803244.4780447,
    "seen": {
     "00c9bd3100c36331": 1793745639.326626,
     "8aa24f6fc3e11696": 1793734578.4901497,
@@ -3822,7 +3826,7 @@
    }
   },
   "25fd51dda77afad8": {
-   "checked": 1793801190.8341832,
+   "checked": 1793803244.4780447,
    "seen": {}
   },
   "2e96a3f13d1836e5": {
@@ -6465,6 +6469,7 @@
   "cl:f6WianbUu6mDoJVd6czGGt": 1793418349.039187,
   "cl:f7YNB4feJYRfPyVwt5dCMM": 1792455348.919546,
   "cl:f7zckMPUpqn3Z5nA38Jbij": 1792415137.5912998,
+  "cl:f8HqQBJJLFypFgTxPKV1Ps": 1793803237.8740764,
   "cl:f8M3yssABrWMs2257HG98S": 1792806443.6024647,
   "cl:f8dRriWSjAWsWX61HhzqDQ": 1793296842.650005,
   "cl:f9B4QZe3zho4PVwkgL1vH8": 1793731852.5077693,
@@ -8078,6 +8083,7 @@
   "lp:https://www.listingsproject.com/listings/quiet-and-large-duplex-brownstone": 1792584500.1648695,
   "lp:https://www.listingsproject.com/listings/quiet-bedroom-in-crown-heights-condo-373bd151-60d6-41d6-8cc1-dc0e94f4a928": 1792584221.762858,
   "lp:https://www.listingsproject.com/listings/quiet-bedroom-in-crown-heights-condo-70a7535b-9455-489b-88a8-d123842e5713": 1792033007.3298416,
+  "lp:https://www.listingsproject.com/listings/quiet-bright-and-cozy-1br-apartment-in-clinton-hill": 1793803244.472653,
   "lp:https://www.listingsproject.com/listings/quiet-east-williamsburg-studio": 1792414547.9402869,
   "lp:https://www.listingsproject.com/listings/quiet-spacious-one-bedroom": 1792584441.4978456,
   "lp:https://www.listingsproject.com/listings/quiet-studio-for-artists-poets-writers-and-dreamers": 1793797775.9002,
@@ -9446,7 +9452,9 @@
   "1880893579415784699": 1793760025.3512383,
   "1880918619630502459": 1793784038.9056516,
   "1880930613649261799": 1793795539.259927,
-  "1880935844615519588": 1793800243.755113
+  "1880935844615519588": 1793800243.755113,
+  "1880938788770871487": 1793803230.3946676,
+  "1880938823067430185": 1793803230.420405
  },
  "reminders_sent": {
   "Listings Project First Access": "2026-45"
