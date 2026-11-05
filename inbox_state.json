@@ -4762,7 +4762,7 @@
    }
   },
   "79503fec19db3cfe": {
-   "checked": 1793887834.994252,
+   "checked": 1793888742.8116567,
    "seen": {
     "5886ae070ea84f79": 1793808373.3345525,
     "e5c1c6951d4cf9ed": 1793808373.3345525
@@ -9420,7 +9420,8 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xodz9r/warning_illegal_apartment_conversions_unsafe/": 1793869538.9939795,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xog9vx/are_beginning_of_year_leases_rare/": 1793878254.164174,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xogbyg/thoughts_on_moving_to_37th_9th/": 1793878252.5762975,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xojqdx/lease_renewal_coming_up_in_nyc_what_your_landlord/": 1793888447.336665
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xojqdx/lease_renewal_coming_up_in_nyc_what_your_landlord/": 1793888447.336665,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xojvhq/lease_takeover_red_hook_3_bed_5000/": 1793888742.8067296
  },
  "problem_alerts": {
   "gmail": 1793033766.0118613
@@ -9736,7 +9737,8 @@
   "1881024780113766628": 1793885131.545864,
   "1881026367305740163": 1793886628.6563754,
   "1881026771336931687": 1793886936.3470538,
-  "1881027206819186154": 1793887539.3075163
+  "1881027206819186154": 1793887539.3075163,
+  "1881028654325323962": 1793888734.797777
  },
  "reminders_sent": {
   "Listings Project First Access": "2026-45"
