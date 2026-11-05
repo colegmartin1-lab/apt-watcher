@@ -1,7 +1,7 @@
 {
  "feeds": {
   "Brooklyn Group": {
-   "checked": 1793856064.9490006,
+   "checked": 1793857231.8073292,
    "seen": {
     "bg:1000": 1793852457.6392224,
     "bg:1001": 1793852457.6392224,
@@ -2076,7 +2076,7 @@
    }
   },
   "Nooklyn": {
-   "checked": 1793856064.9490006,
+   "checked": 1793857231.8073292,
    "seen": {
     "nooklyn:100394": 1793852457.6392224,
     "nooklyn:100504": 1793852457.6392224,
@@ -2089,7 +2089,7 @@
     "nooklyn:101227": 1793765434.7149205,
     "nooklyn:101338": 1793852457.6392224,
     "nooklyn:101416": 1793852457.6392224,
-    "nooklyn:101597": 1793769926.7334042,
+    "nooklyn:101597": 1793857231.8073292,
     "nooklyn:101599": 1793852457.6392224,
     "nooklyn:101601": 1793852457.6392224,
     "nooklyn:101602": 1793852457.6392224,
@@ -2204,7 +2204,7 @@
     "nooklyn:101831": 1793828136.670271,
     "nooklyn:101832": 1793828136.670271,
     "nooklyn:101834": 1793828136.670271,
-    "nooklyn:101835": 1793769926.7334042,
+    "nooklyn:101835": 1793857231.8073292,
     "nooklyn:101844": 1793852457.6392224,
     "nooklyn:101845": 1793852457.6392224,
     "nooklyn:101846": 1793852457.6392224,
@@ -4750,7 +4750,7 @@
    }
   },
   "79503fec19db3cfe": {
-   "checked": 1793856084.9726777,
+   "checked": 1793857252.2949228,
    "seen": {
     "5886ae070ea84f79": 1793808373.3345525,
     "e5c1c6951d4cf9ed": 1793808373.3345525
@@ -9377,7 +9377,8 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xo7p2u/uws_sublet_optional_lease_takeover_121331/": 1793847342.5749285,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xo90ph/subletting_bedstuy_room_for_1350_a_month_from/": 1793851265.429627,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xo9bxd/looking_for_a_place/": 1793852480.710756,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xo9nta/looking_for_sublets/": 1793853381.0741463
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xo9nta/looking_for_sublets/": 1793853381.0741463,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xoasxt/lease_takeover_furnished_room_in_2br1ba_lower/": 1793857252.290624
  },
  "problem_alerts": {
   "gmail": 1793033766.0118613
