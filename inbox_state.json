@@ -2994,6 +2994,10 @@
    "price": null,
    "ts": 1792197348.7881727
   },
+  "3bf74b4da08166ac": {
+   "price": 1900,
+   "ts": 1793929244.2185798
+  },
   "3eacb5f932809eaf": {
    "price": 1900,
    "ts": 1792938063.1008143
@@ -5569,6 +5573,7 @@
   "cl:25ruiY3x5FrBy5iZ7D4Nf7": 1793280953.6977098,
   "cl:27NPYu4LYjvLUQanUr8843": 1793718359.5760741,
   "cl:28173oQWmSvEtugx61zzYm": 1793709343.7232857,
+  "cl:29GFLFxkKp6hCnAxsKjrpc": 1793929236.265075,
   "cl:2ArLRcFbpv17vtmbt3HJWy": 1792414539.343112,
   "cl:2B9rP9c75CkqEwb5QEarH6": 1792413687.3736203,
   "cl:2BmpGKj9xEcVK3dA2Cbk6k": 1792455929.0118933,
@@ -5916,6 +5921,7 @@
   "cl:6EVedGyMjUTnspJvrmMEaN": 1792435869.1973417,
   "cl:6EkrsYS4hXuuqrwen5dz4p": 1793755540.2058616,
   "cl:6FQmcCES9WSfK2uFpUd5wY": 1793216431.8055499,
+  "cl:6FagAwEXwvU9LAba5tSwRD": 1793929242.1131537,
   "cl:6FnW9SvqmMV4r8HQ1GXZNw": 1793818837.5838428,
   "cl:6GTLKZPcMfHyJrKoiLiLg1": 1793229078.8258324,
   "cl:6H4SLB5bp15ivZsAmEDptV": 1792455348.919545,
@@ -6367,6 +6373,7 @@
   "cl:bSmvwMNX82qe2V68uPJWhe": 1793837139.7917337,
   "cl:bSnm5ZVbqqwWnQJNQuqSG9": 1792414873.040418,
   "cl:bTC7hY414VPZFypct8Fqpr": 1793761853.3349211,
+  "cl:bTwi2i8HXLZWWGqa5c3RWh": 1793929236.2650762,
   "cl:bVMLpzaccZdJZhCL1Pg3a3": 1793212837.7347982,
   "cl:bVzTETN6RLGjUjpL7AjU9F": 1792724462.6675045,
   "cl:bWwTw5GWaWoBKwcJ8q43NA": 1792495848.7760527,
@@ -9577,7 +9584,9 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xoxwjx/chelsea_1bd1br_corrected_repost/": 1793922041.5725908,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xoy42l/looking_for_a_room_for_2_weeks_flexible_dates/": 1793922632.5860705,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xoyp44/iso_1bed1ba_in_queens_december_move_in/": 1793924149.957723,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xoz498/iso_brokeragent_i_keep_sending_cold_emails/": 1793925337.8686152
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xoz498/iso_brokeragent_i_keep_sending_cold_emails/": 1793925337.8686152,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xp0f3p/what_ive_learnt_looking_for_a_room_under_1500/": 1793929240.9081316,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xp0fwy/iso_1br1ba_astoria_apartment/": 1793929239.1117394
  },
  "problem_alerts": {
   "gmail": 1793919326.5002563
