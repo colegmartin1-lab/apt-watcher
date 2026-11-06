@@ -3266,6 +3266,10 @@
    "price": 1900,
    "ts": 1793273443.5676267
   },
+  "a1d08d61d940cdeb": {
+   "price": 2800,
+   "ts": 1793977252.5817957
+  },
   "a2649b9bbfb29adf": {
    "price": 2700,
    "ts": 1793806292.8790038
@@ -3934,7 +3938,7 @@
    }
   },
   "25fd51dda77afad8": {
-   "checked": 1793975444.6200483,
+   "checked": 1793977248.8293993,
    "seen": {}
   },
   "2e96a3f13d1836e5": {
@@ -4810,7 +4814,7 @@
    }
   },
   "79503fec19db3cfe": {
-   "checked": 1793976340.304152,
+   "checked": 1793977248.8293993,
    "seen": {
     "5886ae070ea84f79": 1793895352.3303187,
     "e5c1c6951d4cf9ed": 1793895352.3303187
@@ -9643,7 +9647,8 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xpdewv/nightmare_nyc_neighbors/": 1793973653.1000564,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xpe44t/24yearold_gay_man_seeking_a_private_room_budget/": 1793975444.6144462,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xpe4wh/1_bed_1_bath_apartment_right_next_to_newark_penn/": 1793975442.8162131,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xpehcx/sublet_in_bushwick_december_21_january_15/": 1793976340.298067
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xpehcx/sublet_in_bushwick_december_21_january_15/": 1793976340.298067,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xpetik/24yearold_gay_man_seeking_a_private_room_budget/": 1793977248.8240683
  },
  "problem_alerts": {
   "gmail": 1793919326.5002563
@@ -9976,7 +9981,8 @@
   "1881103246388808882": 1793960129.7485762,
   "1881103399246877947": 1793960129.7601476,
   "1881115817918515789": 1793972126.9265578,
-  "1881117076974406964": 1793973327.3075168
+  "1881117076974406964": 1793973327.3075168,
+  "1881121270039345016": 1793977240.43528
  },
  "reminders_sent": {
   "Listings Project First Access": "2026-45"
