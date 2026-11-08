@@ -3453,6 +3453,10 @@
    "price": 1400,
    "ts": 1793117456.8190596
   },
+  "d07815b95cc1d33a": {
+   "price": 2800,
+   "ts": 1794156040.058782
+  },
   "d217471d1c118ac9": {
    "price": 1340,
    "ts": 1792579847.1539927
@@ -5793,6 +5797,7 @@
   "cl:3ZWvNhTeCoozaDTGSU8dCw": 1793204455.0016181,
   "cl:3a1P8Hgg7RWqH4TKPsDMSZ": 1792414873.0404158,
   "cl:3a88XaMZoZAfARdZfBrZLV": 1792591565.754531,
+  "cl:3aFr5hJEAoctMANEabyYzr": 1794156031.323946,
   "cl:3b5htKUnGCwBHTqiobfnC5": 1793830540.1405497,
   "cl:3bS6u4N7fzsJypcC9LamLE": 1793325043.2251842,
   "cl:3cPsU7Ak9gcmyGVGHM4TJw": 1792414550.005309,
@@ -6819,6 +6824,7 @@
   "cl:eXmk8XpjYDBY5E4R9T59ue": 1793798732.009348,
   "cl:eY1VvqCWtDgNCDm3mt4unN": 1792435869.1973457,
   "cl:eY71N8vtoGNot5XnLybmdu": 1793727348.1761043,
+  "cl:eYwHexCAgGkC2VdLMWoreR": 1794156031.3239443,
   "cl:eZu4vSNUdbiHtzSbvKdWXy": 1792909231.060024,
   "cl:ea7C2t9sbtsSqdkPdbmFJZ": 1792967139.2598743,
   "cl:eaVQEhJwraxoVZHqQRKcgg": 1792437370.9419088,
@@ -7826,6 +7832,7 @@
   "cl:qvGu1eT2ATKkDpSTZeeSBS": 1793739066.6514678,
   "cl:qvXE3PHYat6F1aZcJ7ZmUu": 1792437945.168436,
   "cl:qvdFQXd8qpMLYaAJLQc3iN": 1792414242.316941,
+  "cl:qvjXt6NB8PoZAxB8MBC6y8": 1794156037.1954718,
   "cl:qwCUD1j58EU3rbPoYshgnM": 1793739948.0550735,
   "cl:qwKNpyTXBHyVApyxK8Aigi": 1792436164.0554938,
   "cl:qxeLxwCHRQCCPuHnNqAJAn": 1792455047.151021,
@@ -9962,7 +9969,8 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xr025i/carroll_gardens_room/": 1794149446.9926684,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xr0zer/furnished_1br_sublet_near_grand_st_l_brooklyn_dec/": 1794151837.4694679,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xr1ylh/when_your_friend_says_they_have_roof_access/": 1794154237.477332,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xr2eil/looking_for_the_brokest_broker_that_has_ever/": 1794155437.84993
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xr2eil/looking_for_the_brokest_broker_that_has_ever/": 1794155437.84993,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xr2lof/28m_moving_to_brooklyn_which_neighborhoods_to/": 1794156033.6530774
  },
  "problem_alerts": {
   "gmail": 1793919326.5002563
