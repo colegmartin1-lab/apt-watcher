@@ -3999,7 +3999,7 @@
    }
   },
   "25fd51dda77afad8": {
-   "checked": 1794153647.8104825,
+   "checked": 1794155437.858036,
    "seen": {}
   },
   "2e96a3f13d1836e5": {
@@ -4537,7 +4537,7 @@
    }
   },
   "6a8f0567c9ab8b31": {
-   "checked": 1794154529.2601154,
+   "checked": 1794155437.858036,
    "seen": {
     "0b7cbc72981c0b70": 1792203628.762504,
     "0cd8108d7312bf0a": 1794113732.9352226,
@@ -4916,7 +4916,7 @@
    }
   },
   "8a43479d71a9baf2": {
-   "checked": 1794153647.8104825,
+   "checked": 1794155437.858036,
    "seen": {
     "1a284981a4da9c0b": 1794128440.804436,
     "20524f768f0fb257": 1794128440.804436,
@@ -9960,7 +9960,8 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xqzczq/leasebreaknew_lease_4985m_1b1b_in_cobble_hill/": 1794147332.1636276,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xr025i/carroll_gardens_room/": 1794149446.9926684,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xr0zer/furnished_1br_sublet_near_grand_st_l_brooklyn_dec/": 1794151837.4694679,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xr1ylh/when_your_friend_says_they_have_roof_access/": 1794154237.477332
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xr1ylh/when_your_friend_says_they_have_roof_access/": 1794154237.477332,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xr2eil/looking_for_the_brokest_broker_that_has_ever/": 1794155437.84993
  },
  "problem_alerts": {
   "gmail": 1793919326.5002563
@@ -10324,7 +10325,8 @@
   "1881279593789840265": 1794128125.4720461,
   "1881302680519811352": 1794150327.3828907,
   "1881305206038164870": 1794152726.3778508,
-  "1881306305211489109": 1794153641.1925604
+  "1881306305211489109": 1794153641.1925604,
+  "1881308310188992280": 1794155430.1873505
  },
  "reminders_sent": {
   "Listings Project First Access": "2026-45"
