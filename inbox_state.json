@@ -2841,6 +2841,10 @@
    "price": 1564,
    "ts": 1792426227.9794424
   },
+  "0e826029e20f4104": {
+   "price": 1700,
+   "ts": 1794190241.4398847
+  },
   "1274b284c3491b96": {
    "price": 1870,
    "ts": 1792757446.0319624
@@ -6637,6 +6641,7 @@
   "cl:cCrYgGuVyTit8qjTjdM41j": 1793639436.5738392,
   "cl:cETmrzAV3Vm8JmJtv4NEY7": 1792589754.8171782,
   "cl:cF1ESM6PGahyZvEifkvFXK": 1793071528.668696,
+  "cl:cFk4CNYuD47GWTaRi1Jdij": 1794190234.687054,
   "cl:cGARAmcmiqC96vE1DzrW74": 1793376629.841914,
   "cl:cGUZnKPLaGU3SeQx29HgLF": 1792938049.110367,
   "cl:cGWndwS6sdvCmefgC8M7oS": 1793074566.8746073,
@@ -6977,6 +6982,7 @@
   "cl:fox1JDHD4QbiScS5XQygNJ": 1792436475.4934263,
   "cl:fpKh6vy71ANiBw9UrhJMEL": 1793709347.001081,
   "cl:fpZafc1PFvPXu1EKJxkuDy": 1793608256.7927487,
+  "cl:fqcxXnqwe6rY8Eq1do4dZp": 1794190238.9275992,
   "cl:fqhwjQy6VAx9H6RcERt94E": 1793752556.3542447,
   "cl:frpLwRKbd21L5Hm1p7Jzem": 1793638839.591273,
   "cl:fs1T7rMFx9K4fgLcLs6LvU": 1792534246.303133,
@@ -8005,6 +8011,7 @@
   "cl:sD6Y9yzB7bispfmRddFCqW": 1793912154.6165242,
   "cl:sE8vP6xzdruAhRbiaBRgLL": 1792965647.2441418,
   "cl:sE93f1HK2PC9JHQsYfZpsz": 1793124638.355114,
+  "cl:sEmqnDDQd6AGz8sCnLBCzn": 1794190234.687055,
   "cl:sFUKsJdx2zGHkP7P3PSZVG": 1792414000.6161735,
   "cl:sFxVR5CT2EEnKReR2xeHwG": 1792414555.8830955,
   "cl:sGYfJjpNqkxGhRCRBT2uep": 1792436482.0989702,
@@ -10047,7 +10054,8 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xrdmhv/advice_for_facebook_roommates/": 1794184240.2745633,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xrdmmi/iso_uws_upper_west_side_1_bed_max_budget_is_5k/": 1794184239.1915123,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xrdtkf/considering_buying_a_303k_condo_in_ny_but/": 1794184832.4978719,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xrf0ed/looking_for_a_1bedroom_apt_lease_takeover_end_of/": 1794188433.7488654
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xrf0ed/looking_for_a_1bedroom_apt_lease_takeover_end_of/": 1794188433.7488654,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xrfmdp/whats_the_catch_with_this_unit/": 1794190237.6625907
  },
  "problem_alerts": {
   "gmail": 1793919326.5002563
