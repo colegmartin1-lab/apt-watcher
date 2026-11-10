@@ -3680,7 +3680,7 @@
    }
   },
   "0a905052f37cc2ca": {
-   "checked": 1794323135.5421395,
+   "checked": 1794324941.855645,
    "seen": {
     "0a905052f37cc2ca": 1794303340.6053462,
     "4181740518101970": 1794303340.6053462,
@@ -4975,7 +4975,7 @@
    }
   },
   "79503fec19db3cfe": {
-   "checked": 1794324038.719885,
+   "checked": 1794324941.855645,
    "seen": {
     "5886ae070ea84f79": 1794242455.8226354,
     "e5c1c6951d4cf9ed": 1794242455.8226354
@@ -6153,6 +6153,7 @@
   "cl:62qRHgJSKzncxKFhkqr8Vp": 1794317745.3239625,
   "cl:62rTw6neqfmkjYf9K4HNbq": 1793031078.960679,
   "cl:636WNFbnfFtYH1dT6RYosE": 1793880339.6536684,
+  "cl:63hMfkr8RXUx8C3H1i3iro": 1794324935.3206415,
   "cl:63jmkYR7sMX9Rhb592Mcpk": 1794112834.0090246,
   "cl:648ZGcRzE2rq8C5HpPniPK": 1793645752.674695,
   "cl:64Q5gMkDWLAGyTcviVe1B1": 1793259647.4241025,
@@ -10370,7 +10371,9 @@
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xsmxgf/sharing_a_hack_to_get_apartment_square_footage/": 1794317455.5304403,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xsnyty/1_bedroom_for_rent_in_kensington_brooklyn_2499/": 1794320168.842558,
   "reddit:https://www.reddit.com/r/NYCapartments/comments/1xsojoj/les_2bedroom_apartment_lease_takeover/": 1794321637.2412617,
-  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xsp7n2/room_for_sublet_bensonhurst_brooklyn_1000month/": 1794323443.6609237
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xsp7n2/room_for_sublet_bensonhurst_brooklyn_1000month/": 1794323443.6609237,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xspvhs/lindsay_park_mitchell_lama/": 1794324941.851207,
+  "reddit:https://www.reddit.com/r/NYCapartments/comments/1xspxfi/is_this_legal/": 1794324940.4973798
  },
  "problem_alerts": {
   "gmail": 1793919326.5002563
@@ -10762,7 +10765,8 @@
   "1881479788244497736": 1794319236.1174817,
   "1881480689462707752": 1794319835.696345,
   "1881483112138240486": 1794322236.9999385,
-  "1881483520147864900": 1794322531.3646052
+  "1881483520147864900": 1794322531.3646052,
+  "1881485864726799075": 1794324932.1869762
  },
  "reminders_sent": {
   "Listings Project First Access": "2026-45"
